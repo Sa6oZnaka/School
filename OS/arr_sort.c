@@ -8,6 +8,10 @@
 void* sort_number(void* arg){
 	int *arr = *((int *)arg);
 	
+	for(int i=0;i<SIZE/2;i++){
+		printf("%d", arr[i]);
+	}
+	
 	return NULL;
 }
 
