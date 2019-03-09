@@ -10,7 +10,7 @@ public abstract class BasicCard implements Card{
         return mySuit;
     }
 
-    protected Rank getRank() {
+    public Rank getRank() {
         return myRank;
     }
 
