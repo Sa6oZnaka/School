@@ -2,8 +2,8 @@ package org.elsys.cardgame.api;
 
 public abstract class BasicCard implements Card{
 
-    Suit mySuit;
-    Rank myRank;
+    private Suit mySuit;
+    private Rank myRank;
 
     @Override
     public Suit getSuit() {
@@ -13,7 +13,5 @@ public abstract class BasicCard implements Card{
     public Rank getRank() {
         return myRank;
     }
-
-
 
 }
