@@ -1,6 +1,6 @@
 package org.elsys.cardgame.api;
 
-public abstract class BasicCard implements Card{
+public class BasicCard implements Card{
 
     private Suit mySuit;
     private Rank myRank;

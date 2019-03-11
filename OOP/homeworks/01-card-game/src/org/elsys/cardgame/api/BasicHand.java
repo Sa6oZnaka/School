@@ -3,7 +3,7 @@ package org.elsys.cardgame.api;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class BasicHand implements Hand{
+public class BasicHand implements Hand{
 
     private List<Card> myList = new ArrayList<>();
 
@@ -15,5 +15,7 @@ public abstract class BasicHand implements Hand{
     public int size(){
         return myList.size();
     }
+
+
 
 }
