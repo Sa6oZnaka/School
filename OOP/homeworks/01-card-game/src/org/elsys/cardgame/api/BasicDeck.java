@@ -1,44 +1,65 @@
 package org.elsys.cardgame.api;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
-public abstract class BasicDeck implements Deck{
+public class BasicDeck implements Deck{
 
-    private List<Card> myList = new ArrayList<>();
-    private Hand myHand;
+    private List<Card> myDeck = new ArrayList<>();
+    private Hand myHand = new BasicHand();
 
     @Override
     public List<Card> getCards(){
-        return myList;
+        return this.myDeck;
     }
 
     public int size(){
-        return myList.size();
+        return this.myDeck.size();
     }
 
     public int handSize(){
-        return myHand.size();
+        return this.myHand.size();
     }
 
-    //public Card drawTopCard(){
-    //    Card result;
-    //    return result;
-    //}
+    public Card drawTopCard(){
+        BasicCard result;
+        result = (BasicCard) myDeck.get(size() - 1);
+        myDeck.remove(size() - 1);
+        return result;
+    }
 
     public Card topCard(){
-        return myList.get(size() - 1);
+        return myDeck.get(size() - 1);
     }
 
-    /*Card drawBottomCard();
+    public Card drawBottomCard(){
+        BasicCard result;
+        result = (BasicCard) myDeck.get(0);
+        myDeck.remove(0);
+        return result;
+    }
 
-    Card bottomCard();
+    public Card bottomCard(){
+        return this.myDeck.get(0);
+    }
 
-    Hand deal();
+    public Hand deal() {
+        return null;
+    }
 
-    void sort();
+    public void sort(){
+        Collections.sort(myDeck, new Comparator<Card>() {
+            @Override
+            public int compare(Card a, Card b){
+                return  a.getRank().compareTo(b.getRank());
+            }
+        });
+    }
 
-    void shuffle();
-    */
+    public void shuffle(){
+        Collections.shuffle(myDeck);
+    }
 
 }
