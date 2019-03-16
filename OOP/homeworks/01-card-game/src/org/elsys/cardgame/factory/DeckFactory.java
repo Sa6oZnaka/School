@@ -6,19 +6,42 @@ import java.util.*;
 public class DeckFactory {
 
 	public static Deck defaultWarDeck() {
-		List<Card> cards;
+
+		ArrayList<Card> cards = new ArrayList<>();
+
+		for (Suit suit : Suit.values()) {
+			for (Rank rank : Rank.values()) {
+				cards.add(new BasicCard(rank , suit));
+			}
+		}
 
 		return new BasicDeck(cards, 26);
 	}
 
 	public static Deck defaultSantaseDeck() {
-		List<Card> cards;
+		ArrayList<Card> cards = new ArrayList<>();
+
+		for (Suit suit : Suit.values()) {
+			for (Rank rank : Rank.values()) {
+				if (rank.ordinal() > Rank.SIX.ordinal()) {
+					cards.add(new BasicCard(rank , suit));
+				}
+			}
+		}
 
 		return new BasicDeck(cards, 6);
 	}
 
 	public static Deck defaultBeloteDeck() {
-		List<Card> cards;
+		ArrayList<Card> cards = new ArrayList<>();
+
+		for (Suit suit : Suit.values()) {
+			for (Rank rank : Rank.values()) {
+				if (rank.ordinal() > Rank.SEVEN.ordinal()) {
+					cards.add(new BasicCard(rank , suit));
+				}
+			}
+		}
 
 		return new BasicDeck(cards, 8);
 	}

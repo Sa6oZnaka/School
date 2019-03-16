@@ -26,7 +26,6 @@ public class BasicDeck implements Deck{
 
     @Override
     public int handSize(){
-        //return this.myHand.size();
         return myHandSize;
     }
 

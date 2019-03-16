@@ -15,6 +15,7 @@ public class BasicHand implements Hand{
         return myCards;
     }
 
+    @Override
     public int size(){
         return myCards.size();
     }
