@@ -3,8 +3,9 @@
 #include<pthread.h>
 #include<math.h>
 #include<stdlib.h>
+#include<stdio.h>
 
-#define NUM_OF_THREADS 8
+#define NUM_OF_THREADS 1000
 
 int gold = 100;
 int zombies_count = 1;
@@ -37,7 +38,7 @@ void* zombies(void *arg){
 		    heal -= (zombies_count - soldiers_count);
 		    print_fail("Zombie attack succeded ;(!");
 		    if(heal <= 0){
-		    	game_end(1);
+		    	game_end(zombies_count);
 		    }
 		    print_health(heal);
 
@@ -61,8 +62,8 @@ int main() {
 	init();
 	print_gold(gold);
 	print_soldiers(soldiers_count);
-	print_zombies(5, 13);
-	print_health(100);
+	//print_zombies(5, 13);
+	print_health(heal);
 
 	pthread_create(&threads[last],NULL,zombies,NULL);
 
@@ -70,7 +71,7 @@ int main() {
 		int ch = get_input();
 		switch(ch) {
 			case 'q':
-				game_end(1);
+				game_end(zombies_count);
 				break;
 			case 'm':
 				if(gold >= 100){
