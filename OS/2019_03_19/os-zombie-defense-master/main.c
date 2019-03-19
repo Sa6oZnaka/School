@@ -9,7 +9,7 @@
 
 int gold = 100;
 int zombies_count = 1;
-int soldiers_count = 15;
+int soldiers_count = 0;
 int heal = 100;
 pthread_mutex_t mutex;
 
@@ -33,7 +33,7 @@ void* zombies(void *arg){
 	    	sleep(1);
 	    }
 		if(zombies_count > soldiers_count){
-			pthread_mutex_lock(&mutex);
+			//pthread_mutex_lock(&mutex);
 		    
 		    heal -= (zombies_count - soldiers_count);
 		    print_fail("Zombie attack succeded ;(!");
@@ -42,7 +42,7 @@ void* zombies(void *arg){
 		    }
 		    print_health(heal);
 
-		    pthread_mutex_unlock(&mutex);
+		    //pthread_mutex_unlock(&mutex);
 		}else{
 		    print_succ("Zombie attack deflected! :)");
 		}
