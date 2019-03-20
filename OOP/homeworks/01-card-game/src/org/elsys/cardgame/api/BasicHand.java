@@ -5,9 +5,11 @@ import java.util.List;
 public class BasicHand implements Hand{
 
     private List<Card> myCards;
+    private int size;
 
-    BasicHand(List<Card> cards){
+    BasicHand(List<Card> cards, int size){
         this.myCards = cards;
+        this.size = size;
     }
 
     @Override
@@ -17,7 +19,7 @@ public class BasicHand implements Hand{
 
     @Override
     public int size(){
-        return myCards.size();
+        return size;
     }
 
 }

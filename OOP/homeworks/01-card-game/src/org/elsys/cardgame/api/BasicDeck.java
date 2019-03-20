@@ -1,5 +1,6 @@
 package org.elsys.cardgame.api;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -8,20 +9,22 @@ public class BasicDeck implements Deck{
 
     private List<Card> myDeck;
     private int myHandSize;
+    private Comparator<Card> cmp;
 
-    public BasicDeck(List<Card> deckCards,int handSize){
+    public BasicDeck(List<Card> deckCards,int handSize, Comparator<Card> cmp){
         this.myDeck = deckCards;
         this.myHandSize = handSize;
+        this.cmp = cmp;
     }
 
     @Override
     public List<Card> getCards(){
-        return this.myDeck;
+        return myDeck;
     }
 
     @Override
     public int size(){
-        return this.myDeck.size();
+        return myDeck.size();
     }
 
     @Override
@@ -31,8 +34,8 @@ public class BasicDeck implements Deck{
 
     @Override
     public Card drawTopCard(){
-        BasicCard result;
-        result = (BasicCard) myDeck.get(size() - 1);
+        Card result;
+        result = myDeck.get(size() - 1);
         myDeck.remove(size() - 1);
         return result;
     }
@@ -44,30 +47,37 @@ public class BasicDeck implements Deck{
 
     @Override
     public Card drawBottomCard(){
-        BasicCard result;
-        result = (BasicCard) myDeck.get(0);
+        Card result;
+        result = myDeck.get(0);
         myDeck.remove(0);
         return result;
     }
 
     @Override
     public Card bottomCard(){
-        return this.myDeck.get(0);
+        return myDeck.get(0);
     }
 
     @Override
     public Hand deal() {
-        return new BasicHand(myDeck);
+
+        List<Card> result = new ArrayList<>(myDeck.subList(0, myHandSize));
+        for(int i=0; i < myHandSize;i ++){
+            myDeck.remove(i);
+        }
+        return new BasicHand(result, myHandSize);
     }
 
     @Override
     public void sort(){
-        Collections.sort(myDeck, new Comparator<Card>() {
-            @Override
-            public int compare(Card a, Card b){
-                return  a.getRank().compareTo(b.getRank());
-            }
-        });
+        myDeck.sort(cmp);
+
+        //Collections.sort(myDeck, new Comparator<Card>() {
+        //    @Override
+        //    public int compare(Card a, Card b){
+        //        return  a.getRank().compareTo(b.getRank());
+        //    }
+        //});
     }
 
     @Override

@@ -15,7 +15,18 @@ public class DeckFactory {
 			}
 		}
 
-		return new BasicDeck(cards, 26);
+		Comparator<Card> cmp = new Comparator<Card>() {
+			@Override
+			public int compare(Card card1, Card card2) {
+				if(card1.getSuit().ordinal() == card2.getSuit().ordinal()) {
+					return card1.getRank().ordinal() - card2.getRank().ordinal();
+				}else{
+					return card1.getSuit().ordinal() - card2.getSuit().ordinal();
+				}
+			}
+		};
+
+		return new BasicDeck(cards, 26, cmp);
 	}
 
 	public static Deck defaultSantaseDeck() {
@@ -29,7 +40,18 @@ public class DeckFactory {
 			}
 		}
 
-		return new BasicDeck(cards, 6);
+		Comparator<Card> cmp = new Comparator<Card>() {
+			@Override
+			public int compare(Card card1, Card card2) {
+				if(card1.getSuit().ordinal() == card2.getSuit().ordinal()) {
+					return card1.getSuit().ordinal() - card2.getSuit().ordinal();
+				}else{
+					return card1.getRank().ordinal() - card2.getRank().ordinal();
+				}
+			}
+		};
+
+		return new BasicDeck(cards, 6, cmp);
 	}
 
 	public static Deck defaultBeloteDeck() {
@@ -43,6 +65,17 @@ public class DeckFactory {
 			}
 		}
 
-		return new BasicDeck(cards, 8);
+		Comparator<Card> cmp = new Comparator<Card>() {
+			@Override
+			public int compare(Card card1, Card card2) {
+				if(card1.getSuit().ordinal() == card2.getSuit().ordinal()) {
+					return card1.getSuit().ordinal() - card2.getSuit().ordinal();
+				}else{
+					return card1.getRank().ordinal() - card2.getRank().ordinal();
+				}
+			}
+		};
+
+		return new BasicDeck(cards, 8, cmp);
 	}
 }
