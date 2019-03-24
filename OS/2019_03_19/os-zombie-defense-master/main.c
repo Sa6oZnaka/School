@@ -1,3 +1,10 @@
+//--------------------------------------------
+//	NAME: Alexandar Karapenev
+//  CLASS: XIb
+//  NUMBER: 1
+//  PROBLEM: #1
+//---------------------------------------------
+
 #include "ui.h"
 #include<unistd.h>
 #include<pthread.h>
@@ -32,8 +39,8 @@ void* zombies(void *arg){
 	    	print_zombies(i, zombies_count);
 	    	sleep(1);
 	    }
-		if(zombies_count > soldiers_count){
-			//pthread_mutex_lock(&mutex);
+	    pthread_mutex_lock(&mutex);
+		if(zombies_count > soldiers_count){	
 		    
 		    heal -= (zombies_count - soldiers_count);
 		    print_fail("Zombie attack succeded ;(!");
@@ -41,13 +48,13 @@ void* zombies(void *arg){
 		    	game_end(zombies_count);
 		    }
 		    print_health(heal);
-
-		    //pthread_mutex_unlock(&mutex);
 		}else{
 		    print_succ("Zombie attack deflected! :)");
 		}
 		zombies_count *= 2;
+		pthread_mutex_unlock(&mutex);
 	}
+	
 	return NULL;
 }
 
@@ -75,7 +82,10 @@ int main() {
 				break;
 			case 'm':
 				if(gold >= 100){
+					pthread_mutex_lock(&mutex);
 					gold -= 100;
+					pthread_mutex_unlock(&mutex);
+					
 					print_gold(gold);
 
 					pthread_create(&threads[last],NULL,miners,NULL);
@@ -89,9 +99,12 @@ int main() {
 
 				break;
 			case 's':
+			
 				if(gold >= 10){
+					pthread_mutex_lock(&mutex);
 					gold -= 10;
 					soldiers_count++;
+					pthread_mutex_unlock(&mutex);
 					print_gold(gold);
 					print_msg("Soldier created!");
 					print_soldiers(soldiers_count);
@@ -101,8 +114,10 @@ int main() {
 				break;
 			case 'x':
 				if(gold >= 100){
+					pthread_mutex_lock(&mutex);
 					gold -= 100;
 					soldiers_count += 10;
+					pthread_mutex_unlock(&mutex);
 					print_gold(gold);
 					print_msg("10 x soldiers created!");
 					print_soldiers(soldiers_count);
@@ -113,7 +128,7 @@ int main() {
 		}
 	}
 
-	for(int i=0; i< last + 1; i++){ // + 1 for the zombies
+	for(int i=1; i< last + 1; i++){ // + 1 for the zombies
 		pthread_join(threads[i],NULL);
 	}
 	pthread_mutex_destroy(&mutex);
