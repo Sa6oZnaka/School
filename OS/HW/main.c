@@ -19,6 +19,7 @@
 pthread_mutex_t mutex[MAX_MINERALS];
 pthread_mutex_t command_center;
 pthread_mutex_t miners_learning;
+pthread_mutex_t soldiers_learning;
 
 int Mineral_Blocks_Count;
 int minerals[MAX_MINERALS];
@@ -30,6 +31,7 @@ int Miners = 5;
 pthread_t threads[MAX_THREADS];
 
 int br = 0;
+int sol = 0;
 
 void* miner(void *arg){
     
@@ -42,7 +44,7 @@ void* miner(void *arg){
 	
     while(1){
     	
-    	if(br == 1) break;
+    	if(br == 1 && sol == 1) break;
     	
 	    for(int i = 0;i < Mineral_Blocks_Count;i ++){		
 			
@@ -55,7 +57,7 @@ void* miner(void *arg){
 	    	if(e == Mineral_Blocks_Count){
 				br = 1;
 				// TEST PRINT
-				//printf("[MINER] BRAKING!!! IN FOR %d \n", (id+1));
+				// printf("[MINER] BRAKING!!! IN FOR %d \n", (id+1));
 				
 				break;		
 			}
@@ -79,8 +81,19 @@ void* miner(void *arg){
 	                	
 			            printf("SCV %d is mining from mineral block %d\n", id, (i+1));
 			            
-			            pthread_mutex_unlock(&mutex[i]);
-			            
+			            int reward = 0;
+			            if(minerals[i] < WORKER_PAYOUT){
+							reward += minerals[i];
+							minerals[i] = 0;
+							blocks[i] = 0; 
+				  
+						}else{
+							minerals[i] -= WORKER_PAYOUT;
+							reward += WORKER_PAYOUT;
+						}
+			         	
+			         	pthread_mutex_unlock(&mutex[i]);
+			         	
 			            printf("SCV %d is transporting minerals\n", id);
 			            
 			            sleep(2);
@@ -91,15 +104,8 @@ void* miner(void *arg){
 							
 					        if(pthread_mutex_trylock(&command_center) == 0){
 					        	
-							    if(minerals[i] < WORKER_PAYOUT){
-							    	MyMinerals += minerals[i];
-							    	minerals[i] = 0;
-							    	blocks[i] = 0; 
-							  
-							    }else{
-							    	minerals[i] -= WORKER_PAYOUT;
-							    	MyMinerals += WORKER_PAYOUT;
-							    }
+							    MyMinerals += reward;
+							    
 							    printf("SCV %d delivered minerals to the Command center\n", id);
 
 							    pthread_mutex_unlock(&command_center);
@@ -154,45 +160,56 @@ int main( int argc, char * argv [] ) {
 	
 	while(1){
 	
-		if(br == 1) break;
-		if(Soldiers >= 20) break;
+		if(Soldiers >= 20) sol = 1;
+	
+		if(br == 1 && sol == 1) break;
 
 		char input;
 		scanf("%c", &input);
 		
-		if(br == 1) break;
+		//input = getchar();
 		
-		if(input == 'm'){
-			if(MyMinerals > 50){
-				sleep(1);
-				MyMinerals -= 50;
-				printf("You wanna piece of me, boy?\n");
-				Soldiers++;
-			}else{
-				printf("Not enough minerals.\n");
+		if(br == 1 && sol == 1) break;
+		
+		
+		if(Miners + Soldiers < 200){
+			if(input == 'm'){
+				if(MyMinerals >= 50){
+					
+					pthread_mutex_lock(&soldiers_learning);	
+					
+					sleep(1);
+					MyMinerals -= 50;
+					printf("You wanna piece of me, boy?\n");
+					Soldiers++;
+					
+					pthread_mutex_unlock(&soldiers_learning);
+					
+				}else{
+					printf("Not enough minerals.\n");
+				}
+				
+				// TEST PRINT
+				//printf("[MAIN] Soldiers: %d !!!\n", Soldiers);
+
 			}
-			
-			// TEST PRINT
-			//printf("[MAIN] Soldiers: %d !!!\n", Soldiers);
 
-		}
-
-		if(input == 's'){
-			if(MyMinerals > 50){
-				pthread_mutex_lock(&miners_learning); // LOCK MUTEX
-				MyMinerals -= 50;
-				sleep(4);
-				printf("SCV good to go, sir.\n");
-				Miners++;
-				pthread_create(&threads[Miners],NULL,miner,&Miners);
-				pthread_mutex_unlock(&miners_learning); // UNLOCK
-			}else{
-				printf("Not enough minerals.\n");
-			}	
+			if(input == 's'){
+				if(MyMinerals >= 50){
+					pthread_mutex_lock(&miners_learning); // LOCK MUTEX
+					MyMinerals -= 50;
+					sleep(4);
+					printf("SCV good to go, sir.\n");
+					Miners++;
+					pthread_create(&threads[Miners],NULL,miner,&Miners);
+					pthread_mutex_unlock(&miners_learning); // UNLOCK
+				}else{
+					printf("Not enough minerals.\n");
+				}	
+			}
 		}
 		
 	}
-	
 	
 	for(int i = 0; i < Miners; i ++){ 
 		pthread_cancel(threads[i]);
@@ -203,7 +220,7 @@ int main( int argc, char * argv [] ) {
 	}
 	
 	int N = BLOCK_REWARD * Mineral_Blocks_Count;
-	
+	            
 	printf("Map minerals %d, player minerals %d, SCVs %d, Marines %d\n", N, MyMinerals, Miners, Soldiers);
 	
 	return 0;
