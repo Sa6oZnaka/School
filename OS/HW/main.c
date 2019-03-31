@@ -1,8 +1,13 @@
 //--------------------------------------------
-//	NAME: Alexandar Karapenev
-//  CLASS: XIb
-//  NUMBER: 1
-//  PROBLEM: #1
+// NAME: Alexandar Karapenev
+// CLASS: XIb
+// NUMBER: 1
+// PROBLEM: #3
+// FILE NAME: main.c
+// FILE PURPOSE: 
+// Starcraft 3 prototype using threads
+// The goal is to buy 20 seldiers and mine all
+// of the blocks using your miners                       
 //---------------------------------------------
 
 #include<unistd.h>
@@ -176,14 +181,14 @@ int main( int argc, char * argv [] ) {
 			if(input == 'm'){
 				if(MyMinerals >= 50){
 					
-					pthread_mutex_lock(&soldiers_learning);	
+					//pthread_mutex_lock(&soldiers_learning);	
 					
 					sleep(1);
 					MyMinerals -= 50;
 					printf("You wanna piece of me, boy?\n");
 					Soldiers++;
 					
-					pthread_mutex_unlock(&soldiers_learning);
+					//pthread_mutex_unlock(&soldiers_learning);
 					
 				}else{
 					printf("Not enough minerals.\n");
@@ -212,7 +217,7 @@ int main( int argc, char * argv [] ) {
 	}
 	
 	for(int i = 0; i < Miners; i ++){ 
-		pthread_cancel(threads[i]);
+		pthread_join(threads[i], NULL);
 	}
 	
 	for(int i=0;i < Mineral_Blocks_Count;i++){
@@ -225,3 +230,4 @@ int main( int argc, char * argv [] ) {
 	
 	return 0;
 }
+
