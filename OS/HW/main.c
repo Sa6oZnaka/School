@@ -13,7 +13,7 @@
 
 #define MAX_MINERALS 10000
 #define MAX_THREADS 1000
-#define BLOCK_REWARD 500
+#define BLOCK_REWARD 50
 #define WORKER_PAYOUT 8
 
 pthread_mutex_t mutex[MAX_MINERALS];
@@ -48,7 +48,7 @@ void* miner(void *arg){
 			
 	    	int e = 0;
 	    	for(int j = 0;j < Mineral_Blocks_Count;j ++){
-				if(minerals[j] < WORKER_PAYOUT){
+				if(minerals[j] == 0){
 					e++;	
 				}
 	    	}
@@ -66,32 +66,38 @@ void* miner(void *arg){
 	            if(pthread_mutex_trylock(&mutex[i]) == 0){
 	            
 	            	// IS IT EMPTY???
-	            	if(minerals[i] < WORKER_PAYOUT){
+	            	if(minerals[i] == 0){
 	                    blocks[i] = 0;
 	                    continue;
 	                }else{ 
 	                	
+	                	// TEST
+	                	//if(minerals[i] < 8){
+	                	//	printf("KERNEL PANIC!!!!!!!!!!!!!!!!!!!!!!\n \n \n \n \n ");
+	                	//}
+	                	//printf("[TEST] BLOCK CONTAINS %d \n" , minerals[i]);
 	                	
 			            printf("SCV %d is mining from mineral block %d\n", id, (i+1));
-			            minerals[i] -= WORKER_PAYOUT;
 			            
 			            pthread_mutex_unlock(&mutex[i]);
 			            
 			            printf("SCV %d is transporting minerals\n", id);
+			            
+			            sleep(2);
 			            
 			            ////// DELIVER MINERALS //////
 						int delivered = 0;
 						while(delivered != 1){
 							
 					        if(pthread_mutex_trylock(&command_center) == 0){
-					        	sleep(2);
-			
+					        	
 							    if(minerals[i] < WORKER_PAYOUT){
-							    	//MyMinerals += minerals[i];
-							    	//minerals[i] = 0;
+							    	MyMinerals += minerals[i];
+							    	minerals[i] = 0;
 							    	blocks[i] = 0; 
 							  
 							    }else{
+							    	minerals[i] -= WORKER_PAYOUT;
 							    	MyMinerals += WORKER_PAYOUT;
 							    }
 							    printf("SCV %d delivered minerals to the Command center\n", id);
@@ -187,13 +193,6 @@ int main( int argc, char * argv [] ) {
 		
 	}
 	
-	// TEST PRINT
-	//printf("[MAIN] While (in main ENDED) \n");
-	
-	//for(int i = 0;i < Mineral_Blocks_Count;i ++){
-		// TEST
-		//printf("[MAIN] Mineral block %d ( %d / 500) \n", (i+1), minerals[i]);
-	//}
 	
 	for(int i = 0; i < Miners; i ++){ 
 		pthread_cancel(threads[i]);
@@ -203,4 +202,8 @@ int main( int argc, char * argv [] ) {
 	    pthread_mutex_destroy(&mutex[i]);
 	}
 	
+	int N = BLOCK_REWARD * Mineral_Blocks_Count;
+	printf("Map minerals %d, player minerals %d, SCVs %d, Marines %d\n", N, MyMinerals, Miners, Soldiers);
+	
+	return 0;
 }
