@@ -12,7 +12,9 @@
 #include<stdio.h>
 
 #define MAX_MINERALS 10000
-#define MAX_THREADS 10000
+#define MAX_THREADS 1000
+#define BLOCK_REWARD 500
+#define WORKER_PAYOUT 8
 
 pthread_mutex_t mutex[MAX_MINERALS];
 pthread_mutex_t command_center;
@@ -27,70 +29,133 @@ int Miners = 5;
 
 pthread_t threads[MAX_THREADS];
 
+int br = 0;
+
 void* miner(void *arg){
     
     int id = *((int *)arg) - 1;
+    
     int blocks[Mineral_Blocks_Count];
     for(int i = 0;i < Mineral_Blocks_Count;i++){
         blocks[i] = 1;
     }
-    // 0 - empty
-    // 1 - contains gems
-	
-	//printf("THREAD CREATED ID %d \n", id);	
 	
     while(1){
-    	if(Soldiers >= 20) break;
-	    for(int i = 0;i < Mineral_Blocks_Count;i ++){
-	    	if(Soldiers >= 20) break;	
+    	
+    	if(br == 1) break;
+    	
+	    for(int i = 0;i < Mineral_Blocks_Count;i ++){		
+			
+	    	int e = 0;
+	    	for(int j = 0;j < Mineral_Blocks_Count;j ++){
+				if(minerals[j] < WORKER_PAYOUT){
+					e++;	
+				}
+	    	}
+	    	if(e == Mineral_Blocks_Count){
+				br = 1;
+				// TEST PRINT
+				//printf("[MINER] BRAKING!!! IN FOR %d \n", (id+1));
+				
+				break;		
+			}
+	    	
 	        if(blocks[i] == 1){ // if it contains minerals
 	        	sleep(3);
+	        	//// GO TO BLOCK ////////
 	            if(pthread_mutex_trylock(&mutex[i]) == 0){
-	            	if(minerals[i] == 0){
+	            
+	            	// IS IT EMPTY???
+	            	if(minerals[i] < WORKER_PAYOUT){
 	                    blocks[i] = 0;
+	                    continue;
 	                }else{ 
-			            printf("SCV %d is mining from mineral block %d\n", id, i + 1);
+	                	
+	                	
+			            printf("SCV %d is mining from mineral block %d\n", id, (i+1));
+			            minerals[i] -= WORKER_PAYOUT;
+			            
 			            pthread_mutex_unlock(&mutex[i]);
 			            
 			            printf("SCV %d is transporting minerals\n", id);
-			            //sleep(2);
 			            
-			            // deliver the minerals
+			            ////// DELIVER MINERALS //////
 						int delivered = 0;
 						while(delivered != 1){
-						
+							
 					        if(pthread_mutex_trylock(&command_center) == 0){
 					        	sleep(2);
-					        	//printf("M LOCK ------------------\n");
-							    if(minerals[i] < 8){
-							    	MyMinerals += minerals[i];
-							    	minerals[i] = 0; 
+			
+							    if(minerals[i] < WORKER_PAYOUT){
+							    	//MyMinerals += minerals[i];
+							    	//minerals[i] = 0;
+							    	blocks[i] = 0; 
+							  
 							    }else{
-							    	MyMinerals += 8;
-							    	minerals[i] -= 8;
+							    	MyMinerals += WORKER_PAYOUT;
 							    }
 							    printf("SCV %d delivered minerals to the Command center\n", id);
-							    //printf("M UNLOCK ================\n");
+
 							    pthread_mutex_unlock(&command_center);
 							    delivered = 1;
+							    
+							    // TEST PRINT
+							    //printf("[MINER] GOLD - %d  \n", MyMinerals);
+							    //printf("[MINER] MINED FROM BLOCK - %d - (%d / 500) \n", (i+1), minerals[i]);
+							    
 							}    
 	  					}
+	  					///////////////////////////////
 			        }    
 	            }
 	        }
         }
         
 	}	
+	
+	// TETS
+	//printf("[MINER] Thread %d ENDED!!! \n", (id+1) );
 		
 	return NULL;
 }
 
-void *user_commands(void *arg){
 
+int main( int argc, char * argv [] ) {
+    
+    
+    // BLOCKS //
+    if(argc > 1){
+    	Mineral_Blocks_Count = atoi(argv[1]);
+    }else{
+    	Mineral_Blocks_Count = 2;
+    }
+    ////////////
+    
+    for(int i = 0;i < Mineral_Blocks_Count;i ++){
+        minerals[i] = BLOCK_REWARD;
+    }
+	
+	
+	for(int i=0;i < Mineral_Blocks_Count;i++){
+	    pthread_mutex_init(&mutex[i],NULL);
+    }
+    
+    // thread creation
+    for (int i = 0; i < Miners;i ++){
+    	int tmp = i+1;
+	    pthread_create(&threads[i],NULL,miner,&tmp);
+	}
+	
 	while(1){
+	
+		if(br == 1) break;
+		if(Soldiers >= 20) break;
+
 		char input;
 		scanf("%c", &input);
-		if(Soldiers >= 20) break;
+		
+		if(br == 1) break;
+		
 		if(input == 'm'){
 			if(MyMinerals > 50){
 				sleep(1);
@@ -100,9 +165,12 @@ void *user_commands(void *arg){
 			}else{
 				printf("Not enough minerals.\n");
 			}
-			//printf("SOLDIERS: %d", Soldiers);
 			
+			// TEST PRINT
+			//printf("[MAIN] Soldiers: %d !!!\n", Soldiers);
+
 		}
+
 		if(input == 's'){
 			if(MyMinerals > 50){
 				pthread_mutex_lock(&miners_learning); // LOCK MUTEX
@@ -118,42 +186,17 @@ void *user_commands(void *arg){
 		}
 		
 	}
-
-	return NULL;
-}
-
-
-int main( int argc, char * argv [] ) {
-    
-    
-    // BLOCKS //
-    if(argc > 1){
-    	Mineral_Blocks_Count = atoi(argv[1]);
-    }else{
-    	Mineral_Blocks_Count = 2;
-    }
-    //printf("ARGUMENT (BLOCKS) - %d \n \n", Mineral_Blocks_Count);
-    ///////////
-    
-    pthread_create(&threads[0],NULL,user_commands,NULL);
-    
-    for(int i = 0;i < Mineral_Blocks_Count;i ++){
-        minerals[i] = 500;
-    }
 	
-	for(int i=0;i < Mineral_Blocks_Count;i++){
-	    pthread_mutex_init(&mutex[i],NULL);
-    }
-    
-    for (int i = 1; i <= Miners;i ++){
-    	printf("%p %d \n", &i, i);
-	    pthread_create(&threads[i],NULL,miner,&i);
-	    //sleep(1);
-	}
-
+	// TEST PRINT
+	//printf("[MAIN] While (in main ENDED) \n");
 	
-	for(int i = 0; i<= Miners; i ++){ 
-		pthread_join(threads[i],NULL);
+	//for(int i = 0;i < Mineral_Blocks_Count;i ++){
+		// TEST
+		//printf("[MAIN] Mineral block %d ( %d / 500) \n", (i+1), minerals[i]);
+	//}
+	
+	for(int i = 0; i < Miners; i ++){ 
+		pthread_cancel(threads[i]);
 	}
 	
 	for(int i=0;i < Mineral_Blocks_Count;i++){
