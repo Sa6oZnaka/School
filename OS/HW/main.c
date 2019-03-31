@@ -13,7 +13,7 @@
 
 #define MAX_MINERALS 10000
 #define MAX_THREADS 1000
-#define BLOCK_REWARD 50
+#define BLOCK_REWARD 500
 #define WORKER_PAYOUT 8
 
 pthread_mutex_t mutex[MAX_MINERALS];
@@ -203,6 +203,7 @@ int main( int argc, char * argv [] ) {
 	}
 	
 	int N = BLOCK_REWARD * Mineral_Blocks_Count;
+	
 	printf("Map minerals %d, player minerals %d, SCVs %d, Marines %d\n", N, MyMinerals, Miners, Soldiers);
 	
 	return 0;
