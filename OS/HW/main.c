@@ -38,6 +38,12 @@ pthread_t threads[MAX_THREADS];
 int br = 0;
 int sol = 0;
 
+//--------------------------------------------
+// FUNCTION: miner
+// Workers (threads) they are mining minerals from blocks (mutex)
+// PARAMETERS:
+// none
+//----------------------------------------------
 void* miner(void *arg){
     
     int id = *((int *)arg) - 1;
@@ -61,29 +67,18 @@ void* miner(void *arg){
 	    	}
 	    	if(e == Mineral_Blocks_Count){
 				br = 1;
-				// TEST PRINT
-				// printf("[MINER] BRAKING!!! IN FOR %d \n", (id+1));
-				
 				break;		
 			}
 	    	
 	        if(blocks[i] == 1){ // if it contains minerals
 	        	sleep(3);
-	        	//// GO TO BLOCK ////////
 	            if(pthread_mutex_trylock(&mutex[i]) == 0){
-	            
-	            	// IS IT EMPTY???
+
 	            	if(minerals[i] == 0){
 	                    blocks[i] = 0;
 	                    continue;
 	                }else{ 
-	                	
-	                	// TEST
-	                	//if(minerals[i] < 8){
-	                	//	printf("KERNEL PANIC!!!!!!!!!!!!!!!!!!!!!!\n \n \n \n \n ");
-	                	//}
-	                	//printf("[TEST] BLOCK CONTAINS %d \n" , minerals[i]);
-	                	
+	        
 			            printf("SCV %d is mining from mineral block %d\n", id, (i+1));
 			            
 			            int reward = 0;
@@ -103,7 +98,6 @@ void* miner(void *arg){
 			            
 			            sleep(2);
 			            
-			            ////// DELIVER MINERALS //////
 						int delivered = 0;
 						while(delivered != 1){
 							
@@ -116,10 +110,6 @@ void* miner(void *arg){
 							    pthread_mutex_unlock(&command_center);
 							    delivered = 1;
 							    
-							    // TEST PRINT
-							    //printf("[MINER] GOLD - %d  \n", MyMinerals);
-							    //printf("[MINER] MINED FROM BLOCK - %d - (%d / 500) \n", (i+1), minerals[i]);
-							    
 							}    
 	  					}
 			        }    
@@ -128,14 +118,17 @@ void* miner(void *arg){
         }
         
 	}	
-	
-	// TETS
-	//printf("[MINER] Thread %d ENDED!!! \n", (id+1) );
 		
 	return NULL;
 }
 
-
+//--------------------------------------------
+// FUNCTION: main
+// Input and thrad creation/join
+// PARAMETERS:
+// argc - num of arguments
+// argv - arguments 
+//----------------------------------------------
 int main( int argc, char * argv [] ) {
     
     
@@ -177,14 +170,14 @@ int main( int argc, char * argv [] ) {
 			if(input == 'm'){
 				if(MyMinerals >= 50){
 					
-					pthread_mutex_lock(&soldiers_learning);	
+					//pthread_mutex_lock(&soldiers_learning);	
 					
 					sleep(1);
 					MyMinerals -= 50;
 					printf("You wanna piece of me, boy?\n");
 					Soldiers++;
 					
-					pthread_mutex_unlock(&soldiers_learning);
+					//pthread_mutex_unlock(&soldiers_learning);
 					
 				}else{
 					printf("Not enough minerals.\n");
