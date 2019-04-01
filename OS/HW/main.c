@@ -122,7 +122,6 @@ void* miner(void *arg){
 							    
 							}    
 	  					}
-	  					///////////////////////////////
 			        }    
 	            }
 	        }
@@ -172,31 +171,25 @@ int main( int argc, char * argv [] ) {
 		char input;
 		scanf("%c", &input);
 		
-		//input = getchar();
-		
-		if(br == 1 && sol == 1) break;
-		
+		if(br == 1 && sol == 1) break;	
 		
 		if(Miners + Soldiers < 200){
 			if(input == 'm'){
 				if(MyMinerals >= 50){
 					
-					//pthread_mutex_lock(&soldiers_learning);	
+					pthread_mutex_lock(&soldiers_learning);	
 					
 					sleep(1);
 					MyMinerals -= 50;
 					printf("You wanna piece of me, boy?\n");
 					Soldiers++;
 					
-					//pthread_mutex_unlock(&soldiers_learning);
+					pthread_mutex_unlock(&soldiers_learning);
 					
 				}else{
 					printf("Not enough minerals.\n");
 				}
 				
-				// TEST PRINT
-				//printf("[MAIN] Soldiers: %d !!!\n", Soldiers);
-
 			}
 
 			if(input == 's'){
@@ -230,5 +223,4 @@ int main( int argc, char * argv [] ) {
 	
 	return 0;
 }
-
 
