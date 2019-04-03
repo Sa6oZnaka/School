@@ -34,7 +34,7 @@ public class DeckFactory {
 
 		for (Suit suit : Suit.values()) {
 			for (Rank rank : Rank.values()) {
-				if (rank.ordinal() > Rank.SIX.ordinal()) {
+				if (rank.ordinal() >= Rank.NINE.ordinal()) {
 					cards.add(new BasicCard(rank , suit));
 				}
 			}
@@ -59,7 +59,7 @@ public class DeckFactory {
 
 		for (Suit suit : Suit.values()) {
 			for (Rank rank : Rank.values()) {
-				if (rank.ordinal() > Rank.SEVEN.ordinal()) {
+				if (rank.ordinal() >= Rank.SEVEN.ordinal()) {
 					cards.add(new BasicCard(rank , suit));
 				}
 			}
