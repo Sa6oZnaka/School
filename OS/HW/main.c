@@ -72,6 +72,9 @@ void* miner(void *arg){
 	    	
 	        if(blocks[i] == 1){ // if it contains minerals
 	        	sleep(3);
+	        	
+	        	if(br == 1 && sol == 1) break;
+	        	
 	            if(pthread_mutex_trylock(&mutex[i]) == 0){
 
 	            	if(minerals[i] == 0){
@@ -100,6 +103,8 @@ void* miner(void *arg){
 			            
 						int delivered = 0;
 						while(delivered != 1){
+
+							if(br == 1 && sol == 1) break;
 							
 					        if(pthread_mutex_trylock(&command_center) == 0){
 					        	

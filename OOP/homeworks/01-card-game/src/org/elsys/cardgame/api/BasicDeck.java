@@ -35,27 +35,27 @@ public class BasicDeck implements Deck{
     @Override
     public Card drawTopCard(){
         Card result;
-        result = myDeck.get(size() - 1);
-        myDeck.remove(size() - 1);
-        return result;
-    }
-
-    @Override
-    public Card topCard(){
-        return myDeck.get(size() - 1);
-    }
-
-    @Override
-    public Card drawBottomCard(){
-        Card result;
         result = myDeck.get(0);
         myDeck.remove(0);
         return result;
     }
 
     @Override
-    public Card bottomCard(){
+    public Card topCard(){
         return myDeck.get(0);
+    }
+
+    @Override
+    public Card drawBottomCard(){
+        Card result;
+        result = myDeck.get(size() - 1);
+        myDeck.remove(size() - 1);
+        return result;
+    }
+
+    @Override
+    public Card bottomCard(){
+        return myDeck.get(size() - 1);
     }
 
     @Override
