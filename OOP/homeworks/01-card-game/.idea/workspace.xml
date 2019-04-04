@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7bcea0a5-b996-430a-a19d-f2ed17d04685" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/org/elsys/cardgame/api/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/elsys/cardgame/api/Operation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/elsys/cardgame/factory/GameFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/org/elsys/cardgame/factory/DeckFactory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/org/elsys/cardgame/factory/DeckFactory$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/org/elsys/cardgame/factory/DeckFactory$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/org/elsys/cardgame/factory/DeckFactory$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/org/elsys/cardgame/factory/DeckFactory$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/org/elsys/cardgame/factory/DeckFactory$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/org/elsys/cardgame/factory/DeckFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/org/elsys/cardgame/factory/DeckFactory.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/elsys/cardgame/factory/DeckFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/elsys/cardgame/factory/DeckFactory.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
@@ -38,8 +45,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/elsys/cardgame/api/BasicDeck.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="57" column="36" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="36" />
+            <state relative-caret-position="342">
+              <caret line="77" column="61" lean-forward="true" selection-start-line="77" selection-start-column="17" selection-end-line="77" selection-end-column="61" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -48,28 +55,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/org/elsys/cardgame/deck/WarDeckTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/elsys/cardgame/api/Deck.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/org/elsys/cardgame/deck/AbstractDeckTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="860">
-              <caret line="77" selection-start-line="77" selection-end-line="77" />
+            <state relative-caret-position="216">
+              <caret line="63" column="35" selection-start-line="63" selection-start-column="35" selection-end-line="63" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -77,8 +66,38 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/elsys/cardgame/factory/DeckFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="39" column="13" lean-forward="true" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
+            <state relative-caret-position="480">
+              <caret line="38" column="13" lean-forward="true" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/elsys/cardgame/api/Game.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/elsys/cardgame/api/Operation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/elsys/cardgame/factory/GameFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -98,17 +117,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/elsys/cardgame/api/BasicHand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/elsys/cardgame/api/Card.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+            <state relative-caret-position="210">
+              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -137,6 +147,7 @@
       <find>hands</find>
       <find>ordi</find>
       <find>this</find>
+      <find>compa</find>
       <find>top</find>
     </findStrings>
   </component>
@@ -151,6 +162,9 @@
         <option value="$PROJECT_DIR$/src/org/elsys/cardgame/api/BasicCard.java" />
         <option value="$PROJECT_DIR$/src/org/elsys/cardgame/api/BasicHand.java" />
         <option value="$PROJECT_DIR$/src/org/elsys/cardgame/api/BasicDeck.java" />
+        <option value="$PROJECT_DIR$/src/org/elsys/cardgame/api/Game.java" />
+        <option value="$PROJECT_DIR$/src/org/elsys/cardgame/factory/GameFactory.java" />
+        <option value="$PROJECT_DIR$/src/org/elsys/cardgame/api/Operation.java" />
         <option value="$PROJECT_DIR$/src/org/elsys/cardgame/factory/DeckFactory.java" />
       </list>
     </option>
@@ -219,7 +233,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554291448327" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554366878763" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/hamcrest-core-1.3.jar!/" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -251,12 +265,47 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AbstractDeckTest and 3 more (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="01-card-game" />
+      <option name="TEST_OBJECT" value="pattern" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <patterns>
+        <pattern testClass="org.elsys.cardgame.deck.AbstractDeckTest" />
+        <pattern testClass="org.elsys.cardgame.deck.SantaseDeckTest" />
+        <pattern testClass="org.elsys.cardgame.deck.WarDeckTest" />
+        <pattern testClass="org.elsys.cardgame.deck.BeloteDeckTest" />
+      </patterns>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AbstractDeckTest and 3 more" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="01-card-game" />
       <option name="TEST_OBJECT" value="pattern" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <patterns>
         <pattern testClass="org.elsys.cardgame.deck.AbstractDeckTest" />
+        <pattern testClass="org.elsys.cardgame.deck.BeloteDeckTest" />
+        <pattern testClass="org.elsys.cardgame.deck.SantaseDeckTest" />
+        <pattern testClass="org.elsys.cardgame.deck.WarDeckTest" />
+      </patterns>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BeloteDeckTest and 2 more" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="01-card-game" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.elsys.cardgame.deck.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.elsys.cardgame.deck" />
+      <option name="MAIN_CLASS_NAME" value="org.elsys.cardgame.deck.AbstractDeckTest" />
+      <option name="TEST_OBJECT" value="pattern" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <patterns>
         <pattern testClass="org.elsys.cardgame.deck.BeloteDeckTest" />
         <pattern testClass="org.elsys.cardgame.deck.SantaseDeckTest" />
         <pattern testClass="org.elsys.cardgame.deck.WarDeckTest" />
@@ -279,50 +328,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BeloteDeckTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="WarDeckTest and 3 more" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="01-card-game" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.elsys.cardgame.deck.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.elsys.cardgame.deck" />
-      <option name="MAIN_CLASS_NAME" value="org.elsys.cardgame.deck.BeloteDeckTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="pattern" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SantaseDeckTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="01-card-game" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.elsys.cardgame.deck.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.elsys.cardgame.deck" />
-      <option name="MAIN_CLASS_NAME" value="org.elsys.cardgame.deck.SantaseDeckTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WarDeckTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="01-card-game" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.elsys.cardgame.deck.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.elsys.cardgame.deck" />
-      <option name="MAIN_CLASS_NAME" value="org.elsys.cardgame.deck.WarDeckTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <patterns>
+        <pattern testClass="org.elsys.cardgame.deck.WarDeckTest" />
+        <pattern testClass="org.elsys.cardgame.deck.BeloteDeckTest" />
+        <pattern testClass="org.elsys.cardgame.deck.AbstractDeckTest" />
+        <pattern testClass="org.elsys.cardgame.deck.SantaseDeckTest" />
+      </patterns>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -368,10 +383,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.AbstractDeckTest and 3 more" />
+        <item itemvalue="JUnit.BeloteDeckTest and 2 more" />
+        <item itemvalue="JUnit.BeloteDeckTest and 2 more" />
+        <item itemvalue="JUnit.AbstractDeckTest and 3 more (1)" />
         <item itemvalue="JUnit.BeloteDeckTest and 3 more" />
-        <item itemvalue="JUnit.BeloteDeckTest" />
-        <item itemvalue="JUnit.WarDeckTest" />
-        <item itemvalue="JUnit.SantaseDeckTest" />
       </list>
     </recent_temporary>
   </component>
@@ -389,34 +404,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AbstractDeckTest_and_3_more - 2019.04.03 at 14h 20m 27s.xml">
+    <history-entry file="AbstractDeckTest_and_3_more - 2019.04.04 at 11h 11m 15s.xml">
       <configuration name="AbstractDeckTest and 3 more" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AbstractDeckTest_and_3_more - 2019.04.03 at 14h 20m 57s.xml">
+    <history-entry file="AbstractDeckTest_and_3_more - 2019.04.04 at 11h 11m 37s.xml">
       <configuration name="AbstractDeckTest and 3 more" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AbstractDeckTest_and_3_more - 2019.04.03 at 14h 25m 36s.xml">
+    <history-entry file="AbstractDeckTest_and_3_more - 2019.04.04 at 11h 11m 52s.xml">
       <configuration name="AbstractDeckTest and 3 more" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AbstractDeckTest_and_3_more - 2019.04.03 at 14h 25m 55s.xml">
+    <history-entry file="AbstractDeckTest_and_3_more - 2019.04.04 at 11h 11m 59s.xml">
       <configuration name="AbstractDeckTest and 3 more" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AbstractDeckTest_and_3_more - 2019.04.03 at 14h 32m 59s.xml">
+    <history-entry file="BeloteDeckTest_and_2_more - 2019.04.04 at 11h 17m 52s.xml">
+      <configuration name="BeloteDeckTest and 2 more" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BeloteDeckTest_and_2_more - 2019.04.04 at 11h 21m 29s.xml">
+      <configuration name="BeloteDeckTest and 2 more" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AbstractDeckTest_and_3_more - 2019.04.04 at 11h 22m 55s.xml">
       <configuration name="AbstractDeckTest and 3 more" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AbstractDeckTest_and_3_more - 2019.04.03 at 14h 33m 05s.xml">
+    <history-entry file="AbstractDeckTest_and_3_more - 2019.04.04 at 11h 28m 30s.xml">
       <configuration name="AbstractDeckTest and 3 more" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AbstractDeckTest_and_3_more - 2019.04.03 at 14h 33m 08s.xml">
+    <history-entry file="AbstractDeckTest_and_3_more - 2019.04.04 at 11h 28m 38s.xml">
       <configuration name="AbstractDeckTest and 3 more" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BeloteDeckTest_and_3_more - 2019.04.03 at 14h 33m 17s.xml">
-      <configuration name="BeloteDeckTest and 3 more" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AbstractDeckTest_and_3_more - 2019.04.03 at 14h 36m 59s.xml">
-      <configuration name="AbstractDeckTest and 3 more" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AbstractDeckTest_and_3_more - 2019.04.03 at 14h 37m 03s.xml">
+    <history-entry file="AbstractDeckTest_and_3_more - 2019.04.04 at 11h 32m 37s.xml">
       <configuration name="AbstractDeckTest and 3 more" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -433,7 +448,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.3247768" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.28125" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39955357" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -489,13 +504,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/elsys/cardgame/api/Card.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/org/elsys/cardgame/deck/WarDeckTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -503,24 +511,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/org/elsys/cardgame/deck/AbstractDeckTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="860">
-          <caret line="77" selection-start-line="77" selection-end-line="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/elsys/cardgame/api/Rank.java">
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/cardgame/api/Card.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/elsys/cardgame/api/Suit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -531,13 +525,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/elsys/cardgame/api/BasicDeck.java">
+    <entry file="file://$PROJECT_DIR$/test/org/elsys/cardgame/deck/AbstractDeckTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="57" column="36" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="216">
+          <caret line="63" column="35" selection-start-line="63" selection-start-column="35" selection-end-line="63" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/cardgame/api/Suit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/cardgame/api/Rank.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/cardgame/api/Operation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -552,17 +564,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/cardgame/api/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/elsys/cardgame/api/BasicHand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        <state relative-caret-position="210">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/cardgame/api/BasicDeck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="77" column="61" lean-forward="true" selection-start-line="77" selection-start-column="17" selection-end-line="77" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/cardgame/factory/GameFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/elsys/cardgame/factory/DeckFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="39" column="13" lean-forward="true" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
+        <state relative-caret-position="480">
+          <caret line="38" column="13" lean-forward="true" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
