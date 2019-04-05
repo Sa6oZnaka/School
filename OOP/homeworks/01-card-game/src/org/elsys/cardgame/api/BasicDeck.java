@@ -42,6 +42,7 @@ public class BasicDeck implements Deck{
 
     @Override
     public Card topCard(){
+        check();
         return myDeck.get(0);
     }
 
@@ -60,12 +61,12 @@ public class BasicDeck implements Deck{
 
     @Override
     public Hand deal() {
-
-        List<Card> result = new ArrayList<>(myDeck.subList(0, myHandSize));
-        for(int i=0; i < myHandSize;i ++){
-            myDeck.remove(i);
+        List<Card> result = new ArrayList<Card>();
+        for(int i = 0;i < myHandSize;i ++){
+            Card tmp = drawTopCard();
+            result.add(tmp);
         }
-        return new BasicHand(result, myHandSize);
+        return new BasicHand(result ,myHandSize);
     }
 
     @Override
@@ -84,5 +85,13 @@ public class BasicDeck implements Deck{
     public void shuffle(){
         Collections.shuffle(myDeck);
     }
+
+    private void check() throws CardException{
+        if(this.myDeck.size() == 0) {
+            //throw new CardException("ERROR: Not enough cards in deck");
+            throw new CardException();
+        }
+    }
+
 
 }

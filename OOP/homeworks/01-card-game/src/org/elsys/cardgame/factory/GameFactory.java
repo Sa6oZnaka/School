@@ -2,23 +2,28 @@ package org.elsys.cardgame.factory;
 
 import java.util.List;
 
-import org.elsys.cardgame.api.Card;
-import org.elsys.cardgame.api.Game;
+import org.elsys.cardgame.api.*;
 
 public class GameFactory {
 
     public static Game createWarGame(List<Card> cards) {
-        // TODO
-        return null;
+
+        Deck WarDeck = DeckFactory.defaultWarDeck();
+        return new BasicGame(WarDeck);
+
     }
 
     public static Game createSantaseGame(List<Card> cards) {
-        // TODO
-        return null;
+
+        Deck SantaseDeck = DeckFactory.defaultWarDeck();
+        return new BasicGame(SantaseDeck);
+
     }
 
     public static Game createBeloteGame(List<Card> cards) {
-        // TODO
-        return null;
+
+        Deck BelotDeck = DeckFactory.defaultWarDeck();
+        return new BasicGame(BelotDeck);
+
     }
 }

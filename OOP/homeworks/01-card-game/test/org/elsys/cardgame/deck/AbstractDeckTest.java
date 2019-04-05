@@ -97,5 +97,4 @@ public abstract class AbstractDeckTest {
 		assertEquals("Card is correct", ranks.get(ranks.size() - 1), card.getRank());
 		assertEquals("Card suit is correct", Suit.SPADES, card.getSuit());
 	}
-
 }
