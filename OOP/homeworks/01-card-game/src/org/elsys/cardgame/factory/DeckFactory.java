@@ -18,10 +18,11 @@ public class DeckFactory {
 		Comparator<Card> cmp = new Comparator<Card>() {
 			@Override
 			public int compare(Card card1, Card card2) {
-
-				return card1.getRank().ordinal() - card2.getRank().ordinal();
-
-
+				if( card1.getSuit().ordinal() == card2.getSuit().ordinal()) {
+					return card1.getRank().ordinal() - card2.getRank().ordinal();
+				}else{
+					return card1.getSuit().ordinal() - card2.getSuit().ordinal();
+				}
 			}
 		};
 
@@ -67,7 +68,7 @@ public class DeckFactory {
 		Comparator<Card> cmp = new Comparator<Card>() {
 			@Override
 			public int compare(Card card1, Card card2) {
-				if(card1.getSuit().ordinal() == card2.getSuit().ordinal()) {
+				if(card1.getSuit().ordinal() != card2.getSuit().ordinal()) {
 					return card1.getSuit().ordinal() - card2.getSuit().ordinal();
 				}else{
 					return card1.getRank().ordinal() - card2.getRank().ordinal();

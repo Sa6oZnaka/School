@@ -20,4 +20,18 @@ public class BasicCard implements Card{
         return myRank;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null)
+            return false;
+
+        if (obj == this)
+            return true;
+
+        if (! (obj instanceof Card) )
+            return false;
+
+        Card otherCard = (Card)obj;
+        return otherCard.getRank().getSymbol().equals(this.getRank().getSymbol()) && otherCard.getSuit().getSymbol().equals(this.getSuit().getSymbol());
+    }
 }
