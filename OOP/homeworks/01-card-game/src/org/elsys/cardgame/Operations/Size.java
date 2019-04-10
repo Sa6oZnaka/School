@@ -1,21 +1,21 @@
-package org.elsys.cardgame.api.Operations;
+package org.elsys.cardgame.Operations;
 
 import org.elsys.cardgame.api.BasicDeck;
 import org.elsys.cardgame.api.BasicOperation;
 
-public class BottomCard extends BasicOperation {
+public class Size extends BasicOperation {
 
     private BasicDeck myDeck;
 
-    BottomCard(BasicDeck deck){
-        super("bottom_card");
+    Size(BasicDeck deck){
+        super("size");
 
         this.myDeck = deck;
     }
 
     @Override
     public void execute(){
-        System.out.println( myDeck.bottomCard() );
+        System.out.println( myDeck.size() );
     }
 
 }

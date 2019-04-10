@@ -1,5 +1,8 @@
 package org.elsys.cardgame.api;
 
+
+import org.elsys.cardgame.Operations.Size;
+
 public class BasicOperation implements Operation{
 
 
@@ -14,9 +17,10 @@ public class BasicOperation implements Operation{
         return name;
     }
 
-    @Override
-    public void execute() {
-        // TODO
+    //@Override
+    public void execute(){
+
+
     }
 
 }

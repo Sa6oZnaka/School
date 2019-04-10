@@ -8,7 +8,6 @@ public class BasicGame implements Game {
     private Deck myDeck;
     private Hand myHand;
 
-
     private List<Operation> MyOperations = new ArrayList<>();
 
     public BasicGame(Deck deck) {

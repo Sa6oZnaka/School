@@ -1,4 +1,4 @@
-package org.elsys.cardgame.api.Operations;
+package org.elsys.cardgame.Operations;
 
 import org.elsys.cardgame.api.BasicDeck;
 import org.elsys.cardgame.api.BasicOperation;

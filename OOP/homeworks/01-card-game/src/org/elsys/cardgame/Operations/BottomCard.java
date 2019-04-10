@@ -1,21 +1,21 @@
-package org.elsys.cardgame.api.Operations;
+package org.elsys.cardgame.Operations;
 
 import org.elsys.cardgame.api.BasicDeck;
 import org.elsys.cardgame.api.BasicOperation;
 
-public class Sort extends BasicOperation {
+public class BottomCard extends BasicOperation {
 
     private BasicDeck myDeck;
 
-    Sort(BasicDeck deck){
-        super("sort");
+    BottomCard(BasicDeck deck){
+        super("bottom_card");
 
         this.myDeck = deck;
     }
 
     @Override
     public void execute(){
-        myDeck.sort();
+        System.out.println( myDeck.bottomCard() );
     }
 
 }

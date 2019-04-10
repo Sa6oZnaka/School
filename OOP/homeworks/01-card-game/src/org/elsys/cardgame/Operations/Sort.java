@@ -1,21 +1,21 @@
-package org.elsys.cardgame.api.Operations;
+package org.elsys.cardgame.Operations;
 
 import org.elsys.cardgame.api.BasicDeck;
 import org.elsys.cardgame.api.BasicOperation;
 
-public class Suffle extends BasicOperation {
+public class Sort extends BasicOperation {
 
     private BasicDeck myDeck;
 
-    Suffle(BasicDeck deck){
-        super("shuffle");
+    Sort(BasicDeck deck){
+        super("sort");
 
         this.myDeck = deck;
     }
 
     @Override
     public void execute(){
-        myDeck.shuffle();
+        myDeck.sort();
     }
 
 }
