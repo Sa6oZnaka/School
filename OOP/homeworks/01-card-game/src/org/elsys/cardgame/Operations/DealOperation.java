@@ -4,19 +4,19 @@ import org.elsys.cardgame.api.BasicDeck;
 import org.elsys.cardgame.api.BasicOperation;
 import org.elsys.cardgame.api.Deck;
 
-public class Size extends BasicOperation {
+public class DealOperation extends BasicOperation {
 
     private Deck myDeck;
 
-    public Size(Deck deck){
-        super("size");
+    public DealOperation(Deck deck){
+        super("deal");
 
         this.myDeck = deck;
     }
 
     @Override
     public void execute(){
-        System.out.println( this.myDeck.size() );
+        System.out.println( myDeck.deal() );
     }
 
 }

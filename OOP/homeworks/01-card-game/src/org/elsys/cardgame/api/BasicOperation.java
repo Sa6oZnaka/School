@@ -1,8 +1,6 @@
 package org.elsys.cardgame.api;
 
 
-import org.elsys.cardgame.Operations.Size;
-
 public class BasicOperation implements Operation{
 
 

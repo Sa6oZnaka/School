@@ -2,12 +2,13 @@ package org.elsys.cardgame.Operations;
 
 import org.elsys.cardgame.api.BasicDeck;
 import org.elsys.cardgame.api.BasicOperation;
+import org.elsys.cardgame.api.Deck;
 
 public class Shuffle extends BasicOperation {
 
-    private BasicDeck myDeck;
+    private Deck myDeck;
 
-    Shuffle(BasicDeck deck){
+    public Shuffle(Deck deck){
         super("shuffle");
 
         this.myDeck = deck;

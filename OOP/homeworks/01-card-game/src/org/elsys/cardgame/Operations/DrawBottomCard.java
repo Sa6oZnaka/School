@@ -2,12 +2,14 @@ package org.elsys.cardgame.Operations;
 
 import org.elsys.cardgame.api.BasicDeck;
 import org.elsys.cardgame.api.BasicOperation;
+import org.elsys.cardgame.api.Card;
+import org.elsys.cardgame.api.Deck;
 
 public class DrawBottomCard extends BasicOperation {
 
-    private BasicDeck myDeck;
+    private Deck myDeck;
 
-    DrawBottomCard(BasicDeck deck){
+    public DrawBottomCard(Deck deck){
         super("draw_bottom_card");
 
         this.myDeck = deck;
@@ -15,7 +17,8 @@ public class DrawBottomCard extends BasicOperation {
 
     @Override
     public void execute(){
-        System.out.println( myDeck.drawBottomCard() );
+        Card c = myDeck.drawBottomCard();
+        System.out.println( c.getSuit() + "" + c.getRank() );
     }
 
 }

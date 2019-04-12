@@ -2,12 +2,13 @@ package org.elsys.cardgame.Operations;
 
 import org.elsys.cardgame.api.BasicDeck;
 import org.elsys.cardgame.api.BasicOperation;
+import org.elsys.cardgame.api.Deck;
 
 public class Sort extends BasicOperation {
 
-    private BasicDeck myDeck;
+    private Deck myDeck;
 
-    Sort(BasicDeck deck){
+    public Sort(Deck deck){
         super("sort");
 
         this.myDeck = deck;
@@ -15,7 +16,9 @@ public class Sort extends BasicOperation {
 
     @Override
     public void execute(){
-        myDeck.sort();
+        if(myDeck.size() > 0) {
+            myDeck.sort();
+        }
     }
 
 }
