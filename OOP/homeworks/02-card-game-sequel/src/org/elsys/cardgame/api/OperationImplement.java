@@ -18,16 +18,8 @@ public class OperationImplement implements Operation{
     }
 
     @Override
-    public void execute(){
+    public void execute() {
 
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        OperationImplement that = (OperationImplement) o;
-        return Objects.equals(name, that.name);
     }
 
 }
