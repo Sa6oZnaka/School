@@ -15,7 +15,7 @@ public class Size extends BasicOperation {
 
     @Override
     public void execute(){
-        System.out.println( myDeck.size() );
+        System.out.println( this.myDeck.size() );
     }
 
 }

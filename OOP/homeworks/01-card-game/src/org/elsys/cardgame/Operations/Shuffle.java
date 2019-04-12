@@ -3,11 +3,11 @@ package org.elsys.cardgame.Operations;
 import org.elsys.cardgame.api.BasicDeck;
 import org.elsys.cardgame.api.BasicOperation;
 
-public class Suffle extends BasicOperation {
+public class Shuffle extends BasicOperation {
 
     private BasicDeck myDeck;
 
-    Suffle(BasicDeck deck){
+    Shuffle(BasicDeck deck){
         super("shuffle");
 
         this.myDeck = deck;
