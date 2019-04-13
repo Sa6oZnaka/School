@@ -58,15 +58,6 @@ public class Main {
             game = GameFactory.createWarGame(cardsArr);
         }
 
-        game.addOperation(new BottomCard(game.getDeck()));
-        game.addOperation(new DealOperation(game.getDeck()));
-        game.addOperation(new DrawBottomCard(game.getDeck()));
-        game.addOperation(new DrawTopCard(game.getDeck()));
-        game.addOperation(new Shuffle(game.getDeck()));
-        game.addOperation(new Size(game.getDeck()));
-        game.addOperation(new Sort(game.getDeck()));
-        game.addOperation(new TopCard(game.getDeck()));
-
         while(scanner.hasNext()){
             String input = scanner.nextLine();
             if(input.equals("quit")) break;
