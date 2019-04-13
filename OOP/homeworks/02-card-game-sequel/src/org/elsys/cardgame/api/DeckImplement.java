@@ -44,6 +44,7 @@ public class DeckImplement implements Deck{
 
     @Override
     public Card topCard(){
+        checkDraw();
         return myDeck.get(0);
     }
 
@@ -59,12 +60,14 @@ public class DeckImplement implements Deck{
 
     @Override
     public Card bottomCard(){
+        checkDraw();
         return myDeck.get(size() - 1);
     }
 
     @Override
     public Hand deal() {
         checkDeal();
+        printCards(0, myHandSize);
 
         List<Card> result = new ArrayList<Card>();
         for(int i = 0;i < myHandSize;i ++){
@@ -77,11 +80,13 @@ public class DeckImplement implements Deck{
     @Override
     public void sort(){
         myDeck.sort(cmp);
+        printCards(0, size());
     }
 
     @Override
     public void shuffle(){
         Collections.shuffle(myDeck);
+        printCards(0, size());
     }
 
     private void checkDraw() throws CardException{
@@ -95,5 +100,13 @@ public class DeckImplement implements Deck{
             throw new CardException();
         }
     }
+
+    public void printCards(int from, int to){
+        for(int i = from;i < to;i ++){
+            System.out.print(myDeck.get(i).getSuit() + "" + myDeck.get(i).getRank() + " ");
+        }
+        System.out.println();
+    }
+
 
 }

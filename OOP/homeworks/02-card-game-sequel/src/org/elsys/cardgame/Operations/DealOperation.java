@@ -15,7 +15,7 @@ public class DealOperation extends OperationImplement {
 
     @Override
     public void execute(){
-        System.out.println( myDeck.deal() );
+        myDeck.deal();
     }
 
 }
