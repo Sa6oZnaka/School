@@ -1,6 +1,8 @@
 package org.elsys.cardgame.Operations;
 
-import org.elsys.cardgame.api.*;
+import org.elsys.cardgame.api.Card;
+import org.elsys.cardgame.api.OperationImplement;
+import org.elsys.cardgame.api.Deck;
 
 public class DrawTopCard extends OperationImplement {
 

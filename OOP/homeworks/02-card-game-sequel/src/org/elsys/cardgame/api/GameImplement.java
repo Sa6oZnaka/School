@@ -2,6 +2,7 @@ package org.elsys.cardgame.api;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class GameImplement implements Game {
 
@@ -42,6 +43,5 @@ public class GameImplement implements Game {
     public void addOperation(Operation operation) {
         MyOperations.add(operation);
     }
-
-
+    
 }
