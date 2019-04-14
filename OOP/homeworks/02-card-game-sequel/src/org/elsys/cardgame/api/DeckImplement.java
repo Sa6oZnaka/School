@@ -91,13 +91,13 @@ public class DeckImplement implements Deck{
 
     private void checkDraw() throws CardException{
         if(this.myDeck.size() == 0) {
-            throw new CardException();
+            throw new CardException("ERROR: Not enough cards in deck");
         }
     }
 
     private void checkDeal() throws CardException{
         if(this.myDeck.size() < myHandSize) {
-            throw new CardException();
+            throw new CardException("ERROR: Not enough cards in deck");
         }
     }
 

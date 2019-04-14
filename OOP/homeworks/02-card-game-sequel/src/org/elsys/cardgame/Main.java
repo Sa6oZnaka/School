@@ -65,7 +65,7 @@ public class Main {
                 if (game != null) {
                     game.process(input);
                 } else {
-                    System.out.println("ERROR: Deck not initialed");
+                    System.out.println("ERROR: No deck");
                 }
             }
         }
@@ -76,17 +76,21 @@ public class Main {
 
         Deck defaultDeck;
         DeckImplement testDeck;
+        int handsize;
 
         if(type.equals("Santase")) {
             defaultDeck = DeckFactory.defaultSantaseDeck();
             testDeck = new DeckImplement(testCards, 6, DeckFactory.cmp());
+            handsize = 6;
         }
         else if(type.equals("Belote")) {
             defaultDeck = DeckFactory.defaultBeloteDeck();
             testDeck = new DeckImplement(testCards, 8, DeckFactory.cmp());
+            handsize = 8;
         }else{
             defaultDeck = DeckFactory.defaultWarDeck();
             testDeck = new DeckImplement(testCards, 26, DeckFactory.cmp());
+            handsize = 26;
         }
 
         testDeck.sort();
@@ -117,17 +121,17 @@ public class Main {
                 }
             }
 
-            DeckImplement finalDeck = new DeckImplement(cardsArr, 6, DeckFactory.cmp());
+            DeckImplement finalDeck = new DeckImplement(cardsArr, handsize, DeckFactory.cmp());
             finalDeck.printCards(0, cardsArr.size());
 
             if(type.equals("Santase")){
                 return GameFactory.createSantaseGame(cardsArr);
             }
             else if(type.equals("Belote")){
-                return GameFactory.createSantaseGame(cardsArr);
+                return GameFactory.createBeloteGame(cardsArr);
             }
             else{
-                return GameFactory.createSantaseGame(cardsArr);
+                return GameFactory.createWarGame(cardsArr);
             }
         }else{
             System.out.println("ERROR: Not enough cards for " + type);
