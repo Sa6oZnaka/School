@@ -1,5 +1,7 @@
 package org.elsys.cardgame.api;
 
+import java.util.Objects;
+
 public class CardImplement implements Card{
 
     private Suit mySuit;
@@ -24,9 +26,13 @@ public class CardImplement implements Card{
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        CardImplement basicCard = (CardImplement) o;
-        return mySuit == basicCard.mySuit &&
-                myRank == basicCard.myRank;
+        CardImplement that = (CardImplement) o;
+        return mySuit == that.mySuit &&
+                myRank == that.myRank;
     }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(mySuit, myRank);
+    }
 }

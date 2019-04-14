@@ -51,7 +51,7 @@ public class GameImplement implements Game {
             }
         }
         if(! executed){
-            System.out.println("Error: Command not found");
+            System.out.println("ERROR: Unknown operation");
         }
     }
 
