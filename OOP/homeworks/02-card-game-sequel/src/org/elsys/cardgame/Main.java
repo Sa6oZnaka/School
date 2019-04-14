@@ -46,6 +46,7 @@ public class Main {
 
         boolean initalised = false;
         while(scanner.hasNext()){
+
             String input = scanner.nextLine();
 
             if(input.equals("quit")) break;
