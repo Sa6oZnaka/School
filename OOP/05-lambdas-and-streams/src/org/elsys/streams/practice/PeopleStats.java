@@ -6,7 +6,8 @@ import java.util.List;
 public class PeopleStats {
 
     public static IntSummaryStatistics getStats(List<Person> people) {
-        return null;
+
+        return people.stream().mapToInt(Person::getAge).summaryStatistics();
     }
 
 }

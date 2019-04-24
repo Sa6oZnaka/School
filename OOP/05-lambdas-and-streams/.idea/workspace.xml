@@ -2,35 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb21b7af-25c0-4f83-b90b-107bdfeb6b4f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/hamcrest_core_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2019-04-17-lambdas/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2019-04-17-lambdas/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2019-04-17-lambdas/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2019-04-17-lambdas/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2019-04-17-lambdas/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2019-04-17-lambdas/2019-04-17-lambdas.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2019-04-17-lambdas/out/production/2019-04-17-lambdas/org/elsys/lambda/AbstractIntegrable.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2019-04-17-lambdas/out/production/2019-04-17-lambdas/org/elsys/lambda/IntegrationService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2019-04-17-lambdas/out/production/2019-04-17-lambdas/org/elsys/lambda/IntegrationServiceTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2019-04-17-lambdas/out/production/2019-04-17-lambdas/org/elsys/lambda/Main$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2019-04-17-lambdas/out/production/2019-04-17-lambdas/org/elsys/lambda/Main$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2019-04-17-lambdas/out/production/2019-04-17-lambdas/org/elsys/lambda/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2019-04-17-lambdas/out/production/2019-04-17-lambdas/org/elsys/lambda/MathFunction.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2019-04-17-lambdas/src/org/elsys/lambda/AbstractIntegrable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2019-04-17-lambdas/src/org/elsys/lambda/IntegrationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2019-04-17-lambdas/src/org/elsys/lambda/IntegrationServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2019-04-17-lambdas/src/org/elsys/lambda/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2019-04-17-lambdas/src/org/elsys/lambda/MathFunction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2019-04-22-streams/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2019-04-22-streams/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2019-04-22-streams/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2019-04-22-streams/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2019-04-22-streams/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2019-04-22-streams/2019-04-22-streams.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2019-04-22-streams/persons.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2019-04-22-streams/src/Gender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2019-04-22-streams/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../2019-04-22-streams/src/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/org/elsys/streams/practice/FlatCollection.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/org/elsys/streams/practice/FlatCollection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/org/elsys/streams/practice/Grouping.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/org/elsys/streams/practice/Grouping.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/org/elsys/streams/practice/JoiningTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/org/elsys/streams/practice/JoiningTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/org/elsys/streams/practice/Kids.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/org/elsys/streams/practice/Kids.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/org/elsys/streams/practice/KidsTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/org/elsys/streams/practice/KidsTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/org/elsys/streams/practice/OldestPerson.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/org/elsys/streams/practice/OldestPerson.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/org/elsys/streams/practice/PeopleStats.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/org/elsys/streams/practice/PeopleStats.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/elsys/streams/practice/FlatCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/elsys/streams/practice/FlatCollection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/elsys/streams/practice/Grouping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/elsys/streams/practice/Grouping.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/elsys/streams/practice/Joining.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/elsys/streams/practice/Joining.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/elsys/streams/practice/Kids.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/elsys/streams/practice/Kids.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/elsys/streams/practice/OldestPerson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/elsys/streams/practice/OldestPerson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/elsys/streams/practice/Partitioning.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/elsys/streams/practice/Partitioning.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/elsys/streams/practice/PeopleStats.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/elsys/streams/practice/PeopleStats.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/org/elsys/streams/practice/JoiningTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/org/elsys/streams/practice/JoiningTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/org/elsys/streams/practice/KidsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/org/elsys/streams/practice/KidsTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,28 +28,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/org/elsys/streams/practice/JoiningTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/elsys/streams/practice/ToUpperCase.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="90" selection-start-line="8" selection-start-column="90" selection-end-line="8" selection-end-column="90" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/elsys/streams/practice/FilterCollection.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -77,29 +44,94 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/elsys/streams/practice/FlatCollection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/org/elsys/streams/practice/Kids.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+            <state relative-caret-position="135">
+              <caret line="9" column="86" selection-start-line="9" selection-start-column="86" selection-end-line="9" selection-end-column="86" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/elsys/streams/practice/Sum.java">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-190">
+              <caret lean-forward="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/elsys/streams/practice/Kids.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/elsys/streams/practice/OldestPerson.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="78" selection-start-line="8" selection-start-column="78" selection-end-line="8" selection-end-column="78" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/elsys/streams/practice/Joining.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="83" selection-start-line="8" selection-start-column="83" selection-end-line="8" selection-end-column="83" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/org/elsys/streams/practice/JoiningTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="142">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/elsys/streams/practice/PeopleStats.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/elsys/streams/practice/Partitioning.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
-              <caret line="7" column="58" selection-start-line="7" selection-start-column="58" selection-end-line="7" selection-end-column="58" />
+              <caret line="9" column="83" selection-start-line="9" selection-start-column="83" selection-end-line="9" selection-end-column="83" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/org/elsys/streams/practice/Grouping.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
               <folding>
-                <element signature="e#135#136#0" expanded="true" />
-                <element signature="e#194#195#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -117,16 +149,22 @@
         <option value="$PROJECT_DIR$/src/org/elsys/streams/practice/Sum.java" />
         <option value="$PROJECT_DIR$/src/org/elsys/streams/practice/ToUpperCase.java" />
         <option value="$PROJECT_DIR$/src/org/elsys/streams/practice/FilterCollection.java" />
-        <option value="$PROJECT_DIR$/src/org/elsys/streams/practice/FlatCollection.java" />
+        <option value="$PROJECT_DIR$/test/org/elsys/streams/practice/KidsTest.java" />
         <option value="$PROJECT_DIR$/src/org/elsys/streams/practice/Kids.java" />
+        <option value="$PROJECT_DIR$/src/org/elsys/streams/practice/PeopleStats.java" />
+        <option value="$PROJECT_DIR$/src/org/elsys/streams/practice/FlatCollection.java" />
+        <option value="$PROJECT_DIR$/src/org/elsys/streams/practice/Partitioning.java" />
+        <option value="$PROJECT_DIR$/src/org/elsys/streams/practice/Joining.java" />
+        <option value="$PROJECT_DIR$/src/org/elsys/streams/practice/OldestPerson.java" />
+        <option value="$PROJECT_DIR$/src/org/elsys/streams/practice/Grouping.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="20" />
-    <option name="y" value="24" />
-    <option name="width" value="1002" />
-    <option name="height" value="696" />
+    <option name="x" value="132" />
+    <option name="y" value="112" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -135,7 +173,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -169,6 +206,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -176,8 +214,8 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556108176495" />
-    <property name="last_opened_file_path" value="$APPLICATION_HOME_DIR$/lib/junit.jar!/" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556115538290" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../oop2018-2019/practice/05-lambdas-and-streams" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -223,62 +261,70 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_09-lambdas-and-streams - 2019.04.24 at 15h 02m 05s.xml">
+    <history-entry file="All_in_09-lambdas-and-streams - 2019.04.24 at 16h 34m 53s.xml">
       <configuration name="All in 09-lambdas-and-streams" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_09-lambdas-and-streams - 2019.04.24 at 15h 04m 42s.xml">
+    <history-entry file="All_in_09-lambdas-and-streams - 2019.04.24 at 16h 39m 29s.xml">
       <configuration name="All in 09-lambdas-and-streams" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_09-lambdas-and-streams - 2019.04.24 at 15h 07m 03s.xml">
+    <history-entry file="All_in_09-lambdas-and-streams - 2019.04.24 at 16h 40m 08s.xml">
       <configuration name="All in 09-lambdas-and-streams" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_09-lambdas-and-streams - 2019.04.24 at 15h 09m 20s.xml">
+    <history-entry file="All_in_09-lambdas-and-streams - 2019.04.24 at 16h 40m 50s.xml">
       <configuration name="All in 09-lambdas-and-streams" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_09-lambdas-and-streams - 2019.04.24 at 15h 15m 32s.xml">
+    <history-entry file="All_in_09-lambdas-and-streams - 2019.04.24 at 16h 41m 16s.xml">
+      <configuration name="All in 09-lambdas-and-streams" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_09-lambdas-and-streams - 2019.04.24 at 16h 42m 30s.xml">
+      <configuration name="All in 09-lambdas-and-streams" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_09-lambdas-and-streams - 2019.04.24 at 16h 42m 41s.xml">
+      <configuration name="All in 09-lambdas-and-streams" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_09-lambdas-and-streams - 2019.04.24 at 16h 47m 49s.xml">
+      <configuration name="All in 09-lambdas-and-streams" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_09-lambdas-and-streams - 2019.04.24 at 16h 55m 51s.xml">
+      <configuration name="All in 09-lambdas-and-streams" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_09-lambdas-and-streams - 2019.04.24 at 16h 56m 48s.xml">
       <configuration name="All in 09-lambdas-and-streams" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1366" height="736" extended-state="6" />
+    <frame x="-2" y="-2" width="1370" height="740" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1918429" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" weight="0.32899022" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32899022" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.28664497" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32899022" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test/org/elsys/streams/practice/JoiningTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/elsys/streams/practice/Sum.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -300,6 +346,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/org/elsys/streams/practice/OldestPersonTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/org/elsys/streams/practice/KidsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-13">
+          <caret line="21" column="55" lean-forward="true" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/streams/practice/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/org/elsys/streams/practice/FlatCollectionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/org/elsys/streams/practice/JoiningTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/elsys/streams/practice/FilterCollection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -310,17 +394,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/elsys/streams/practice/FlatCollection.java">
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/streams/practice/PeopleStats.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/streams/practice/FlatCollection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="86" selection-start-line="9" selection-start-column="86" selection-end-line="9" selection-end-column="86" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/streams/practice/Joining.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="83" selection-start-line="8" selection-start-column="83" selection-end-line="8" selection-end-column="83" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/elsys/streams/practice/Kids.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+        <state relative-caret-position="165">
+          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/streams/practice/OldestPerson.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="78" selection-start-line="8" selection-start-column="78" selection-end-line="8" selection-end-column="78" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/streams/practice/Partitioning.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="9" column="83" selection-start-line="9" selection-start-column="83" selection-end-line="9" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-190">
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/streams/practice/Grouping.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

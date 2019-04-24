@@ -8,12 +8,14 @@ import java.util.stream.Collectors;
 public class Kids {
 
     public static Set<String> getKidNames(List<Person> people) {
-        return people.stream().map(p -> p.getName()).collect(Collectors.toSet());
+        return people.stream().filter(p -> p.getAge() < 18).map(p -> p.getName()).collect(Collectors.toSet());
     }
 
-    public static Map<String, String> getKidsAgeByName(List<Person> people) {
-        return null;
-        
+    public static Map<String, Integer> getKidsAgeByName(List<Person> people) {
+        //return null;
+
+        return people.stream().filter(k -> k.getAge() < 18).collect(Collectors.toMap(k -> k.getName(), k -> k.getAge()));
+
     }
 
 }

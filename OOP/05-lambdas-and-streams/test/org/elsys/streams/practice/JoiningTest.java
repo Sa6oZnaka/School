@@ -1,12 +1,13 @@
 package org.elsys.streams.practice;
 
+import org.elsys.streams.practice.Person;
 import org.junit.Test;
 
 import java.util.List;
 
 import static java.util.Arrays.asList;
-import static junit.framework.Assert.assertEquals;
 import static org.elsys.streams.practice.Joining.namesToString;
+import static org.junit.Assert.assertEquals;
 
 public class JoiningTest {
 
