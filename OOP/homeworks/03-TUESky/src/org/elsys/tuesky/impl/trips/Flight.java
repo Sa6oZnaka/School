@@ -5,28 +5,40 @@ import org.elsys.tuesky.api.trips.TripUnit;
 import java.time.Duration;
 
 public class Flight implements org.elsys.tuesky.api.trips.Flight {
+
+
+    private String origin, destination;
+    private TripUnit trip;
+
+
+    public Flight(String origin, String destination, TripUnit trip) {
+        this.origin = origin;
+        this.destination = destination;
+        this.trip = trip;
+    }
+
     @Override
     public String getOrigin() {
-        return null;
+        return origin;
     }
 
     @Override
     public String getDestination() {
-        return null;
+        return destination;
     }
 
     @Override
     public Duration getDuration() {
-        return null;
+        return trip.getDuration();
     }
 
     @Override
     public TripUnit getNext() {
-        return null;
+        return trip.getNext();
     }
 
     @Override
     public TripUnit getPrev() {
-        return null;
+        return trip.getPrev();
     }
 }
