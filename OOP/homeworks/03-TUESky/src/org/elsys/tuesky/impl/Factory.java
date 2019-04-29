@@ -12,8 +12,7 @@ import java.util.List;
 public class Factory {
 
     public static TripBuilder startTrip() {
-        // TODO implement me!
-        return null;
+        return new org.elsys.tuesky.impl.trips.TripBuilder();
     }
 
     public static Flight createFlight(String from, String to, Duration duration) {
