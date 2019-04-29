@@ -5,9 +5,16 @@ import org.elsys.tuesky.api.trips.Trip;
 public class TripQuery implements org.elsys.tuesky.api.planner.TripQuery {
 
 
+    private Trip trip;
+
+    public TripQuery(Trip trip) {
+        this.trip = trip;
+    }
+
+
     @Override
     public boolean matches(Trip trip) {
-        return false;
+        return this.trip.equals(trip);
     }
 
     @Override
@@ -24,4 +31,6 @@ public class TripQuery implements org.elsys.tuesky.api.planner.TripQuery {
     public org.elsys.tuesky.api.planner.TripQuery not(org.elsys.tuesky.api.planner.TripQuery query) {
         return null;
     }
+
+
 }

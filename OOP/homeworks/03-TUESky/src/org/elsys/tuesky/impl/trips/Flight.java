@@ -8,13 +8,21 @@ public class Flight implements org.elsys.tuesky.api.trips.Flight {
 
 
     private String origin, destination;
-    private TripUnit trip;
+    private Duration duration;
+    private TripUnit next, prev;
 
-
-    public Flight(String origin, String destination, TripUnit trip) {
+    public Flight(String origin, String destination, Duration duration) {
         this.origin = origin;
         this.destination = destination;
-        this.trip = trip;
+        this.duration = duration;
+    }
+
+    public void setNext(TripUnit next) {
+        this.next = next;
+    }
+
+    public void setPrev(TripUnit prev) {
+        this.prev = prev;
     }
 
     @Override
@@ -29,16 +37,16 @@ public class Flight implements org.elsys.tuesky.api.trips.Flight {
 
     @Override
     public Duration getDuration() {
-        return trip.getDuration();
+        return duration;
     }
 
     @Override
     public TripUnit getNext() {
-        return trip.getNext();
+        return next;
     }
 
     @Override
     public TripUnit getPrev() {
-        return trip.getPrev();
+        return prev;
     }
 }

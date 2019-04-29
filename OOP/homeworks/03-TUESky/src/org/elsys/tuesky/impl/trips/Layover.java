@@ -6,24 +6,33 @@ import java.time.Duration;
 
 public class Layover implements org.elsys.tuesky.api.trips.Layover {
 
-    private TripUnit layover;
+    private Duration layover;
+    private TripUnit next, prev;
 
-    public Layover(TripUnit layover) {
+    public Layover(Duration layover) {
         this.layover = layover;
+    }
+
+    public void setNext(TripUnit next) {
+        this.next = next;
+    }
+
+    public void setPrev(TripUnit prev) {
+        this.prev = prev;
     }
 
     @Override
     public Duration getDuration() {
-        return layover.getDuration();
+        return layover;
     }
 
     @Override
     public TripUnit getNext() {
-        return layover.getNext();
+        return next;
     }
 
     @Override
     public TripUnit getPrev() {
-        return layover.getPrev();
+        return prev;
     }
 }

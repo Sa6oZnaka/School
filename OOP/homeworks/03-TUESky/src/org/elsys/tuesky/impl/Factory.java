@@ -17,17 +17,14 @@ public class Factory {
     }
 
     public static Flight createFlight(String from, String to, Duration duration) {
-        // TODO implement me!
-        return null;
+        return new org.elsys.tuesky.impl.trips.Flight(from, to, duration);
     }
 
     public static Layover createLayover(Duration duration) {
-        // TODO implement me!
-        return null;
+        return new org.elsys.tuesky.impl.trips.Layover(duration);
     }
 
     public static Planner createPlanner(List<Trip> trips) {
-        // TODO implement me!
-        return null;
+        return new org.elsys.tuesky.impl.planner.Planner(trips);
     }
 }
