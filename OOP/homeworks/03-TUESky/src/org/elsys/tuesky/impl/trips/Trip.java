@@ -55,7 +55,7 @@ public class Trip implements org.elsys.tuesky.api.trips.Trip {
 
     @Override
     public boolean matches(TripQuery query) {
-        return false;
+        return query.matches(this);
     }
 
     @Override

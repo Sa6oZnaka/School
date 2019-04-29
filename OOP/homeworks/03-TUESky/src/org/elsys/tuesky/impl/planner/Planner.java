@@ -43,7 +43,7 @@ public class Planner implements org.elsys.tuesky.api.planner.Planner {
         int count = 0;
         for (Trip trip : trips) {
             if (query.matches(trip)) {
-                count++;
+                count ++;
             }
         }
         return count;
