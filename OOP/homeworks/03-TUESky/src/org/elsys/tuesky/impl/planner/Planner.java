@@ -3,8 +3,8 @@ package org.elsys.tuesky.impl.planner;
 import org.elsys.tuesky.api.planner.TripQuery;
 import org.elsys.tuesky.api.trips.Trip;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Planner implements org.elsys.tuesky.api.planner.Planner {
 
@@ -15,37 +15,19 @@ public class Planner implements org.elsys.tuesky.api.planner.Planner {
         this.trips = trips;
     }
 
+
     @Override
     public List<Trip> search(TripQuery query) {
-
-        List<Trip> result = new ArrayList<>();
-        for (Trip trip : trips) {
-            if (query.matches(trip)) {
-                result.add(trip);
-            }
-        }
-
-        return result;
+        return trips.stream().filter(t -> t.matches(query)).collect(Collectors.toList());
     }
 
     @Override
     public boolean anyMatch(TripQuery query) {
-        for (Trip trip : trips) {
-            if (query.matches(trip)) {
-                return true;
-            }
-        }
-        return false;
+        return trips.stream().anyMatch(t -> t.matches(query));
     }
 
     @Override
     public int count(TripQuery query) {
-        int count = 0;
-        for (Trip trip : trips) {
-            if (query.matches(trip)) {
-                count ++;
-            }
-        }
-        return count;
+        return trips.size();
     }
 }

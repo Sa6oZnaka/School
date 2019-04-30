@@ -2,6 +2,9 @@ package org.elsys.tuesky.impl.planner;
 
 import org.elsys.tuesky.api.trips.Trip;
 
+import java.util.List;
+
+
 public class TripQuery implements org.elsys.tuesky.api.planner.TripQuery {
 
 
@@ -10,7 +13,6 @@ public class TripQuery implements org.elsys.tuesky.api.planner.TripQuery {
     public TripQuery(Trip trip) {
         this.trip = trip;
     }
-
 
     @Override
     public boolean matches(Trip trip) {
