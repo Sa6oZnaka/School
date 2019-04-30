@@ -7,6 +7,10 @@ import java.time.Duration;
 public class Trips {
 
     public static TripQuery withOrigin(String origin) {
+
+        // TODO
+        //return new org.elsys.tuesky.impl.planner.TripQuery(....)
+
         return null;
     }
 

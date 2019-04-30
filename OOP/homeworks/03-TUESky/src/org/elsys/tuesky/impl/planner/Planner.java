@@ -15,7 +15,6 @@ public class Planner implements org.elsys.tuesky.api.planner.Planner {
         this.trips = trips;
     }
 
-
     @Override
     public List<Trip> search(TripQuery query) {
         return trips.stream().filter(t -> t.matches(query)).collect(Collectors.toList());
@@ -28,6 +27,6 @@ public class Planner implements org.elsys.tuesky.api.planner.Planner {
 
     @Override
     public int count(TripQuery query) {
-        return trips.size();
+        return trips.stream().filter(t -> t.matches(query)).collect(Collectors.toList()).size();
     }
 }

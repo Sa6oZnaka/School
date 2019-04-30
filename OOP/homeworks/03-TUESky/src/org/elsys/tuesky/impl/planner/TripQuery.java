@@ -2,11 +2,13 @@ package org.elsys.tuesky.impl.planner;
 
 import org.elsys.tuesky.api.trips.Trip;
 
-import java.util.List;
-
 
 public class TripQuery implements org.elsys.tuesky.api.planner.TripQuery {
 
+
+
+    // TODO
+    // no idea what i need to do :(
 
     private Trip trip;
 
