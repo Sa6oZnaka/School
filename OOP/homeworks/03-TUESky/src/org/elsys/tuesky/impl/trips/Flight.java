@@ -17,14 +17,6 @@ public class Flight implements org.elsys.tuesky.api.trips.Flight {
         this.duration = duration;
     }
 
-    public void setNext(TripUnit next) {
-        this.next = next;
-    }
-
-    public void setPrev(TripUnit prev) {
-        this.prev = prev;
-    }
-
     @Override
     public String getOrigin() {
         return origin;

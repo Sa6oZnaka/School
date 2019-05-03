@@ -13,14 +13,6 @@ public class Layover implements org.elsys.tuesky.api.trips.Layover {
         this.layover = layover;
     }
 
-    public void setNext(TripUnit next) {
-        this.next = next;
-    }
-
-    public void setPrev(TripUnit prev) {
-        this.prev = prev;
-    }
-
     @Override
     public Duration getDuration() {
         return layover;

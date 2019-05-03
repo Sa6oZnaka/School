@@ -6,7 +6,6 @@ import org.elsys.tuesky.api.trips.Trip;
 public class TripQuery implements org.elsys.tuesky.api.planner.TripQuery {
 
 
-
     // TODO
     // no idea what i need to do :(
 

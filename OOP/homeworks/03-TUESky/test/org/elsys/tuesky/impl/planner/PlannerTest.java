@@ -27,7 +27,7 @@ public class PlannerTest {
         trips.add(Factory.startTrip()
                 .then(Factory.createFlight("North Makedonia", "North Korea", Duration.ofHours(1)))
                 .then(Factory.createLayover(Duration.ofMinutes(90)))
-                .then(Factory.createFlight("Athens", "Xania", Duration.ofHours(1)))
+                .then(Factory.createFlight("North Korea", "Xania", Duration.ofHours(1)))
                 .end());
 
         Planner p = new Planner(trips);

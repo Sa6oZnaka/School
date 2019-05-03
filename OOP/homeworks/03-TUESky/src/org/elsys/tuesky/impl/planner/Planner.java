@@ -27,6 +27,6 @@ public class Planner implements org.elsys.tuesky.api.planner.Planner {
 
     @Override
     public int count(TripQuery query) {
-        return trips.stream().filter(t -> t.matches(query)).collect(Collectors.toList()).size();
+        return search(query).size();
     }
 }

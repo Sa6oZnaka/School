@@ -1,7 +1,6 @@
 package org.elsys.tuesky.impl.trips;
 
 import org.elsys.tuesky.api.planner.TripQuery;
-
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Objects;
@@ -29,23 +28,14 @@ public class Trip implements org.elsys.tuesky.api.trips.Trip {
     @Override
     public Duration getDuration() {
         Duration duration = getLayoverDuration();
-
-        for (Flight flight : flights) {
-            duration = duration.plus(flight.getDuration());
-        }
+        duration = duration.plus(flights.stream().map(Flight::getDuration).reduce(Duration.ofSeconds(0), Duration::plus));
 
         return duration;
     }
 
     @Override
     public Duration getLayoverDuration() {
-        Duration duration = Duration.ofSeconds(0);
-
-        for (Layover layover : layovers) {
-            duration = duration.plus(layover.getDuration());
-        }
-
-        return duration;
+        return layovers.stream().map(Layover::getDuration).reduce(Duration.ofSeconds(0), Duration::plus);
     }
 
     @Override
