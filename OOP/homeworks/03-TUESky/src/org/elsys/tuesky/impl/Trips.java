@@ -1,13 +1,16 @@
 package org.elsys.tuesky.impl;
 
 import org.elsys.tuesky.api.planner.TripQuery;
+import org.elsys.tuesky.api.trips.Trip;
+import org.elsys.tuesky.impl.planner.Planner;
 
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.stream.Stream;
 
 public class Trips {
 
     public static TripQuery withOrigin(String origin) {
-
         return null;
     }
 

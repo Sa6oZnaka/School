@@ -1,7 +1,5 @@
 package org.elsys.tuesky.impl.trips;
 
-import org.elsys.tuesky.api.trips.TripUnit;
-
 import java.time.Duration;
 
 public class Flight implements org.elsys.tuesky.api.trips.Flight {
@@ -9,7 +7,6 @@ public class Flight implements org.elsys.tuesky.api.trips.Flight {
 
     private String origin, destination;
     private Duration duration;
-    private TripUnit next, prev;
 
     public Flight(String origin, String destination, Duration duration) {
         this.origin = origin;
@@ -32,13 +29,4 @@ public class Flight implements org.elsys.tuesky.api.trips.Flight {
         return duration;
     }
 
-    @Override
-    public TripUnit getNext() {
-        return next;
-    }
-
-    @Override
-    public TripUnit getPrev() {
-        return prev;
-    }
 }

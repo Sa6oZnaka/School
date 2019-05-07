@@ -1,5 +1,6 @@
 package org.elsys.tuesky.impl.trips;
 
+import org.elsys.tuesky.api.TUESkyException;
 import org.elsys.tuesky.api.trips.Trip;
 import org.elsys.tuesky.api.trips.TripUnit;
 
@@ -16,7 +17,7 @@ public class TripBuilder implements org.elsys.tuesky.api.trips.TripBuilder {
         if(nextUnit instanceof Flight){
             if(flights.size() > 0){
                 if(! flights.get(flights.size() - 1).getDestination().equals(((Flight) nextUnit).getOrigin())){
-                    throw new RuntimeException();
+                    throw new TUESkyException();
                 }
             }
             flights.add((Flight) nextUnit);
