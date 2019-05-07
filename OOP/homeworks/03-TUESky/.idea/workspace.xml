@@ -2,20 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2468a197-202e-4b61-98b4-376424230dc4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TUESky/org/elsys/tuesky/impl/Trips.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TUESky/org/elsys/tuesky/impl/Trips.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TUESky/org/elsys/tuesky/impl/planner/TripQuery.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TUESky/org/elsys/tuesky/impl/planner/TripQuery.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TUESky/org/elsys/tuesky/impl/trips/TripBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TUESky/org/elsys/tuesky/impl/trips/TripBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/TUESky/org/elsys/tuesky/impl/planner/PlannerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/TUESky/org/elsys/tuesky/impl/planner/PlannerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/elsys/tuesky/api/planner/TripQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/elsys/tuesky/api/planner/TripQuery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/elsys/tuesky/api/trips/TripUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/elsys/tuesky/api/trips/TripUnit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/elsys/tuesky/impl/Trips.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/elsys/tuesky/impl/Trips.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/elsys/tuesky/impl/planner/TripQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/elsys/tuesky/impl/planner/TripQuery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/elsys/tuesky/impl/trips/Flight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/elsys/tuesky/impl/trips/Flight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/elsys/tuesky/impl/trips/Layover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/elsys/tuesky/impl/trips/Layover.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/elsys/tuesky/impl/trips/TripBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/elsys/tuesky/impl/trips/TripBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/org/elsys/tuesky/impl/planner/PlannerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/org/elsys/tuesky/impl/planner/PlannerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/org/elsys/tuesky/impl/trips/TripTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/org/elsys/tuesky/impl/trips/TripTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,40 +16,46 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/03_TUESky$All_in_TUESky.ic" NAME="All in TUESky Coverage Results" MODIFIED="1556524874523" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/elsys/tuesky/impl/trips/Layover.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="60">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/elsys/tuesky/impl/Trips.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="27" lean-forward="true" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="45" />
               <folding>
-                <element signature="e#282#283#0" expanded="true" />
-                <element signature="e#320#321#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#424#425#0" expanded="true" />
+                <element signature="e#451#452#0" expanded="true" />
+                <element signature="e#498#499#0" expanded="true" />
+                <element signature="e#525#526#0" expanded="true" />
+                <element signature="e#691#692#0" expanded="true" />
+                <element signature="e#718#719#0" expanded="true" />
+                <element signature="e#777#778#0" expanded="true" />
+                <element signature="e#804#805#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/elsys/tuesky/impl/trips/Flight.java">
+        <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/org/elsys/tuesky/impl/Trips.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#330#331#0" expanded="true" />
-                <element signature="e#356#357#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="271">
+              <caret line="39" column="36" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -68,12 +63,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/elsys/tuesky/impl/trips/TripBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
+            <state relative-caret-position="285">
               <caret line="19" column="48" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#898#899#0" expanded="true" />
-                <element signature="e#976#977#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -82,8 +75,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/elsys/tuesky/impl/planner/Planner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+            <state relative-caret-position="405">
+              <caret line="29" column="34" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#584#585#0" expanded="true" />
@@ -95,25 +88,38 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/elsys/tuesky/impl/Factory.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/org/elsys/tuesky/impl/planner/PlannerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="61" selection-start-line="14" selection-start-column="61" selection-end-line="14" selection-end-column="61" />
+            <state relative-caret-position="387">
+              <caret line="54" column="47" selection-start-line="54" selection-start-column="47" selection-end-line="54" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#367#368#0" expanded="true" />
-                <element signature="e#435#436#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/org/elsys/tuesky/impl/planner/PlannerTest.java">
+        <entry file="file://$PROJECT_DIR$/test/org/elsys/tuesky/impl/trips/TripTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="840">
+              <caret line="66" column="5" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/org/elsys/tuesky/impl/trips/FlightTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -121,16 +127,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/elsys/tuesky/impl/planner/TripQuery.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="27" column="20" lean-forward="true" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
+            <state relative-caret-position="435">
+              <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#290#291#0" expanded="true" />
-                <element signature="e#325#326#0" expanded="true" />
+                <element signature="e#320#321#0" expanded="true" />
+                <element signature="e#354#355#0" expanded="true" />
                 <element signature="e#358#359#0" expanded="true" />
-                <element signature="e#385#386#0" expanded="true" />
-                <element signature="e#789#790#0" expanded="true" />
-                <element signature="e#816#817#0" expanded="true" />
+                <element signature="e#386#387#0" expanded="true" />
+                <element signature="e#820#821#0" expanded="true" />
+                <element signature="e#846#847#0" expanded="true" />
                 <element signature="e#746#747#0" expanded="true" />
                 <element signature="e#773#774#0" expanded="true" />
               </folding>
@@ -139,19 +145,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/elsys/tuesky/api/TUESkyException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/elsys/tuesky/impl/trips/Trip.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="675">
-              <caret line="53" column="24" lean-forward="true" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
+              <caret line="53" column="24" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -177,6 +174,7 @@
       <find>tri</find>
       <find>tripQ</find>
       <find>plann</find>
+      <find>trips</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -212,13 +210,13 @@
         <option value="$PROJECT_DIR$/src/org/elsys/tuesky/impl/trips/TripUnit.java" />
         <option value="$PROJECT_DIR$/src/org/elsys/tuesky/impl/Factory.java" />
         <option value="$PROJECT_DIR$/src/org/elsys/tuesky/impl/trips/Trip.java" />
-        <option value="$PROJECT_DIR$/src/org/elsys/tuesky/impl/planner/Planner.java" />
-        <option value="$PROJECT_DIR$/test/org/elsys/tuesky/impl/planner/PlannerTest.java" />
-        <option value="$PROJECT_DIR$/src/org/elsys/tuesky/impl/planner/TripQuery.java" />
         <option value="$PROJECT_DIR$/src/org/elsys/tuesky/impl/trips/Flight.java" />
         <option value="$PROJECT_DIR$/src/org/elsys/tuesky/impl/trips/Layover.java" />
         <option value="$PROJECT_DIR$/src/org/elsys/tuesky/impl/trips/TripBuilder.java" />
+        <option value="$PROJECT_DIR$/src/org/elsys/tuesky/impl/planner/TripQuery.java" />
         <option value="$PROJECT_DIR$/src/org/elsys/tuesky/impl/Trips.java" />
+        <option value="$PROJECT_DIR$/src/org/elsys/tuesky/impl/planner/Planner.java" />
+        <option value="$PROJECT_DIR$/test/org/elsys/tuesky/impl/planner/PlannerTest.java" />
       </list>
     </option>
   </component>
@@ -236,8 +234,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -320,6 +316,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -327,6 +325,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557230800923" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/test/org/elsys/tuesky" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/hamcrest-core-1.3.jar!/" />
@@ -429,27 +428,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_TUESky - 2019.05.03 at 15h 36m 18s.xml">
-      <configuration name="All in TUESky" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_TUESky - 2019.05.03 at 15h 37m 41s.xml">
-      <configuration name="All in TUESky" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_TUESky - 2019.05.03 at 16h 01m 11s.xml">
-      <configuration name="All in TUESky" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_TUESky - 2019.05.03 at 16h 02m 01s.xml">
-      <configuration name="All in TUESky" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_TUESky - 2019.05.03 at 16h 02m 29s.xml">
-      <configuration name="All in TUESky" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_TUESky - 2019.05.03 at 16h 05m 54s.xml">
-      <configuration name="All in TUESky" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_TUESky - 2019.05.03 at 16h 07m 32s.xml">
-      <configuration name="All in TUESky" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="All_in_TUESky - 2019.05.03 at 16h 14m 16s.xml">
       <configuration name="All in TUESky" configurationId="JUnit" />
     </history-entry>
@@ -457,6 +435,27 @@
       <configuration name="All in TUESky" configurationId="JUnit" />
     </history-entry>
     <history-entry file="All_in_TUESky - 2019.05.07 at 15h 02m 23s.xml">
+      <configuration name="All in TUESky" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_TUESky - 2019.05.07 at 20h 34m 21s.xml">
+      <configuration name="All in TUESky" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_TUESky - 2019.05.07 at 20h 43m 18s.xml">
+      <configuration name="All in TUESky" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_TUESky - 2019.05.07 at 20h 43m 20s.xml">
+      <configuration name="All in TUESky" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_TUESky - 2019.05.07 at 20h 45m 25s.xml">
+      <configuration name="All in TUESky" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_TUESky - 2019.05.07 at 20h 46m 14s.xml">
+      <configuration name="All in TUESky" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_TUESky - 2019.05.07 at 20h 51m 03s.xml">
+      <configuration name="All in TUESky" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_TUESky - 2019.05.07 at 20h 52m 55s.xml">
       <configuration name="All in TUESky" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -470,7 +469,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1366" height="736" extended-state="6" />
+    <frame x="-2" y="-2" width="1684" height="1022" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
@@ -478,19 +477,19 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.17749244" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.17948718" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" weight="0.32924107" />
       <window_info anchor="bottom" id="Version Control" order="2" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" />
-      <window_info anchor="bottom" id="Run" order="5" weight="0.32899022" />
+      <window_info active="true" anchor="bottom" id="Run" order="5" visible="true" weight="0.328125" />
       <window_info anchor="bottom" id="Debug" order="6" weight="0.39955357" />
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="9" weight="0.32899022" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32899022" />
+      <window_info anchor="bottom" id="TODO" order="9" weight="0.328125" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.328125" />
       <window_info anchor="right" id="Theme Preview" order="0" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Palette&#9;" order="2" />
@@ -571,16 +570,6 @@
     <entry file="file://$PROJECT_DIR$/TUESky.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/org/elsys/tuesky/impl/trips/FlightTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/Downloads/jdk-11.0.2/lib/src.zip!/java.base/java/util/function/Predicate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -588,74 +577,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/org/elsys/tuesky/impl/trips/TripTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="66" column="5" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="164" selection-start-line="21" selection-start-column="127" selection-end-line="21" selection-end-column="164" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/org/elsys/tuesky/impl/planner/PlannerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/elsys/tuesky/impl/trips/Flight.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/elsys/tuesky/impl/trips/Layover.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="e#282#283#0" expanded="true" />
-            <element signature="e#320#321#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/elsys/tuesky/impl/Factory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
+        <state relative-caret-position="90">
           <caret line="14" column="61" selection-start-line="14" selection-start-column="61" selection-end-line="14" selection-end-column="61" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#367#368#0" expanded="true" />
             <element signature="e#435#436#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/elsys/tuesky/impl/planner/TripQuery.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="27" column="20" lean-forward="true" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#290#291#0" expanded="true" />
-            <element signature="e#325#326#0" expanded="true" />
-            <element signature="e#358#359#0" expanded="true" />
-            <element signature="e#385#386#0" expanded="true" />
-            <element signature="e#789#790#0" expanded="true" />
-            <element signature="e#816#817#0" expanded="true" />
-            <element signature="e#746#747#0" expanded="true" />
-            <element signature="e#773#774#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -667,10 +596,87 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/tuesky/impl/trips/Flight.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/tuesky/impl/trips/Layover.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/tuesky/impl/trips/Trip.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="53" column="24" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/tuesky/impl/trips/TripBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="48" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="39" column="36" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/tuesky/impl/planner/TripQuery.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#320#321#0" expanded="true" />
+            <element signature="e#354#355#0" expanded="true" />
+            <element signature="e#358#359#0" expanded="true" />
+            <element signature="e#386#387#0" expanded="true" />
+            <element signature="e#820#821#0" expanded="true" />
+            <element signature="e#846#847#0" expanded="true" />
+            <element signature="e#746#747#0" expanded="true" />
+            <element signature="e#773#774#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/tuesky/impl/Trips.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="27" lean-forward="true" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#424#425#0" expanded="true" />
+            <element signature="e#451#452#0" expanded="true" />
+            <element signature="e#498#499#0" expanded="true" />
+            <element signature="e#525#526#0" expanded="true" />
+            <element signature="e#691#692#0" expanded="true" />
+            <element signature="e#718#719#0" expanded="true" />
+            <element signature="e#777#778#0" expanded="true" />
+            <element signature="e#804#805#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/elsys/tuesky/impl/planner/Planner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        <state relative-caret-position="405">
+          <caret line="29" column="34" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#584#585#0" expanded="true" />
@@ -681,36 +687,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/elsys/tuesky/impl/trips/TripBuilder.java">
+    <entry file="file://$PROJECT_DIR$/test/org/elsys/tuesky/impl/trips/TripTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="19" column="48" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#898#899#0" expanded="true" />
-            <element signature="e#976#977#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/elsys/tuesky/impl/trips/Trip.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="53" column="24" lean-forward="true" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
+        <state relative-caret-position="840">
+          <caret line="66" column="5" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/elsys/tuesky/impl/Trips.java">
+    <entry file="file://$PROJECT_DIR$/test/org/elsys/tuesky/impl/trips/FlightTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+        <state relative-caret-position="285">
+          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#330#331#0" expanded="true" />
-            <element signature="e#356#357#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/org/elsys/tuesky/impl/planner/PlannerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="54" column="47" selection-start-line="54" selection-start-column="47" selection-end-line="54" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

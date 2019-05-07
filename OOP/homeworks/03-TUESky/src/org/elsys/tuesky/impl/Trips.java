@@ -2,16 +2,18 @@ package org.elsys.tuesky.impl;
 
 import org.elsys.tuesky.api.planner.TripQuery;
 import org.elsys.tuesky.api.trips.Trip;
-import org.elsys.tuesky.impl.planner.Planner;
 
 import java.time.Duration;
 import java.util.ArrayList;
-import java.util.stream.Stream;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class Trips {
 
     public static TripQuery withOrigin(String origin) {
-        return null;
+        List<Trip> trips = new ArrayList<>();
+        trips = trips.stream().filter(t -> t.getOrigin().equals(origin)).collect(Collectors.toList());
+        return new org.elsys.tuesky.impl.planner.TripQuery(trips);
     }
 
     public static TripQuery withDestination(String destination) {
@@ -23,7 +25,9 @@ public class Trips {
     }
 
     public static TripQuery withMaxDuration(Duration duration) {
-        return null;
+        List<Trip> trips = new ArrayList<>();
+        trips = trips.stream().filter(t -> t.getDuration().compareTo(duration) < 0).collect(Collectors.toList());
+        return new org.elsys.tuesky.impl.planner.TripQuery(trips);
     }
 
     public static TripQuery withMaxLayoverDuration(Duration duration) {
