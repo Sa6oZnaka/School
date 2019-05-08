@@ -55,7 +55,7 @@ public class PlannerTest {
         List<Trip> expedcted = new ArrayList<>();
         expedcted.add(trips.get(1));
 
-        Planner p = new Planner(trips);
+        org.elsys.tuesky.api.planner.Planner p = Factory.createPlanner(trips);
         List<Trip> tripsList = new ArrayList<>();
         tripsList.add(trips.get(1));
         assertEquals(p.search(new TripQuery(tripsList)), expedcted);

@@ -17,7 +17,9 @@ public class Trips {
     }
 
     public static TripQuery withDestination(String destination) {
-        return null;
+        List<Trip> trips = new ArrayList<>();
+        trips = trips.stream().filter(t -> t.getDuration().equals(destination)).collect(Collectors.toList());
+        return new org.elsys.tuesky.impl.planner.TripQuery(trips);
     }
 
     public static TripQuery via(String via) {
@@ -31,10 +33,14 @@ public class Trips {
     }
 
     public static TripQuery withMaxLayoverDuration(Duration duration) {
-        return null;
+        List<Trip> trips = new ArrayList<>();
+        trips = trips.stream().filter(t -> t.getLayoverDuration().compareTo(duration) < 0).collect(Collectors.toList());
+        return new org.elsys.tuesky.impl.planner.TripQuery(trips);
     }
 
     public static TripQuery withMaxFlights(int flights) {
-        return null;
+        List<Trip> trips = new ArrayList<>();
+        trips = trips.stream().filter(t -> t.getFlightsCount() < flights).collect(Collectors.toList());
+        return new org.elsys.tuesky.impl.planner.TripQuery(trips);
     }
 }

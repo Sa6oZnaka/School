@@ -4,8 +4,6 @@ import org.elsys.tuesky.api.trips.Trip;
 
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
-
 
 public class TripQuery implements org.elsys.tuesky.api.planner.TripQuery {
 
@@ -32,7 +30,7 @@ public class TripQuery implements org.elsys.tuesky.api.planner.TripQuery {
 
     @Override
     public org.elsys.tuesky.api.planner.TripQuery not() {
-        return null;
+        return this;
     }
 
 }
