@@ -4,6 +4,7 @@ import org.elsys.tuesky.api.TUESkyException;
 import org.elsys.tuesky.api.trips.Trip;
 import org.elsys.tuesky.api.trips.TripUnit;
 
+import java.time.Duration;
 import java.util.ArrayList;
 
 public class TripBuilder implements org.elsys.tuesky.api.trips.TripBuilder {
@@ -30,6 +31,20 @@ public class TripBuilder implements org.elsys.tuesky.api.trips.TripBuilder {
 
     @Override
     public Trip end() {
-        return new org.elsys.tuesky.impl.trips.Trip(flights, layovers);
+
+        int flightsCount = flights.size();
+        String origin = flights.get(0).getOrigin();
+        String destination = flights.get(flightsCount - 1).getDestination();
+        Duration layoverDuration = layovers
+                .stream()
+                .map(Layover::getDuration)
+                .reduce(Duration.ofSeconds(0), Duration::plus);
+        Duration duration = flights.
+                stream()
+                .map(Flight::getDuration)
+                .reduce(Duration.ofSeconds(0), Duration::plus)
+                .plus(layoverDuration);
+
+        return new org.elsys.tuesky.impl.trips.Trip(origin, destination, duration, layoverDuration, flightsCount);
     }
 }
