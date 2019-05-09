@@ -10,16 +10,22 @@ import java.util.stream.Collectors;
 
 public class Trips {
 
+    public static List<Trip> trips = new ArrayList<>();
+
     public static TripQuery withOrigin(String origin) {
-        List<Trip> trips = new ArrayList<>();
-        trips = trips.stream().filter(t -> t.getOrigin().equals(origin)).collect(Collectors.toList());
-        return new org.elsys.tuesky.impl.planner.TripQuery(trips);
+        return new org.elsys.tuesky.impl.planner.TripQuery(trips
+                .stream()
+                .filter(t -> t.getOrigin().equals(origin))
+                .collect(Collectors.toList())
+        );
     }
 
     public static TripQuery withDestination(String destination) {
-        List<Trip> trips = new ArrayList<>();
-        trips = trips.stream().filter(t -> t.getDuration().equals(destination)).collect(Collectors.toList());
-        return new org.elsys.tuesky.impl.planner.TripQuery(trips);
+        return new org.elsys.tuesky.impl.planner.TripQuery(trips
+                .stream()
+                .filter(t -> t.getDestination().equals(destination))
+                .collect(Collectors.toList())
+        );
     }
 
     public static TripQuery via(String via) {
@@ -27,20 +33,26 @@ public class Trips {
     }
 
     public static TripQuery withMaxDuration(Duration duration) {
-        List<Trip> trips = new ArrayList<>();
-        trips = trips.stream().filter(t -> t.getDuration().compareTo(duration) < 0).collect(Collectors.toList());
-        return new org.elsys.tuesky.impl.planner.TripQuery(trips);
+        return new org.elsys.tuesky.impl.planner.TripQuery(trips
+                .stream()
+                .filter(t -> t.getDuration().compareTo(duration) <= 0)
+                .collect(Collectors.toList())
+        );
     }
 
     public static TripQuery withMaxLayoverDuration(Duration duration) {
-        List<Trip> trips = new ArrayList<>();
-        trips = trips.stream().filter(t -> t.getLayoverDuration().compareTo(duration) < 0).collect(Collectors.toList());
-        return new org.elsys.tuesky.impl.planner.TripQuery(trips);
+        return new org.elsys.tuesky.impl.planner.TripQuery(trips
+                .stream()
+                .filter(t -> t.getLayoverDuration().compareTo(duration) <= 0)
+                .collect(Collectors.toList())
+        );
     }
 
     public static TripQuery withMaxFlights(int flights) {
-        List<Trip> trips = new ArrayList<>();
-        trips = trips.stream().filter(t -> t.getFlightsCount() < flights).collect(Collectors.toList());
-        return new org.elsys.tuesky.impl.planner.TripQuery(trips);
+        return new org.elsys.tuesky.impl.planner.TripQuery(trips
+                .stream()
+                .filter(t -> t.getFlightsCount() <= flights)
+                .collect(Collectors.toList())
+        );
     }
 }

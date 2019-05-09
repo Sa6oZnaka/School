@@ -20,7 +20,10 @@ public class TripQuery implements org.elsys.tuesky.api.planner.TripQuery {
 
     @Override
     public org.elsys.tuesky.api.planner.TripQuery and(org.elsys.tuesky.api.planner.TripQuery query) {
-        return new TripQuery(trips.stream().filter(t -> t.matches(query)).collect(Collectors.toList()));
+        return new TripQuery(trips
+                .stream().filter(t -> t.matches(query))
+                .collect(Collectors.toList())
+        );
     }
 
     @Override
@@ -30,7 +33,11 @@ public class TripQuery implements org.elsys.tuesky.api.planner.TripQuery {
 
     @Override
     public org.elsys.tuesky.api.planner.TripQuery not() {
-        return this;
+        return new TripQuery(trips
+                .stream()
+                .filter(t -> !t.matches(this))
+                .collect(Collectors.toList())
+        );
     }
 
 }
