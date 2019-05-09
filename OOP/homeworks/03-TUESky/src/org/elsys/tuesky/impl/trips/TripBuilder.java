@@ -6,11 +6,14 @@ import org.elsys.tuesky.api.trips.TripUnit;
 
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.List;
 
 public class TripBuilder implements org.elsys.tuesky.api.trips.TripBuilder {
 
     private ArrayList<Flight> flights = new ArrayList<>();
     private ArrayList<Layover> layovers = new ArrayList<>();
+
+    public static List<Trip> trips = new ArrayList<>();
 
     @Override
     public org.elsys.tuesky.api.trips.TripBuilder then(TripUnit nextUnit) {
@@ -45,6 +48,12 @@ public class TripBuilder implements org.elsys.tuesky.api.trips.TripBuilder {
                 .reduce(Duration.ofSeconds(0), Duration::plus)
                 .plus(layoverDuration);
 
-        return new org.elsys.tuesky.impl.trips.Trip(origin, destination, duration, layoverDuration, flightsCount);
+        trips.add(new org.elsys.tuesky.impl.trips.Trip(origin, destination, duration, layoverDuration, flightsCount));
+
+        return getLast();
+    }
+
+    private Trip getLast(){
+        return trips.get(trips.size() - 1);
     }
 }

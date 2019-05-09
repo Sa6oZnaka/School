@@ -44,7 +44,6 @@ public class PlannerTest {
         List<Trip> expedcted = new ArrayList<>();
         expedcted.add(trips.get(1));
 
-        Trips.trips = trips;
         Planner p = new Planner(trips);
         assertEquals(expedcted, p.search(Trips.withOrigin("North Makedonia").and(Trips.withDestination("Xania").and(Trips.withMaxFlights(2)))));
 
