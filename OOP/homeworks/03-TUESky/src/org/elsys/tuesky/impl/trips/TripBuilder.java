@@ -10,8 +10,8 @@ import java.util.List;
 
 public class TripBuilder implements org.elsys.tuesky.api.trips.TripBuilder {
 
-    private ArrayList<Flight> flights = new ArrayList<>();
-    private ArrayList<Layover> layovers = new ArrayList<>();
+    private List<Flight> flights = new ArrayList<>();
+    private List<Layover> layovers = new ArrayList<>();
 
     public static List<Trip> trips = new ArrayList<>();
 
@@ -56,4 +56,5 @@ public class TripBuilder implements org.elsys.tuesky.api.trips.TripBuilder {
     private Trip getLast(){
         return trips.get(trips.size() - 1);
     }
+
 }

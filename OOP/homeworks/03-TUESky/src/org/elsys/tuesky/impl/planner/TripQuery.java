@@ -1,6 +1,8 @@
 package org.elsys.tuesky.impl.planner;
 
 import org.elsys.tuesky.api.trips.Trip;
+import org.elsys.tuesky.impl.trips.TripBuilder;
+
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -35,7 +37,7 @@ public class TripQuery implements org.elsys.tuesky.api.planner.TripQuery {
 
     @Override
     public org.elsys.tuesky.api.planner.TripQuery not() {
-        return new TripQuery(trips
+        return new TripQuery(TripBuilder.trips
                 .stream()
                 .filter(t -> !t.matches(this))
                 .collect(Collectors.toList())
