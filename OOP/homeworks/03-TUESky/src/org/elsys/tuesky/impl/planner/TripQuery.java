@@ -29,10 +29,7 @@ public class TripQuery implements org.elsys.tuesky.api.planner.TripQuery {
 
     @Override
     public org.elsys.tuesky.api.planner.TripQuery or(org.elsys.tuesky.api.planner.TripQuery query) {
-        if(trips.stream().anyMatch(t -> t.matches(query))){
-            return query;
-        }
-        return this;
+        return (not().and(query.not())).not();
     }
 
     @Override
