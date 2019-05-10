@@ -5,6 +5,7 @@ import org.elsys.tuesky.impl.trips.TripBuilder;
 
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class TripQuery implements org.elsys.tuesky.api.planner.TripQuery {
 
@@ -29,7 +30,7 @@ public class TripQuery implements org.elsys.tuesky.api.planner.TripQuery {
 
     @Override
     public org.elsys.tuesky.api.planner.TripQuery or(org.elsys.tuesky.api.planner.TripQuery query) {
-        return (not().and(query.not())).not();
+        return not().and(query.not()).not(); // Method of Morgan - (A || B) = !(! A && !B)
     }
 
     @Override

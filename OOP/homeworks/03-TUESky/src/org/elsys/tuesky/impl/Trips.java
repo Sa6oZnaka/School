@@ -24,7 +24,9 @@ public class Trips {
     }
 
     public static TripQuery via(String via) {
-        return new org.elsys.tuesky.impl.planner.TripQuery(TripBuilder.trips);
+        return new org.elsys.tuesky.impl.planner.TripQuery(TripBuilder.trips
+                .stream().filter(t -> t.getFlights().stream().anyMatch(f -> f.getDestination().equals(via)))
+                .collect(Collectors.toList()));
     }
 
     public static TripQuery withMaxDuration(Duration duration) {

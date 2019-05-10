@@ -2,46 +2,50 @@ package org.elsys.tuesky.impl.trips;
 
 import org.elsys.tuesky.api.planner.TripQuery;
 import java.time.Duration;
-import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class Trip implements org.elsys.tuesky.api.trips.Trip {
 
-    private String origin, destination;
-    private Duration duration, layoverDuration;
-    private int flightsCount;
+    private List<Flight> flights;
+    private List<Layover> layovers;
 
-    public Trip(String origin, String destination, Duration duration, Duration layoverDuration, int flightsCount) {
-        this.origin = origin;
-        this.destination = destination;
-        this.duration = duration;
-        this.layoverDuration = layoverDuration;
-        this.flightsCount = flightsCount;
+    public Trip(List<Flight> flights, List<Layover> layovers) {
+        this.flights = flights;
+        this.layovers = layovers;
     }
 
     @Override
     public String getOrigin() {
-        return origin;
+        return flights.get(0).getOrigin();
     }
 
     @Override
     public String getDestination() {
-        return destination;
+        return flights.get(flights.size() - 1).getDestination();
     }
 
     @Override
     public Duration getDuration() {
-        return duration;
+        return flights.
+                stream()
+                .map(Flight::getDuration)
+                .reduce(Duration.ofSeconds(0), Duration::plus)
+                .plus(getLayoverDuration());
     }
 
     @Override
     public Duration getLayoverDuration() {
-        return layoverDuration;
+        return layovers
+                .stream()
+                .map(Layover::getDuration)
+                .reduce(Duration.ofSeconds(0), Duration::plus);
+
     }
 
     @Override
     public int getFlightsCount() {
-        return flightsCount;
+        return flights.size();
     }
 
     @Override
@@ -49,20 +53,22 @@ public class Trip implements org.elsys.tuesky.api.trips.Trip {
         return query.matches(this);
     }
 
+    public List<Flight> getFlights() {
+        return flights;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Trip trip = (Trip) o;
-        return flightsCount == trip.flightsCount &&
-                Objects.equals(origin, trip.origin) &&
-                Objects.equals(destination, trip.destination) &&
-                Objects.equals(duration, trip.duration) &&
-                Objects.equals(layoverDuration, trip.layoverDuration);
+        return Objects.equals(flights, trip.flights) &&
+                Objects.equals(layovers, trip.layovers);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(origin, destination, duration, layoverDuration, flightsCount);
+        return Objects.hash(flights, layovers);
     }
+
 }
