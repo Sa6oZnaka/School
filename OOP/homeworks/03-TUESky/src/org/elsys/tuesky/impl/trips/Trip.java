@@ -53,10 +53,6 @@ public class Trip implements org.elsys.tuesky.api.trips.Trip {
         return query.matches(this);
     }
 
-    public List<Flight> getFlights() {
-        return flights;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -71,4 +67,7 @@ public class Trip implements org.elsys.tuesky.api.trips.Trip {
         return Objects.hash(flights, layovers);
     }
 
+    public List<Flight> getFlights() {
+        return flights;
+    }
 }

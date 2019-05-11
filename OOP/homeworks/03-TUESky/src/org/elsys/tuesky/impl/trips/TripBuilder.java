@@ -33,7 +33,6 @@ public class TripBuilder implements org.elsys.tuesky.api.trips.TripBuilder {
 
     @Override
     public Trip end() {
-
         trips.add(new org.elsys.tuesky.impl.trips.Trip(flights, layovers));
         return getLast();
     }

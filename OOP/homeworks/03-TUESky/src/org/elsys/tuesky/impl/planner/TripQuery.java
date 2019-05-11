@@ -3,6 +3,7 @@ package org.elsys.tuesky.impl.planner;
 import org.elsys.tuesky.api.trips.Trip;
 import org.elsys.tuesky.impl.trips.TripBuilder;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -30,7 +31,10 @@ public class TripQuery implements org.elsys.tuesky.api.planner.TripQuery {
 
     @Override
     public org.elsys.tuesky.api.planner.TripQuery or(org.elsys.tuesky.api.planner.TripQuery query) {
-        return not().and(query.not()).not(); // Method of Morgan - (A || B) = !(! A && !B)
+        return new TripQuery(Stream
+                .concat(trips.stream(), ((TripQuery) query).getTrips().stream())
+                .collect(Collectors.toList())
+        );
     }
 
     @Override
@@ -41,5 +45,10 @@ public class TripQuery implements org.elsys.tuesky.api.planner.TripQuery {
                 .collect(Collectors.toList())
         );
     }
+
+    private List<Trip> getTrips() {
+        return trips;
+    }
+
 
 }
