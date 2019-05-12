@@ -13,6 +13,47 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class PlannerTest {
 
+
+    private List<Trip> CreateTrips(){
+
+        List<Trip> trips = new ArrayList<>();
+        trips.add(Factory.startTrip()
+                .then(Factory.createFlight("Sofia", "Pernik", Duration.ofHours(1)))
+                .then(Factory.createLayover(Duration.ofMinutes(90)))
+                .then(Factory.createFlight("Pernik", "Burgas", Duration.ofHours(1)))
+                .end()
+        );
+        trips.add(Factory.startTrip()
+                .then(Factory.createFlight("Sofia", "Athens", Duration.ofHours(1)))
+                .then(Factory.createLayover(Duration.ofMinutes(90)))
+                .then(Factory.createFlight("Athens", "Istambul", Duration.ofHours(1)))
+                .end()
+        );
+        trips.add(Factory.startTrip()
+                .then(Factory.createFlight("Sofia", "Plovdiv", Duration.ofHours(1)))
+                .then(Factory.createLayover(Duration.ofMinutes(90)))
+                .then(Factory.createFlight("Plovdiv", "Varna", Duration.ofHours(1)))
+                .then(Factory.createLayover(Duration.ofMinutes(60)))
+                .then(Factory.createFlight("Varna", "", Duration.ofHours(1)))
+                .end()
+        );
+        trips.add(Factory.startTrip()
+                .then(Factory.createFlight("Sofia", "Athens", Duration.ofHours(1)))
+                .then(Factory.createLayover(Duration.ofMinutes(90)))
+                .then(Factory.createFlight("Athens", "Xania", Duration.ofHours(1)))
+                .end()
+        );
+        trips.add(Factory.startTrip()
+                .then(Factory.createFlight("Sofia", "Athens", Duration.ofHours(1)))
+                .then(Factory.createLayover(Duration.ofMinutes(90)))
+                .then(Factory.createFlight("Athens", "Xania", Duration.ofHours(1)))
+                .end()
+        );
+
+        return trips;
+    }
+
+
     @Test
     public void testPlaner() {
 
