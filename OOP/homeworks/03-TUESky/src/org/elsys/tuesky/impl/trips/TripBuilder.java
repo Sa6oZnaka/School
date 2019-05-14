@@ -7,6 +7,7 @@ import org.elsys.tuesky.api.trips.TripUnit;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class TripBuilder implements org.elsys.tuesky.api.trips.TripBuilder {
 
