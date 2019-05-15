@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/alex/Downloads/clion-2019.1.3/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/alexy/Downloads/clion-2019.1.3/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/alex/Downloads/clion-2019.1.3/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/alexy/Downloads/clion-2019.1.3/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/alex/Documents/School/OS/2019_05_14
+CMAKE_SOURCE_DIR = /home/alexy/Documents/School/OS/2019_05_14
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/alex/Documents/School/OS/2019_05_14/cmake-build-debug
+CMAKE_BINARY_DIR = /home/alexy/Documents/School/OS/2019_05_14/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/untitled.dir/depend.make
@@ -59,42 +59,42 @@ include CMakeFiles/untitled.dir/flags.make
 
 CMakeFiles/untitled.dir/main.c.o: CMakeFiles/untitled.dir/flags.make
 CMakeFiles/untitled.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alex/Documents/School/OS/2019_05_14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/untitled.dir/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/untitled.dir/main.c.o   -c /home/alex/Documents/School/OS/2019_05_14/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alexy/Documents/School/OS/2019_05_14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/untitled.dir/main.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/untitled.dir/main.c.o   -c /home/alexy/Documents/School/OS/2019_05_14/main.c
 
 CMakeFiles/untitled.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/untitled.dir/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/alex/Documents/School/OS/2019_05_14/main.c > CMakeFiles/untitled.dir/main.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/alexy/Documents/School/OS/2019_05_14/main.c > CMakeFiles/untitled.dir/main.c.i
 
 CMakeFiles/untitled.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/untitled.dir/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/alex/Documents/School/OS/2019_05_14/main.c -o CMakeFiles/untitled.dir/main.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/alexy/Documents/School/OS/2019_05_14/main.c -o CMakeFiles/untitled.dir/main.c.s
 
 CMakeFiles/untitled.dir/2nd.c.o: CMakeFiles/untitled.dir/flags.make
 CMakeFiles/untitled.dir/2nd.c.o: ../2nd.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alex/Documents/School/OS/2019_05_14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/untitled.dir/2nd.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/untitled.dir/2nd.c.o   -c /home/alex/Documents/School/OS/2019_05_14/2nd.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alexy/Documents/School/OS/2019_05_14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/untitled.dir/2nd.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/untitled.dir/2nd.c.o   -c /home/alexy/Documents/School/OS/2019_05_14/2nd.c
 
 CMakeFiles/untitled.dir/2nd.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/untitled.dir/2nd.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/alex/Documents/School/OS/2019_05_14/2nd.c > CMakeFiles/untitled.dir/2nd.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/alexy/Documents/School/OS/2019_05_14/2nd.c > CMakeFiles/untitled.dir/2nd.c.i
 
 CMakeFiles/untitled.dir/2nd.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/untitled.dir/2nd.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/alex/Documents/School/OS/2019_05_14/2nd.c -o CMakeFiles/untitled.dir/2nd.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/alexy/Documents/School/OS/2019_05_14/2nd.c -o CMakeFiles/untitled.dir/2nd.c.s
 
 CMakeFiles/untitled.dir/getOPT.c.o: CMakeFiles/untitled.dir/flags.make
 CMakeFiles/untitled.dir/getOPT.c.o: ../getOPT.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alex/Documents/School/OS/2019_05_14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/untitled.dir/getOPT.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/untitled.dir/getOPT.c.o   -c /home/alex/Documents/School/OS/2019_05_14/getOPT.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alexy/Documents/School/OS/2019_05_14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/untitled.dir/getOPT.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/untitled.dir/getOPT.c.o   -c /home/alexy/Documents/School/OS/2019_05_14/getOPT.c
 
 CMakeFiles/untitled.dir/getOPT.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/untitled.dir/getOPT.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/alex/Documents/School/OS/2019_05_14/getOPT.c > CMakeFiles/untitled.dir/getOPT.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/alexy/Documents/School/OS/2019_05_14/getOPT.c > CMakeFiles/untitled.dir/getOPT.c.i
 
 CMakeFiles/untitled.dir/getOPT.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/untitled.dir/getOPT.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/alex/Documents/School/OS/2019_05_14/getOPT.c -o CMakeFiles/untitled.dir/getOPT.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/alexy/Documents/School/OS/2019_05_14/getOPT.c -o CMakeFiles/untitled.dir/getOPT.c.s
 
 # Object files for target untitled
 untitled_OBJECTS = \
@@ -110,7 +110,7 @@ untitled: CMakeFiles/untitled.dir/2nd.c.o
 untitled: CMakeFiles/untitled.dir/getOPT.c.o
 untitled: CMakeFiles/untitled.dir/build.make
 untitled: CMakeFiles/untitled.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/alex/Documents/School/OS/2019_05_14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable untitled"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/alexy/Documents/School/OS/2019_05_14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable untitled"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/untitled.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -123,6 +123,6 @@ CMakeFiles/untitled.dir/clean:
 .PHONY : CMakeFiles/untitled.dir/clean
 
 CMakeFiles/untitled.dir/depend:
-	cd /home/alex/Documents/School/OS/2019_05_14/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/alex/Documents/School/OS/2019_05_14 /home/alex/Documents/School/OS/2019_05_14 /home/alex/Documents/School/OS/2019_05_14/cmake-build-debug /home/alex/Documents/School/OS/2019_05_14/cmake-build-debug /home/alex/Documents/School/OS/2019_05_14/cmake-build-debug/CMakeFiles/untitled.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/alexy/Documents/School/OS/2019_05_14/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/alexy/Documents/School/OS/2019_05_14 /home/alexy/Documents/School/OS/2019_05_14 /home/alexy/Documents/School/OS/2019_05_14/cmake-build-debug /home/alexy/Documents/School/OS/2019_05_14/cmake-build-debug /home/alexy/Documents/School/OS/2019_05_14/cmake-build-debug/CMakeFiles/untitled.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/untitled.dir/depend
 

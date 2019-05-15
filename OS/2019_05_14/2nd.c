@@ -10,7 +10,7 @@
 #include <dirent.h>
 
 
-int main(int arcg, char **argv) {
+int main(int argc, char **argv) {
     printf("Hello, World!\n");
 
     struct dirent *direntbuff;

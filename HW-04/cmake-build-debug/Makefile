@@ -48,10 +48,10 @@ RM = /home/alexy/Downloads/clion-2019.1.3/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/alexy/Documents/School/OS/2019_05_14
+CMAKE_SOURCE_DIR = /home/alexy/Documents/School/HW-04
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/alexy/Documents/School/OS/2019_05_14/cmake-build-debug
+CMAKE_BINARY_DIR = /home/alexy/Documents/School/HW-04/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexy/Documents/School/OS/2019_05_14/cmake-build-debug/CMakeFiles /home/alexy/Documents/School/OS/2019_05_14/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexy/Documents/School/HW-04/cmake-build-debug/CMakeFiles /home/alexy/Documents/School/HW-04/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexy/Documents/School/OS/2019_05_14/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexy/Documents/School/HW-04/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,71 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named untitled
+# Target rules for targets named HW_04
 
 # Build rule for target.
-untitled: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 untitled
-.PHONY : untitled
+HW_04: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 HW_04
+.PHONY : HW_04
 
 # fast build rule for target.
-untitled/fast:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/build
-.PHONY : untitled/fast
-
-2nd.o: 2nd.c.o
-
-.PHONY : 2nd.o
-
-# target to build an object file
-2nd.c.o:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/2nd.c.o
-.PHONY : 2nd.c.o
-
-2nd.i: 2nd.c.i
-
-.PHONY : 2nd.i
-
-# target to preprocess a source file
-2nd.c.i:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/2nd.c.i
-.PHONY : 2nd.c.i
-
-2nd.s: 2nd.c.s
-
-.PHONY : 2nd.s
-
-# target to generate assembly for a file
-2nd.c.s:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/2nd.c.s
-.PHONY : 2nd.c.s
-
-getOPT.o: getOPT.c.o
-
-.PHONY : getOPT.o
-
-# target to build an object file
-getOPT.c.o:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/getOPT.c.o
-.PHONY : getOPT.c.o
-
-getOPT.i: getOPT.c.i
-
-.PHONY : getOPT.i
-
-# target to preprocess a source file
-getOPT.c.i:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/getOPT.c.i
-.PHONY : getOPT.c.i
-
-getOPT.s: getOPT.c.s
-
-.PHONY : getOPT.s
-
-# target to generate assembly for a file
-getOPT.c.s:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/getOPT.c.s
-.PHONY : getOPT.c.s
+HW_04/fast:
+	$(MAKE) -f CMakeFiles/HW_04.dir/build.make CMakeFiles/HW_04.dir/build
+.PHONY : HW_04/fast
 
 main.o: main.c.o
 
@@ -183,7 +129,7 @@ main.o: main.c.o
 
 # target to build an object file
 main.c.o:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/main.c.o
+	$(MAKE) -f CMakeFiles/HW_04.dir/build.make CMakeFiles/HW_04.dir/main.c.o
 .PHONY : main.c.o
 
 main.i: main.c.i
@@ -192,7 +138,7 @@ main.i: main.c.i
 
 # target to preprocess a source file
 main.c.i:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/main.c.i
+	$(MAKE) -f CMakeFiles/HW_04.dir/build.make CMakeFiles/HW_04.dir/main.c.i
 .PHONY : main.c.i
 
 main.s: main.c.s
@@ -201,7 +147,7 @@ main.s: main.c.s
 
 # target to generate assembly for a file
 main.c.s:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/main.c.s
+	$(MAKE) -f CMakeFiles/HW_04.dir/build.make CMakeFiles/HW_04.dir/main.c.s
 .PHONY : main.c.s
 
 # Help Target
@@ -211,14 +157,8 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... untitled"
+	@echo "... HW_04"
 	@echo "... edit_cache"
-	@echo "... 2nd.o"
-	@echo "... 2nd.i"
-	@echo "... 2nd.s"
-	@echo "... getOPT.o"
-	@echo "... getOPT.i"
-	@echo "... getOPT.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

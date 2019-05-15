@@ -4,9 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/alexy/Documents/School/OS/2019_05_14/2nd.c" "/home/alexy/Documents/School/OS/2019_05_14/cmake-build-debug/CMakeFiles/untitled.dir/2nd.c.o"
-  "/home/alexy/Documents/School/OS/2019_05_14/getOPT.c" "/home/alexy/Documents/School/OS/2019_05_14/cmake-build-debug/CMakeFiles/untitled.dir/getOPT.c.o"
-  "/home/alexy/Documents/School/OS/2019_05_14/main.c" "/home/alexy/Documents/School/OS/2019_05_14/cmake-build-debug/CMakeFiles/untitled.dir/main.c.o"
+  "/home/alexy/Documents/School/HW-04/main.c" "/home/alexy/Documents/School/HW-04/cmake-build-debug/CMakeFiles/HW_04.dir/main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
