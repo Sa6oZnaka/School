@@ -26,6 +26,16 @@ bool use_a = false;
 bool use_l = false;
 bool use_R = false;
 
+
+void getType(struct dirent *direntbuff) {
+    if(direntbuff -> d_type == DT_DIR) printf("%s", "d"); // directory
+    if(direntbuff -> d_type == DT_SOCK) printf("%s", "s"); // socket
+    if(direntbuff -> d_type == DT_LNK) printf("%s", "l"); // symbolic link
+    if(direntbuff -> d_type == DT_REG) printf("%s", "-"); // regular file
+    if(direntbuff -> d_type == DT_BLK) printf("%s", "b"); // block device
+    if(direntbuff -> d_type == DT_FIFO) printf("%s", "p"); // pipe
+}
+
 bool ReadDir(char arg[]){
 
     struct dirent *direntbuff;
@@ -39,8 +49,9 @@ bool ReadDir(char arg[]){
 
     while(direntbuff != NULL){
 
-        if(direntbuff->d_type == 8 || use_a) {
-            printf("%s\n", direntbuff->d_name);
+        if(direntbuff -> d_name[0] != '.' || use_a) {
+            getType(direntbuff);
+            printf(" %s\n", direntbuff->d_name); // name
         }
         direntbuff = readdir(dir);
     }
