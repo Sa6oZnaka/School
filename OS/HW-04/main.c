@@ -27,13 +27,27 @@ bool use_l = false;
 bool use_R = false;
 
 
-void getType(struct dirent *direntbuff) {
-    if(direntbuff -> d_type == DT_DIR) printf("%s", "d"); // directory
-    if(direntbuff -> d_type == DT_SOCK) printf("%s", "s"); // socket
-    if(direntbuff -> d_type == DT_LNK) printf("%s", "l"); // symbolic link
-    if(direntbuff -> d_type == DT_REG) printf("%s", "-"); // regular file
-    if(direntbuff -> d_type == DT_BLK) printf("%s", "b"); // block device
-    if(direntbuff -> d_type == DT_FIFO) printf("%s", "p"); // pipe
+void getType(mode_t mode) {
+    if(mode == DT_DIR) printf("%c", 'd');  // directory
+    if(mode == DT_LNK) printf("%c", 'l');  // symbolic link
+    if(mode == DT_REG) printf("%c", '-');  // regular file
+    if(mode == DT_BLK) printf("%c", 'b');  // block device
+    if(mode == DT_SOCK) printf("%c", 's'); // socket
+    if(mode == DT_FIFO) printf("%c", 'p'); // pipe
+}
+
+void getPermissions(mode_t mode){
+    printf("File Permissions: \t");
+    printf( (S_ISDIR(mode)) ? "d" : "-");
+    printf( (mode & S_IRUSR) ? "r" : "-");
+    printf( (mode & S_IWUSR) ? "w" : "-");
+    printf( (mode & S_IXUSR) ? "x" : "-");
+    printf( (mode & S_IRGRP) ? "r" : "-");
+    printf( (mode & S_IWGRP) ? "w" : "-");
+    printf( (mode & S_IXGRP) ? "x" : "-");
+    printf( (mode & S_IROTH) ? "r" : "-");
+    printf( (mode & S_IWOTH) ? "w" : "-");
+    printf( (mode & S_IXOTH) ? "x" : "-");
 }
 
 bool ReadDir(char arg[]){
@@ -50,8 +64,10 @@ bool ReadDir(char arg[]){
     while(direntbuff != NULL){
 
         if(direntbuff -> d_name[0] != '.' || use_a) {
-            getType(direntbuff);
-            printf(" %s\n", direntbuff->d_name); // name
+            getType(direntbuff -> d_type);
+            printf("   ");
+            getPermissions(direntbuff -> d_type);
+            printf("   %s\n", direntbuff->d_name);
         }
         direntbuff = readdir(dir);
     }
@@ -67,7 +83,7 @@ bool ReadDir(char arg[]){
 
 int main(int argc, char **argv) {
 
-    printf("Hello, World!\n");
+    printf("LS V3!\n");
 
     char command = getopt(argc, argv, "alR");
     while(command != -1){
@@ -82,8 +98,8 @@ int main(int argc, char **argv) {
         command = getopt(argc, argv, "alR");
     }
 
-    printf("USE_A %d \n", use_a);
-    printf("USE_L %d \n", use_l);
+    printf("USE_a %d \n", use_a);
+    printf("USE_l %d \n", use_l);
     printf("USE_R %d \n", use_R);
 
     printf("\n");
