@@ -26,33 +26,35 @@ bool use_a = false;
 bool use_l = false;
 bool use_R = false;
 
-
-void ReadDir(char arg[]){
-    printf("Hello, World!\n");
+bool ReadDir(char arg[]){
 
     struct dirent *direntbuff;
     DIR* dir = opendir(arg);
     if(dir == NULL){
         perror("opendir");
-        return;
+        return false;
     }
 
     direntbuff = readdir(dir);
 
     while(direntbuff != NULL){
-        printf("%s\n", direntbuff -> d_name);
+
+        if(direntbuff->d_type == 8 || use_a) {
+            printf("%s\n", direntbuff->d_name);
+        }
         direntbuff = readdir(dir);
     }
 
     if(closedir(dir) == -1){
         perror("closedir");
-        return;
+        return false;
     }
 
+    printf("Sucesss!\n");
+    return true;
 }
 
 int main(int argc, char **argv) {
-
 
     printf("Hello, World!\n");
 
@@ -73,10 +75,10 @@ int main(int argc, char **argv) {
     printf("USE_L %d \n", use_l);
     printf("USE_R %d \n", use_R);
 
-
     printf("\n");
 
-    ReadDir(argv[1]);
+    //ReadDir(argv[1]);
+    ReadDir(".");
 
 
     return 0;
