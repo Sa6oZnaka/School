@@ -21,13 +21,15 @@
 #include <pwd.h>
 #include <dirent.h>
 #include <stdbool.h>
+#include <grp.h>
+#include <time.h>
 
 bool use_a = false;
 bool use_l = false;
 bool use_R = false;
 
 
-void getType(mode_t mode) {
+void showType(mode_t mode) {
     if(mode == DT_DIR) printf("%c", 'd');  // directory
     if(mode == DT_LNK) printf("%c", 'l');  // symbolic link
     if(mode == DT_REG) printf("%c", '-');  // regular file
@@ -36,8 +38,7 @@ void getType(mode_t mode) {
     if(mode == DT_FIFO) printf("%c", 'p'); // pipe
 }
 
-void getPermissions(mode_t mode){
-    printf( (S_ISDIR(mode)) ? "d" : "-");
+void showPermissions(mode_t mode){
     printf( (mode & S_IRUSR) ? "r" : "-");
     printf( (mode & S_IWUSR) ? "w" : "-");
     printf( (mode & S_IXUSR) ? "x" : "-");
@@ -47,6 +48,12 @@ void getPermissions(mode_t mode){
     printf( (mode & S_IROTH) ? "r" : "-");
     printf( (mode & S_IWOTH) ? "w" : "-");
     printf( (mode & S_IXOTH) ? "x" : "-");
+}
+
+void showTime(time_t time){
+
+
+
 }
 
 bool ReadDir(char arg[]){
@@ -64,18 +71,30 @@ bool ReadDir(char arg[]){
 
         if(direntbuff -> d_name[0] != '.' || use_a) {
 
-            if(! use_l) {
-                getType(direntbuff->d_type);
-                printf(" ");
-            } else {
-                // Show permission
-                struct stat fileStat;
-                if (stat(direntbuff->d_name, &fileStat) < 0)
-                    return false;
-                getPermissions(fileStat.st_mode);
-            }
+            showType(direntbuff -> d_type);
 
-            printf(" %s\n", direntbuff->d_name);
+            if(use_l) {
+                struct stat fileStat;
+                if (stat(direntbuff->d_name, &fileStat) < 0){
+                    perror("stat");
+                    return false;
+                }
+
+                showPermissions(fileStat.st_mode);
+                printf(" %ld" ,fileStat.st_nlink);
+                printf(" %s" ,getpwuid(fileStat.st_uid)->pw_name);
+                printf(" %s", getgrgid(fileStat.st_gid)->gr_name);
+                printf(" %8ld" ,fileStat.st_size);
+
+                struct tm *tm;
+                char buf[200];
+                tm = localtime((const time_t *) &fileStat.st_mtim);
+                strftime(buf, sizeof(buf), " %b %d %H:%M", tm);
+                printf("%s", buf);
+
+            }
+            printf(" %s\n", direntbuff -> d_name);
+
         }
         direntbuff = readdir(dir);
     }
@@ -85,7 +104,6 @@ bool ReadDir(char arg[]){
         return false;
     }
 
-    printf("Sucesss!\n");
     return true;
 }
 
