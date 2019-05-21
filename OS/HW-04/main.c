@@ -50,10 +50,37 @@ void showPermissions(mode_t mode){
     printf( (mode & S_IXOTH) ? "x" : "-");
 }
 
-void showTime(time_t time){
+long getTotal(char arg[]){
+    int total = 0;
 
+    struct dirent *direntbuff2;
+    DIR* dir = opendir(arg);
+    if(dir == NULL){
+        perror("opendir");
+        return false;
+    }
 
+    direntbuff2 = readdir(dir);
 
+    while (direntbuff2 != NULL){
+        struct stat fileStat;
+        if (stat(direntbuff2 -> d_name, &fileStat) < 0){
+            perror("stat");
+            return false;
+        }
+        if(direntbuff2 -> d_name[0] != '.' || use_a) {
+            total += fileStat.st_blocks;
+        }
+
+        direntbuff2 = readdir(dir);
+    }
+
+    if(closedir(dir) == -1){
+        perror("closedir");
+        return -1;
+    }
+
+    return total / 2;
 }
 
 bool ReadDir(char arg[]){
@@ -66,6 +93,10 @@ bool ReadDir(char arg[]){
     }
 
     direntbuff = readdir(dir);
+
+    if(use_l) {
+        printf("total: %ld\n", getTotal(arg));
+    }
 
     while(direntbuff != NULL){
 
