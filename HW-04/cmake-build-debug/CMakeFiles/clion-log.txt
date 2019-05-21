@@ -1,11 +1,1 @@
-/home/alexy/Downloads/clion-2019.1.3/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/alexy/Documents/School/HW-04
--- The C compiler identification is GNU 8.3.0
--- Check for working C compiler: /usr/bin/cc
--- Check for working C compiler: /usr/bin/cc -- works
--- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Detecting C compile features
--- Detecting C compile features - done
--- Configuring done
--- Generating done
--- Build files have been written to: /home/alexy/Documents/School/HW-04/cmake-build-debug
+CMakeLists.txt not found in /home/alexy/Documents/School/HW-04 Select CMakeLists.txt file...
