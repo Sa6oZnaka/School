@@ -28,7 +28,7 @@ bool use_a = false;
 bool use_l = false;
 bool use_R = false;
 
-
+// show file type - used for -l
 void showType(mode_t mode) {
     if(mode == DT_DIR) printf("%c", 'd');  // directory
     if(mode == DT_LNK) printf("%c", 'l');  // symbolic link
@@ -38,6 +38,7 @@ void showType(mode_t mode) {
     if(mode == DT_FIFO) printf("%c", 'p'); // pipe
 }
 
+// show permission - used for -l
 void showPermissions(mode_t mode){
     printf( (mode & S_IRUSR) ? "r" : "-");
     printf( (mode & S_IWUSR) ? "w" : "-");
@@ -50,29 +51,30 @@ void showPermissions(mode_t mode){
     printf( (mode & S_IXOTH) ? "x" : "-");
 }
 
+// get total (block) - used for -l
 long getTotal(char arg[]){
     int total = 0;
 
-    struct dirent *direntbuff2;
+    struct dirent *direntbuff;
     DIR* dir = opendir(arg);
     if(dir == NULL){
         perror("opendir");
-        return false;
+        return -1;
     }
 
-    direntbuff2 = readdir(dir);
+    direntbuff = readdir(dir);
 
-    while (direntbuff2 != NULL){
+    while (direntbuff != NULL){
         struct stat fileStat;
-        if (stat(direntbuff2 -> d_name, &fileStat) < 0){
+        if (stat(direntbuff -> d_name, &fileStat) < 0){
             perror("stat");
             return false;
         }
-        if(direntbuff2 -> d_name[0] != '.' || use_a) {
+        if(direntbuff -> d_name[0] != '.' || use_a) {
             total += fileStat.st_blocks;
         }
 
-        direntbuff2 = readdir(dir);
+        direntbuff = readdir(dir);
     }
 
     if(closedir(dir) == -1){
@@ -83,6 +85,7 @@ long getTotal(char arg[]){
     return total / 2;
 }
 
+// show files from the directory
 bool ReadDir(char arg[]){
 
     struct dirent *direntbuff;
@@ -123,8 +126,6 @@ bool ReadDir(char arg[]){
                 strftime(buf, sizeof(buf), " %b %d %H:%M", tm);
                 printf("%s", buf);
 
-                //printf("   %ld    ", fileStat.st_blocks);
-
             }
             printf(" %s\n", direntbuff -> d_name);
 
@@ -140,7 +141,37 @@ bool ReadDir(char arg[]){
     return true;
 }
 
-int main(int argc, char **argv) {
+// check is argument is file or directory
+bool isDir(char arg[]){
+    DIR* dir = opendir(arg);
+    if(dir == NULL){
+        return false;
+    }
+    if(closedir(dir) == -1){
+        perror("closedir");
+        return false;
+    }
+    return true;
+}
+
+// execute the arguments
+void executeArguments(int argc, char* argv[]){
+
+    for (int i = optind; i < argc; ++i){
+        if (isDir(argv[i])){
+            if(argc > 2){
+                printf("\n%s", argv[i]);
+            }
+            ReadDir(argv[i]);
+            continue;
+        }else{
+            printf("- %s\n", argv[i]);
+            continue;
+        }
+    }
+}
+
+int main(int argc, char *argv[]) {
 
     char command = getopt(argc, argv, "alR");
     while(command != -1){
@@ -154,8 +185,8 @@ int main(int argc, char **argv) {
         }
         command = getopt(argc, argv, "alR");
     }
-
-    ReadDir(".");
+    executeArguments(argc, argv);
+    //ReadDir(".");
 
     return 0;
 }
