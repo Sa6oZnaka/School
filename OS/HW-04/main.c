@@ -37,7 +37,6 @@ void getType(mode_t mode) {
 }
 
 void getPermissions(mode_t mode){
-    printf("File Permissions: \t");
     printf( (S_ISDIR(mode)) ? "d" : "-");
     printf( (mode & S_IRUSR) ? "r" : "-");
     printf( (mode & S_IWUSR) ? "w" : "-");
@@ -64,10 +63,19 @@ bool ReadDir(char arg[]){
     while(direntbuff != NULL){
 
         if(direntbuff -> d_name[0] != '.' || use_a) {
-            getType(direntbuff -> d_type);
-            printf("   ");
-            getPermissions(direntbuff -> d_type);
-            printf("   %s\n", direntbuff->d_name);
+
+            if(! use_l) {
+                getType(direntbuff->d_type);
+                printf(" ");
+            } else {
+                // Show permission
+                struct stat fileStat;
+                if (stat(direntbuff->d_name, &fileStat) < 0)
+                    return false;
+                getPermissions(fileStat.st_mode);
+            }
+
+            printf(" %s\n", direntbuff->d_name);
         }
         direntbuff = readdir(dir);
     }
