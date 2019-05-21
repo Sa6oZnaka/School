@@ -92,6 +92,8 @@ bool ReadDir(char arg[]){
                 strftime(buf, sizeof(buf), " %b %d %H:%M", tm);
                 printf("%s", buf);
 
+                //printf("   %ld    ", fileStat.st_blocks);
+
             }
             printf(" %s\n", direntbuff -> d_name);
 
@@ -109,8 +111,6 @@ bool ReadDir(char arg[]){
 
 int main(int argc, char **argv) {
 
-    printf("LS V3!\n");
-
     char command = getopt(argc, argv, "alR");
     while(command != -1){
 
@@ -124,15 +124,7 @@ int main(int argc, char **argv) {
         command = getopt(argc, argv, "alR");
     }
 
-    printf("USE_a %d \n", use_a);
-    printf("USE_l %d \n", use_l);
-    printf("USE_R %d \n", use_R);
-
-    printf("\n");
-
-    //ReadDir(argv[1]);
     ReadDir(".");
-
 
     return 0;
 }
