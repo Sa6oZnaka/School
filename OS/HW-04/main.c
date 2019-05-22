@@ -104,7 +104,9 @@ bool ReadDir(char arg[]){
 
             if(use_l) {
                 struct stat fileStat;
-                if (stat(arg, &fileStat) < 0){
+
+                chdir(arg);
+                if (stat(direntbuff -> d_name, &fileStat) < 0){
                     perror("stat");
                     return false;
                 }
@@ -182,7 +184,7 @@ int main(int argc, char *argv[]) {
     }
     executeArguments(argc, argv);
     if(optind == argc) {
-        ReadDir(".");
+        ReadDir("./");
     }
 
     return 0;
