@@ -20,17 +20,19 @@
 #include <memory.h>
 
 bool use_a = false;
+bool use_A = false;
 bool use_l = false;
 bool use_R = false;
 
 // show file type - used for -l
-void showType(mode_t mode) {
-    if(mode == DT_DIR) printf("%c", 'd');  // directory
-    if(mode == DT_LNK) printf("%c", 'l');  // symbolic link
-    if(mode == DT_REG) printf("%c", '-');  // regular file
-    if(mode == DT_BLK) printf("%c", 'b');  // block device
-    if(mode == DT_SOCK) printf("%c", 's'); // socket
-    if(mode == DT_FIFO) printf("%c", 'p'); // pipe
+char getType(mode_t mode) {
+    if(mode == DT_DIR) return 'b';  // directory
+    if(mode == DT_LNK) return 'c';  // symbolic link
+    if(mode == DT_REG) return '-';  // regular file
+    if(mode == DT_BLK) return 'b';  // block device
+    if(mode == DT_SOCK) return 's'; // socket
+    if(mode == DT_FIFO) return 'p'; // pipe
+    return '?';
 }
 
 // show permission - used for -l
@@ -100,11 +102,11 @@ bool ReadDir(char arg[]){
     }
 
     while(direntbuff != NULL){
-
+        
         if(direntbuff -> d_name[0] != '.' || use_a) {
-
-            showType(direntbuff -> d_type);
-
+            
+            printf("%c" , getType(direntbuff -> d_type));
+            
             if(use_l) {
                 struct stat fileStat;
 
@@ -176,8 +178,10 @@ int main(int argc, char *argv[]) {
     char command = getopt(argc, argv, "AalR");
     while(command != -1){
 
-        if(command == 'a' || command == 'A'){
+        if(command == 'a'){
             use_a = true;
+        }else if(command == 'A'){    
+            use_A = true;
         }else if(command == 'l'){
             use_l = true;
         }else if(command == 'R'){
