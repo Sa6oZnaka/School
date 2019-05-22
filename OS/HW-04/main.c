@@ -1,18 +1,12 @@
-// TODO LS
-// 1. Da formatiram data i chas
-// 2. ima razlichni argumenti
-// -a mnoje da go napishem sled mnogo spaecove (-a, -l , -la)
-// mojem da imame mnogo kombinacii ot komandi
-// ls -a -l = ls -la
-// getopt - trqbda se se izpolzva za argumentite tq kazva kakvi argumenti ima za tazi zadacha
-// no ne pishat po niska otcenka prosto moje da izpusna neshto i shte go
-// prava 10 minuti poveche
-// -a - skriti failove
-// -l - dopulnitelni danni
-// da pusna root directorqta s -a
-// ne trqbva da sortirama
-// mnogo da vnimavam s rekursivnoto izvikvane che se stiga do bezkraen cigul!
-
+//--------------------------------------------
+// NAME: Alexandar Karapenev
+// CLASS: XIb
+// NUMBER: 1
+// PROBLEM: #4
+// FILE NAME: main.c
+// FILE PURPOSE:
+// Implementation of the UNIX function ls
+//---------------------------------------------
 
 #include <stdio.h>
 #include <sys/types.h>
@@ -23,6 +17,7 @@
 #include <stdbool.h>
 #include <grp.h>
 #include <time.h>
+#include <memory.h>
 
 bool use_a = false;
 bool use_l = false;
@@ -66,7 +61,7 @@ long getTotal(char arg[]){
 
     while (direntbuff != NULL){
         struct stat fileStat;
-        if (stat(direntbuff -> d_name, &fileStat) < 0){
+        if (stat(arg, &fileStat) < 0){
             perror("stat");
             return false;
         }
@@ -109,7 +104,7 @@ bool ReadDir(char arg[]){
 
             if(use_l) {
                 struct stat fileStat;
-                if (stat(direntbuff->d_name, &fileStat) < 0){
+                if (stat(arg, &fileStat) < 0){
                     perror("stat");
                     return false;
                 }
@@ -118,7 +113,7 @@ bool ReadDir(char arg[]){
                 printf(" %ld" ,fileStat.st_nlink);
                 printf(" %s" ,getpwuid(fileStat.st_uid)->pw_name);
                 printf(" %s", getgrgid(fileStat.st_gid)->gr_name);
-                printf(" %8ld" ,fileStat.st_size);
+                printf(" %4ld" ,fileStat.st_size);
 
                 struct tm *tm;
                 char buf[200];
@@ -160,7 +155,7 @@ void executeArguments(int argc, char* argv[]){
     for (int i = optind; i < argc; ++i){
         if (isDir(argv[i])){
             if(argc > 2){
-                printf("\n%s", argv[i]);
+                printf("%s:\n", argv[i]);
             }
             ReadDir(argv[i]);
             continue;
@@ -173,20 +168,22 @@ void executeArguments(int argc, char* argv[]){
 
 int main(int argc, char *argv[]) {
 
-    char command = getopt(argc, argv, "alR");
+    char command = getopt(argc, argv, "AalR");
     while(command != -1){
 
-        if(command == 'a'){
+        if(command == 'a' || command == 'A'){
             use_a = true;
         }else if(command == 'l'){
             use_l = true;
         }else if(command == 'R'){
             use_R = true;
         }
-        command = getopt(argc, argv, "alR");
+        command = getopt(argc, argv, "AalR");
     }
     executeArguments(argc, argv);
-    //ReadDir(".");
+    if(optind == argc) {
+        ReadDir(".");
+    }
 
     return 0;
 }
