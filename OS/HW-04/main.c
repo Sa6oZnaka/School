@@ -61,7 +61,10 @@ long getTotal(char arg[]){
 
     while (direntbuff != NULL){
         struct stat fileStat;
-        if (stat(arg, &fileStat) < 0){
+
+        chdir(arg);
+
+        if (stat(direntbuff -> d_name, &fileStat) < 0){
             perror("stat");
             return false;
         }
