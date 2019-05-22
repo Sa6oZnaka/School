@@ -24,9 +24,9 @@ bool use_A = false;
 bool use_l = false;
 bool use_R = false;
 
-// show file type - used for -l
+// get file type - used for -l
 char getType(mode_t mode) {
-    if(mode == DT_DIR) return 'b';  // directory
+    if(mode == DT_DIR) return 'd';  // directory
     if(mode == DT_LNK) return 'c';  // symbolic link
     if(mode == DT_REG) return '-';  // regular file
     if(mode == DT_BLK) return 'b';  // block device
@@ -102,8 +102,15 @@ bool ReadDir(char arg[]){
     }
 
     while(direntbuff != NULL){
-        
-        if(direntbuff -> d_name[0] != '.' || use_a) {
+
+        if(use_A && getType(direntbuff -> d_type) == 'd') {
+            if (strcmp(direntbuff -> d_name, ".") == 0 || strcmp(direntbuff->d_name, "..") == 0 ) {
+                direntbuff = readdir(dir);
+                continue;
+            }
+        }
+
+        if(direntbuff -> d_name[0] != '.' || use_a || use_A) {
             
             printf("%c" , getType(direntbuff -> d_type));
             
