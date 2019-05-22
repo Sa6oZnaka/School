@@ -11,9 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d15ae34e-e814-4d81-9d9b-d43d36149cb1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/HW4.zip" beforeDir="false" afterPath="$PROJECT_DIR$/HW4.zip" afterDir="false" />
-    </list>
+    <list default="true" id="d15ae34e-e814-4d81-9d9b-d43d36149cb1" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -127,16 +125,15 @@
       <option name="presentableId" value="Default" />
       <updated>1557897379616</updated>
       <workItem from="1557897381015" duration="3856000" />
-      <workItem from="1558417106611" duration="28702000" />
+      <workItem from="1558417106611" duration="28885000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32558000" />
+    <option name="totallyTimeSpent" value="32741000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="-2" width="1684" height="1022" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.24969475" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
