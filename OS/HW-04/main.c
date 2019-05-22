@@ -96,7 +96,7 @@ bool ReadDir(char arg[]){
     direntbuff = readdir(dir);
 
     if(use_l) {
-        printf("total: %ld\n", getTotal(arg));
+        printf("total %ld\n", getTotal(arg));
     }
 
     while(direntbuff != NULL){
