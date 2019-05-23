@@ -70,7 +70,7 @@ long getTotal(char arg[]){
             perror("stat");
             return false;
         }
-        if(direntbuff -> d_name[0] != '.' || use_a) {
+        if(direntbuff -> d_name[0] != '.' || use_a || ( use_A && (strcmp(direntbuff -> d_name, ".") != 0 && strcmp(direntbuff -> d_name, "..") != 0 ))) {
             total += fileStat.st_blocks;
         }
 
@@ -103,14 +103,18 @@ bool ReadDir(char arg[]){
 
     while(direntbuff != NULL){
 
-        if(use_A && getType(direntbuff -> d_type) == 'd') {
-            if (strcmp(direntbuff -> d_name, ".") == 0 || strcmp(direntbuff->d_name, "..") == 0 ) {
-                direntbuff = readdir(dir);
-                continue;
-            }
-        }
+        /*if(use_R && getType(direntbuff -> d_type) == 'd'){
+            char path[200] = "";
+            strcat(path, arg);
+            strcat(path, direntbuff -> d_name);
 
-        if(direntbuff -> d_name[0] != '.' || use_a || use_A) {
+            printf("\n PATH %s \n", path);
+
+            ReadDir(path);
+        }*/
+
+
+        if(direntbuff -> d_name[0] != '.' || use_a || ( use_A && (strcmp(direntbuff -> d_name, ".") != 0 && strcmp(direntbuff -> d_name, "..") != 0 ))) {
             
             printf("%c" , getType(direntbuff -> d_type));
             
