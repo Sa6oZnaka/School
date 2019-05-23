@@ -35,8 +35,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="549">
-              <caret line="176" column="13" selection-start-line="176" selection-start-column="13" selection-end-line="176" selection-end-column="13" />
+            <state relative-caret-position="318">
+              <caret line="64" column="29" selection-start-line="64" selection-start-column="29" selection-end-line="64" selection-end-column="29" />
               <folding>
                 <element signature="e#247#265#0" expanded="true" />
               </folding>
@@ -55,6 +55,7 @@
       <find>isD</find>
       <find>showins</find>
       <find>exec</find>
+      <find>showdir</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -131,12 +132,12 @@
       <updated>1557897379616</updated>
       <workItem from="1557897381015" duration="3856000" />
       <workItem from="1558417106611" duration="28885000" />
-      <workItem from="1558526897756" duration="11423000" />
+      <workItem from="1558526897756" duration="12547000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44164000" />
+    <option name="totallyTimeSpent" value="45288000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="-2" width="1684" height="1022" extended-state="6" />
@@ -179,8 +180,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="176" column="13" selection-start-line="176" selection-start-column="13" selection-end-line="176" selection-end-column="13" />
+        <state relative-caret-position="318">
+          <caret line="64" column="29" selection-start-line="64" selection-start-column="29" selection-end-line="64" selection-end-column="29" />
           <folding>
             <element signature="e#247#265#0" expanded="true" />
           </folding>

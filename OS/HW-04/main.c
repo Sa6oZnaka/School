@@ -64,8 +64,6 @@ long getTotal(char arg[]){
     while (direntbuff != NULL){
         struct stat fileStat;
 
-        chdir(arg);
-
         if (stat(direntbuff -> d_name, &fileStat) < 0){
             perror("stat");
             return false;
@@ -86,7 +84,7 @@ long getTotal(char arg[]){
 }
 
 // show files from the directory
-bool ReadDir(char arg[]){
+bool showDir(char arg[]){
 
     struct dirent *direntbuff;
     DIR* dir = opendir(arg);
@@ -110,7 +108,6 @@ bool ReadDir(char arg[]){
             if(use_l) {
                 struct stat fileStat;
 
-                chdir(arg);
                 if (stat(direntbuff -> d_name, &fileStat) < 0){
                     perror("stat");
                     return false;
@@ -144,48 +141,43 @@ bool ReadDir(char arg[]){
 }
 
 // shows all dirs in the directory - used for -R
-void showChildFolders(char arg[], char name[]){
+void showChildFolders(char name[]){
 
     printf("%s:\n", name);
 
-    // pokazmae failovete
-    ReadDir(name);
+    // show files
+    showDir(name);
     printf("\n");
 
-    // otvarqme papkata
+    // open the folder
     struct dirent *direntbuff;
-    DIR* dir = opendir(arg);
+    DIR* dir = opendir(name);
     if(dir == NULL){
         perror("opendir");
         return;
     }
     direntbuff = readdir(dir);
 
-    // chetem q
+    // check for child folders
     while(direntbuff != NULL) {
 
-        // tursim za drugi papki
         if (getType(direntbuff -> d_type) == 'd' && strcmp(direntbuff -> d_name , ".") != 0 && strcmp(direntbuff -> d_name , "..") != 0) {
             if(direntbuff -> d_name[0] != '.' || use_a || ( use_A && (strcmp(direntbuff -> d_name, ".") != 0 && strcmp(direntbuff -> d_name, "..") != 0 ))) {
-                // namirame i vika sebe si
                 char path[100] = "";
                 strcat(path, name);
                 strcat(path, "/");
                 strcat(path, direntbuff->d_name);
 
-                showChildFolders(path, path);
+                showChildFolders(path);
             }
         }
         direntbuff = readdir(dir);
     }
 
-    // zatvarq
-    //printf("Closing dir %s\n", name);
     if(closedir(dir) == -1){
         perror("closedir");
         return;
     }
-
 }
 
 
@@ -211,9 +203,9 @@ void executeArguments(int argc, char* argv[]){
                 printf("%s:\n", argv[i]);
             }
             if(! use_R) {
-                ReadDir(argv[i]);
+                showDir(argv[i]);
             } else {
-                showChildFolders(argv[i], ".");
+                showChildFolders(argv[i]);
             }
             continue;
         }else{
@@ -242,9 +234,9 @@ int main(int argc, char *argv[]) {
     executeArguments(argc, argv);
     if(optind == argc) {
         if(! use_R) {
-            ReadDir("./");
+            showDir(".");
         } else {
-            showChildFolders(".", ".");
+            showChildFolders(".");
         }
     }
 
