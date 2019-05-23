@@ -146,35 +146,41 @@ bool ReadDir(char arg[]){
 // shows all dirs in the directory - used for -R
 void showChildFolders(char arg[], char name[]){
 
+    printf("%s:\n", name);
+
+    // pokazmae failovete
+    ReadDir(name);
+    printf("\n");
+
+    // otvarqme papkata
     struct dirent *direntbuff;
     DIR* dir = opendir(arg);
     if(dir == NULL){
         perror("opendir");
         return;
     }
-
     direntbuff = readdir(dir);
 
-    char path[200] = "";
-    strcat(path , name);
-    strcat(path, "/");
+    // chetem q
+    while(direntbuff != NULL) {
 
-    while(direntbuff != NULL){
+        // tursim za drugi papki
+        if (getType(direntbuff -> d_type) == 'd' && strcmp(direntbuff -> d_name , ".") != 0 && strcmp(direntbuff -> d_name , "..") != 0) {
+            if(direntbuff -> d_name[0] != '.' || use_a || ( use_A && (strcmp(direntbuff -> d_name, ".") != 0 && strcmp(direntbuff -> d_name, "..") != 0 ))) {
+                // namirame i vika sebe si
+                char path[100] = "";
+                strcat(path, name);
+                strcat(path, "/");
+                strcat(path, direntbuff->d_name);
 
-        if( getType(direntbuff -> d_type) == 'd' && strcmp(direntbuff -> d_name , "..") != 0 && strcmp(direntbuff -> d_name , ".") != 0) {
-
-            strcat(path, direntbuff -> d_name);
-            printf("%s:\n", path);
-
-            chdir(direntbuff -> d_name);
-            ReadDir(".");
-            printf("\n");
-
-            showChildFolders(".", path);
+                showChildFolders(path, path);
+            }
         }
         direntbuff = readdir(dir);
     }
 
+    // zatvarq
+    //printf("Closing dir %s\n", name);
     if(closedir(dir) == -1){
         perror("closedir");
         return;
@@ -207,9 +213,6 @@ void executeArguments(int argc, char* argv[]){
             if(! use_R) {
                 ReadDir(argv[i]);
             } else {
-                printf(".:\n");
-                ReadDir(argv[i]);
-                printf("\n");
                 showChildFolders(argv[i], ".");
             }
             continue;
@@ -241,9 +244,6 @@ int main(int argc, char *argv[]) {
         if(! use_R) {
             ReadDir("./");
         } else {
-            printf(".:\n");
-            ReadDir(".");
-            printf("\n");
             showChildFolders(".", ".");
         }
     }
