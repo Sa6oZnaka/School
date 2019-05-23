@@ -103,19 +103,18 @@ bool ReadDir(char arg[]){
 
     while(direntbuff != NULL){
 
-        /*if(use_R && getType(direntbuff -> d_type) == 'd'){
-            char path[200] = "";
-            strcat(path, arg);
-            strcat(path, direntbuff -> d_name);
-
-            printf("\n PATH %s \n", path);
-
-            ReadDir(path);
-        }*/
-
-
         if(direntbuff -> d_name[0] != '.' || use_a || ( use_A && (strcmp(direntbuff -> d_name, ".") != 0 && strcmp(direntbuff -> d_name, "..") != 0 ))) {
-            
+
+            if(use_R && getType(direntbuff -> d_type) == 'd'){
+                printf("[Line 109] Opening folder: %s \n" , direntbuff -> d_name);
+                printf("---------------------\n");
+
+                chdir(direntbuff -> d_name);
+                ReadDir(".");
+                printf("=====================\n");
+            }
+
+
             printf("%c" , getType(direntbuff -> d_type));
             
             if(use_l) {
