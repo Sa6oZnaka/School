@@ -204,7 +204,14 @@ void executeArguments(int argc, char* argv[]){
             if(argc > 2){
                 printf("%s:\n", argv[i]);
             }
-            ReadDir(argv[i]);
+            if(! use_R) {
+                ReadDir(argv[i]);
+            } else {
+                printf(".:\n");
+                ReadDir(argv[i]);
+                printf("\n");
+                showChildFolders(argv[i], ".");
+            }
             continue;
         }else{
             printf("- %s\n", argv[i]);
@@ -215,7 +222,7 @@ void executeArguments(int argc, char* argv[]){
 
 int main(int argc, char *argv[]) {
 
-    /*char command = getopt(argc, argv, "AalR");
+    char command = getopt(argc, argv, "AalR");
     while(command != -1){
 
         if(command == 'a'){
@@ -231,13 +238,16 @@ int main(int argc, char *argv[]) {
     }
     executeArguments(argc, argv);
     if(optind == argc) {
-        ReadDir("./");
-    }*/
+        if(! use_R) {
+            ReadDir("./");
+        } else {
+            printf(".:\n");
+            ReadDir(".");
+            printf("\n");
+            showChildFolders(".", ".");
+        }
+    }
 
-    printf(".:\n");
-    ReadDir(".");
-    printf("\n");
-    showChildFolders(".", ".");
 
     return 0;
 }
