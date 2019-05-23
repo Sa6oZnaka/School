@@ -105,16 +105,6 @@ bool ReadDir(char arg[]){
 
         if(direntbuff -> d_name[0] != '.' || use_a || ( use_A && (strcmp(direntbuff -> d_name, ".") != 0 && strcmp(direntbuff -> d_name, "..") != 0 ))) {
 
-            if(use_R && getType(direntbuff -> d_type) == 'd'){
-                printf("[Line 109] Opening folder: %s \n" , direntbuff -> d_name);
-                printf("---------------------\n");
-
-                chdir(direntbuff -> d_name);
-                ReadDir(".");
-                printf("=====================\n");
-            }
-
-
             printf("%c" , getType(direntbuff -> d_type));
             
             if(use_l) {
@@ -153,6 +143,46 @@ bool ReadDir(char arg[]){
     return true;
 }
 
+// shows all dirs in the directory - used for -R
+void showChildFolders(char arg[], char name[]){
+
+    struct dirent *direntbuff;
+    DIR* dir = opendir(arg);
+    if(dir == NULL){
+        perror("opendir");
+        return;
+    }
+
+    direntbuff = readdir(dir);
+
+    char path[200] = "";
+    strcat(path , name);
+    strcat(path, "/");
+
+    while(direntbuff != NULL){
+
+        if( getType(direntbuff -> d_type) == 'd' && strcmp(direntbuff -> d_name , "..") != 0 && strcmp(direntbuff -> d_name , ".") != 0) {
+
+            strcat(path, direntbuff -> d_name);
+            printf("%s:\n", path);
+
+            chdir(direntbuff -> d_name);
+            ReadDir(".");
+            printf("\n");
+
+            showChildFolders(".", path);
+        }
+        direntbuff = readdir(dir);
+    }
+
+    if(closedir(dir) == -1){
+        perror("closedir");
+        return;
+    }
+
+}
+
+
 // check is argument is file or directory
 bool isDir(char arg[]){
     DIR* dir = opendir(arg);
@@ -185,7 +215,7 @@ void executeArguments(int argc, char* argv[]){
 
 int main(int argc, char *argv[]) {
 
-    char command = getopt(argc, argv, "AalR");
+    /*char command = getopt(argc, argv, "AalR");
     while(command != -1){
 
         if(command == 'a'){
@@ -202,7 +232,12 @@ int main(int argc, char *argv[]) {
     executeArguments(argc, argv);
     if(optind == argc) {
         ReadDir("./");
-    }
+    }*/
+
+    printf(".:\n");
+    ReadDir(".");
+    printf("\n");
+    showChildFolders(".", ".");
 
     return 0;
 }
