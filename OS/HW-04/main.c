@@ -53,6 +53,7 @@ long getTotal(char arg[]){
     int total = 0;
 
     struct dirent *direntbuff;
+
     DIR* dir = opendir(arg);
     if(dir == NULL){
         perror("opendir");
@@ -62,9 +63,14 @@ long getTotal(char arg[]){
     direntbuff = readdir(dir);
 
     while (direntbuff != NULL){
-        struct stat fileStat;
 
-        if (stat(arg, &fileStat) < 0){
+        char path[100] = "";
+        strcat(path, arg);
+        strcat(path, "/");
+        strcat(path, direntbuff -> d_name);
+
+        struct stat fileStat;
+        if (stat(path, &fileStat) < 0){
             perror("stat");
             return false;
         }
@@ -87,6 +93,7 @@ long getTotal(char arg[]){
 void showDir(char arg[]){
 
     struct dirent *direntbuff;
+
     DIR* dir = opendir(arg);
     if(dir == NULL){
         perror("opendir");
@@ -103,12 +110,17 @@ void showDir(char arg[]){
 
         if(direntbuff -> d_name[0] != '.' || use_a || ( use_A && (strcmp(direntbuff -> d_name, ".") != 0 && strcmp(direntbuff -> d_name, "..") != 0 ))) {
 
+            char path[100] = "";
+            strcat(path, arg);
+            strcat(path, "/");
+            strcat(path, direntbuff -> d_name);
+
             printf("%c" , getType(direntbuff -> d_type));
 
             // show additional file info
             if(use_l) {
-                struct stat fileStat;
 
+                struct stat fileStat;
                 if (stat(arg, &fileStat) < 0){
                     perror("stat");
                     return;
