@@ -64,7 +64,7 @@ long getTotal(char arg[]){
     while (direntbuff != NULL){
         struct stat fileStat;
 
-        if (stat(direntbuff -> d_name, &fileStat) < 0){
+        if (stat(arg, &fileStat) < 0){
             perror("stat");
             return false;
         }
@@ -84,13 +84,13 @@ long getTotal(char arg[]){
 }
 
 // show files from the directory
-bool showDir(char arg[]){
+void showDir(char arg[]){
 
     struct dirent *direntbuff;
     DIR* dir = opendir(arg);
     if(dir == NULL){
         perror("opendir");
-        return false;
+        return;
     }
 
     direntbuff = readdir(dir);
@@ -104,19 +104,20 @@ bool showDir(char arg[]){
         if(direntbuff -> d_name[0] != '.' || use_a || ( use_A && (strcmp(direntbuff -> d_name, ".") != 0 && strcmp(direntbuff -> d_name, "..") != 0 ))) {
 
             printf("%c" , getType(direntbuff -> d_type));
-            
+
+            // show additional file info
             if(use_l) {
                 struct stat fileStat;
 
-                if (stat(direntbuff -> d_name, &fileStat) < 0){
+                if (stat(arg, &fileStat) < 0){
                     perror("stat");
-                    return false;
+                    return;
                 }
 
                 showPermissions(fileStat.st_mode);
                 printf(" %ld" ,fileStat.st_nlink);
-                printf(" %s" ,getpwuid(fileStat.st_uid)->pw_name);
-                printf(" %s", getgrgid(fileStat.st_gid)->gr_name);
+                printf(" %s" ,getpwuid(fileStat.st_uid) -> pw_name);
+                printf(" %s", getgrgid(fileStat.st_gid) -> gr_name);
                 printf(" %4ld" ,fileStat.st_size);
 
                 struct tm *tm;
@@ -134,10 +135,8 @@ bool showDir(char arg[]){
 
     if(closedir(dir) == -1){
         perror("closedir");
-        return false;
+        return;
     }
-
-    return true;
 }
 
 // shows all dirs in the directory - used for -R
