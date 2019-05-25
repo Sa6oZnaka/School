@@ -121,7 +121,7 @@ void showDir(char arg[]){
             if(use_l) {
 
                 struct stat fileStat;
-                if (stat(arg, &fileStat) < 0){
+                if (stat(path, &fileStat) < 0){
                     perror("stat");
                     return;
                 }

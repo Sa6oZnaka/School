@@ -14,6 +14,7 @@
     <list default="true" id="d15ae34e-e814-4d81-9d9b-d43d36149cb1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../../OOP/04-Santa-Claus/src/com/company/Elve.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/04-Santa-Claus/src/com/company/Elve.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../OOP/04-Santa-Claus/src/com/company/Reindeer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../OOP/04-Santa-Claus/src/com/company/Reindeer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW4.zip" beforeDir="false" afterPath="$PROJECT_DIR$/HW4.zip" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,8 +37,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="531">
-              <caret line="118" lean-forward="true" selection-start-line="118" selection-end-line="118" />
+            <state relative-caret-position="606">
+              <caret line="123" column="29" selection-start-line="123" selection-start-column="29" selection-end-line="123" selection-end-column="29" />
               <folding>
                 <element signature="e#247#265#0" expanded="true" />
               </folding>
@@ -134,12 +135,12 @@
       <workItem from="1557897381015" duration="3856000" />
       <workItem from="1558417106611" duration="28885000" />
       <workItem from="1558526897756" duration="13165000" />
-      <workItem from="1558773654293" duration="1185000" />
+      <workItem from="1558773654293" duration="1360000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47091000" />
+    <option name="totallyTimeSpent" value="47266000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="-2" width="1684" height="1022" extended-state="6" />
@@ -182,8 +183,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="531">
-          <caret line="118" lean-forward="true" selection-start-line="118" selection-end-line="118" />
+        <state relative-caret-position="606">
+          <caret line="123" column="29" selection-start-line="123" selection-start-column="29" selection-end-line="123" selection-end-column="29" />
           <folding>
             <element signature="e#247#265#0" expanded="true" />
           </folding>
