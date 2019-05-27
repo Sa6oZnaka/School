@@ -110,16 +110,16 @@ void showDir(char arg[]){
 
         if(direntbuff -> d_name[0] != '.' || use_a || ( use_A && (strcmp(direntbuff -> d_name, ".") != 0 && strcmp(direntbuff -> d_name, "..") != 0 ))) {
 
-            char path[100] = "";
-            strcat(path, arg);
-            strcat(path, "/");
-            strcat(path, direntbuff -> d_name);
-
             printf("%c" , getType(direntbuff -> d_type));
 
             // show additional file info
             if(use_l) {
 
+                char path[100] = "";
+                strcat(path, arg);
+                strcat(path, "/");
+                strcat(path, direntbuff -> d_name);
+                
                 struct stat fileStat;
                 if (stat(path, &fileStat) < 0){
                     perror("stat");
