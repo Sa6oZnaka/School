@@ -20,21 +20,52 @@ public class WaterConstructor {
 	private Semaphore hydrogenSemaphore = new Semaphore(0);
 
 	public void proceedOxygen(Oxygen oxygen) throws Exception {
-		// TODO: implement me
+
+		lock.lock();
+		oxygenCounter ++;
+		if (hydrogenCounter >= 2 && oxygenCounter >= 1) {
+			hydrogenSemaphore.release(2);
+			hydrogenCounter -= 2;
+			oxygenSemaphore.release();
+			oxygenCounter --;
+
+			lock.unlock();
+		}else{
+			lock.unlock();
+		}
+		oxygenSemaphore.acquire();
+		barrier.await();
+		oxygen.bond();
+
 	}
 
 	public void proceedHydrogen(Hydrogen hydrogen) throws Exception {
-		// TODO: implement me
+		lock.lock();
+		hydrogenCounter += 2;
+		if (hydrogenCounter >= 2 && oxygenCounter >= 1) {
+			hydrogenSemaphore.release(2);
+			hydrogenCounter -= 2;
+			oxygenSemaphore.release();
+			oxygenCounter --;
+
+			lock.unlock();
+		}else{
+			lock.unlock();
+		}
+		hydrogenSemaphore.acquire();
+		barrier.await();
+		hydrogen.bond();
+
 	}
 
-	public static void main(String[] args) {
+	public synchronized static void main(String[] args) {
 		WaterConstructor constructor = new WaterConstructor();
 		Random random = new Random();
 		int oxygen = 0;
 		int hydrogen = 0;
 
 		while (true) {
-			if (random.nextInt(3) == 0) {
+			if (random.nextInt(2) == 0) {
 				Oxygen o = new Oxygen(++oxygen, constructor);
 				new Thread(o).start();
 			} else {
