@@ -18,44 +18,42 @@ public class WaterConstructor {
 
 	private Semaphore oxygenSemaphore = new Semaphore(0);
 	private Semaphore hydrogenSemaphore = new Semaphore(0);
+	private Semaphore mutex = new Semaphore(1);
+
 
 	public void proceedOxygen(Oxygen oxygen) throws Exception {
 
-		lock.lock();
+		mutex.acquire(); // wait
 		oxygenCounter ++;
-		if (hydrogenCounter >= 2 && oxygenCounter >= 1) {
-			hydrogenSemaphore.release(2);
+		if (hydrogenCounter >= 2) {
+			hydrogenSemaphore.release(2); // signal
 			hydrogenCounter -= 2;
-			oxygenSemaphore.release();
+			oxygenSemaphore.release(1);
 			oxygenCounter --;
-
-			lock.unlock();
-		}else{
-			lock.unlock();
+		}else {
+			mutex.release();
 		}
 		oxygenSemaphore.acquire();
-		barrier.await();
 		oxygen.bond();
-
+		barrier.await();
+		mutex.release();
 	}
 
 	public void proceedHydrogen(Hydrogen hydrogen) throws Exception {
-		lock.lock();
+		mutex.acquire();
 		hydrogenCounter += 2;
 		if (hydrogenCounter >= 2 && oxygenCounter >= 1) {
 			hydrogenSemaphore.release(2);
 			hydrogenCounter -= 2;
-			oxygenSemaphore.release();
+			oxygenSemaphore.release(1);
 			oxygenCounter --;
-
-			lock.unlock();
 		}else{
-			lock.unlock();
+			mutex.release();
 		}
 		hydrogenSemaphore.acquire();
-		barrier.await();
 		hydrogen.bond();
-
+		barrier.await();
+		mutex.release();
 	}
 
 	public synchronized static void main(String[] args) {
@@ -65,7 +63,7 @@ public class WaterConstructor {
 		int hydrogen = 0;
 
 		while (true) {
-			if (random.nextInt(2) == 0) {
+			if (random.nextInt(3) == 0) {
 				Oxygen o = new Oxygen(++oxygen, constructor);
 				new Thread(o).start();
 			} else {
