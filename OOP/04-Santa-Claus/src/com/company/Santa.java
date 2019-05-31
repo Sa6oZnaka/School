@@ -1,49 +1,104 @@
 package com.company;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
-import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.Semaphore;
-import java.util.concurrent.atomic.AtomicBoolean;
-import java.util.concurrent.locks.ReentrantLock;
-import java.util.stream.Collectors;
+
+// wait = accuire
+// signal = release
 
 public class Santa {
 
-    private AtomicBoolean running = new AtomicBoolean(true);
-    private ReentrantLock lock = new ReentrantLock();
+    private int elvesCount = 0;
+    private int reindeerCount = 0;
+    private Semaphore santaSem = new Semaphore(0);
+    private Semaphore reindeerSem = new Semaphore(0);
+    private Semaphore elfTex = new Semaphore(1);
+    private Semaphore mutex = new Semaphore(1);
 
-    private int elveCounter = 0;
-    private int reindeerCounter = 0;
-
-    private CyclicBarrier barrier = new CyclicBarrier(3);
-    private Semaphore santaSemaphore = new Semaphore(0);
-
-
-
-    public static void main(String[] args) {
-
-        Random random = new Random();
-
-        List<Thread> elveThreads = new ArrayList<>();
-        List<Elve> elves = new ArrayList<>();
-
-        for(int i = 0; i < 15; i ++){
-            Elve o = new Elve(i);
-            elves.add(o);
-            elveThreads.add(new Thread(o));
-            elveThreads.get(elveThreads.size() - 1).start();
+    public void SantaClaus() throws Exception {
+        santaSem.acquire();
+        mutex.acquire();
+        if(reindeerCount  >= 9) {
+            prepareSleigh();
+            reindeerSem.release(9);
+            reindeerCount -= 9;
+        }else if(elvesCount == 3){
+            helpElves();
         }
+        mutex.release();
+    }
 
+    public void processReindeer() throws Exception{
+        System.out.println("Reindeer count " + reindeerCount);
+
+        mutex.acquire();
+        reindeerCount ++;
+        if (reindeerCount  >= 9){
+            santaSem.release();
+        }
+        mutex.release();
+        reindeerSem.acquire();
+        getHitched ();
+    }
+
+    public void processElve() throws Exception {
+        System.out.println("Elve count " + elvesCount);
+
+        elfTex.acquire();
+        mutex.acquire();
+        elvesCount ++;
+        if(elvesCount  >= 3) {
+            santaSem.release();
+        }else {
+            elfTex.release();
+        }
+        mutex.release();
+        getHelp();
+        mutex.acquire();
+        elvesCount  --;
+        if(elvesCount  == 0) {
+            elfTex.release();
+        }
+        mutex.release();
+    }
+
+
+    private void getHitched() {
+        System.out.println("Hitched!");
+        try {
+            SantaClaus();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void helpElves() {
+        System.out.println("Elves Helped!");
+        //elvesCount = 0;
+    }
+
+    private void prepareSleigh() {
+        System.out.println("9 ELVES!!!!!");
+    }
+
+    private void getHelp(){
+        // TODO
+    }
+
+    public synchronized static void main(String[] args) {
+        Random random = new Random();
+        Santa constructor = new Santa();
+
+        int elve = 0;
+        int reindeer = 0;
 
         while (true) {
-
-            int elvesNeedHelp = (int) elves.stream().filter(Elve::needHelp).count();
-            System.out.println("Elves need help:" + elvesNeedHelp);
-
-            if(elvesNeedHelp > 3){
-                elves.stream().filter(Elve::needHelp).forEach(Elve::helped);
+            if (random.nextInt(2) == 0) {
+                Reindeer r = new Reindeer(++ elve, constructor);
+                new Thread(r).start();
+            } else {
+                Elve e = new Elve(++ reindeer, constructor);
+                new Thread(e).start();
             }
 
             try {
@@ -53,4 +108,5 @@ public class Santa {
             }
         }
     }
+
 }

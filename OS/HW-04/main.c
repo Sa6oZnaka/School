@@ -119,7 +119,7 @@ void showDir(char arg[]){
                 strcat(path, arg);
                 strcat(path, "/");
                 strcat(path, direntbuff -> d_name);
-                
+
                 struct stat fileStat;
                 if (stat(path, &fileStat) < 0){
                     perror("stat");
