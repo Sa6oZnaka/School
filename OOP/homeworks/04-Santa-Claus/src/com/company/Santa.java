@@ -36,7 +36,7 @@ public class Santa {
         getHitched ();
     }
 
-    public void processElve() throws Exception {
+    public void processElf() throws Exception {
         elfTex.acquire();
         mutex.acquire();
         elvesCount ++;
@@ -65,11 +65,11 @@ public class Santa {
     }
 
     private void helpElves() {
-        System.out.println("Elves Helped!");
+        System.out.println("Santa helped 3 Elves!");
     }
 
     private void prepareSleigh() {
-        System.out.println("9 Raindeers reached!");
+        System.out.println("Santa's reindeers are ready!");
     }
 
     private void getHelp(){
@@ -78,6 +78,7 @@ public class Santa {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        elvesCount -= 2;
     }
 
     public synchronized static void main(String[] args) {
@@ -92,12 +93,12 @@ public class Santa {
                 Reindeer r = new Reindeer(++ elves, constructor);
                 new Thread(r).start();
             } else {
-                Elve e = new Elve(++ reindeers, constructor);
+                Elf e = new Elf(++ reindeers, constructor);
                 new Thread(e).start();
             }
 
             try {
-                Thread.sleep(random.nextInt(1000));
+                Thread.sleep(random.nextInt(100));
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

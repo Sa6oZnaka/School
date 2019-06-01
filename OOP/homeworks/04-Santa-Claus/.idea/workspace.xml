@@ -2,26 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd66054b-5a1b-43f2-b697-49898eff3575" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../06-water-construction/.idea/06-water-construction.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../06-water-construction/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../06-water-construction/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../06-water-construction/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../06-water-construction/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../06-water-construction/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../06-water-construction/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../06-water-construction/out/production/06-water-construction/org/elsys/water/Atom.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../06-water-construction/out/production/06-water-construction/org/elsys/water/Hydrogen.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../06-water-construction/out/production/06-water-construction/org/elsys/water/Oxygen.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../06-water-construction/out/production/06-water-construction/org/elsys/water/WaterConstructor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../06-water-construction/src/org/elsys/water/Atom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../06-water-construction/src/org/elsys/water/Hydrogen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../06-water-construction/src/org/elsys/water/Oxygen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../06-water-construction/src/org/elsys/water/WaterConstructor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Santa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Santa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../homeworks/02-card-game-sequel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../homeworks/02-card-game-sequel/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../homeworks/03-TUESky/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../homeworks/03-TUESky/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../homeworks/03-TUESky/src/org/elsys/tuesky/impl/Trips.java" beforeDir="false" afterPath="$PROJECT_DIR$/../homeworks/03-TUESky/src/org/elsys/tuesky/impl/Trips.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../homeworks/03-TUESky/src/org/elsys/tuesky/impl/trips/TripBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/../homeworks/03-TUESky/src/org/elsys/tuesky/impl/trips/TripBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../04-Santa-Claus/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../04-Santa-Claus/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../04-Santa-Claus/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../04-Santa-Claus/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../04-Santa-Claus/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../04-Santa-Claus/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../04-Santa-Claus/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../04-Santa-Claus/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../04-Santa-Claus/04-Santa-Claus.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../04-Santa-Claus/out/production/04-Santa-Claus/META-INF/04-Santa-Claus.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../04-Santa-Claus/out/production/04-Santa-Claus/com/company/Elve.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../04-Santa-Claus/out/production/04-Santa-Claus/com/company/Reindeer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../04-Santa-Claus/out/production/04-Santa-Claus/com/company/Santa.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../04-Santa-Claus/src/com/company/Elf.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../04-Santa-Claus/src/com/company/Reindeer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../04-Santa-Claus/src/com/company/Santa.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,14 +34,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Santa.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="744">
-              <caret line="104" column="5" selection-start-line="104" selection-start-column="5" selection-end-line="104" selection-end-column="5" />
+            <state relative-caret-position="277">
+              <caret line="75" column="13" lean-forward="true" selection-start-line="75" selection-start-column="13" selection-end-line="75" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1799#1800#0" expanded="true" />
-                <element signature="e#1850#1851#0" expanded="true" />
-                <element signature="e#1912#1913#0" expanded="true" />
-                <element signature="e#1962#1963#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -55,16 +47,16 @@
         <entry file="file://$PROJECT_DIR$/src/com/company/Reindeer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
-              <caret line="16" column="41" lean-forward="true" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
+              <caret line="16" column="41" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/Elve.java">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Elf.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+            <state relative-caret-position="30">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -83,10 +75,16 @@
       <find>geth</find>
       <find>helpelves</find>
       <find>elve</find>
+      <find>elf</find>
+      <find>helpe</find>
+      <find>help</find>
+      <find>processe</find>
+      <find>process</find>
+      <find>helped</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -95,6 +93,7 @@
         <option value="$PROJECT_DIR$/src/com/company/Santa2.java" />
         <option value="$PROJECT_DIR$/src/com/company/Reindeer.java" />
         <option value="$PROJECT_DIR$/src/com/company/Elve.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Elf.java" />
         <option value="$PROJECT_DIR$/src/com/company/Santa.java" />
       </list>
     </option>
@@ -110,7 +109,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -133,11 +131,13 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -185,7 +185,7 @@
     <frame x="-2" y="-2" width="1684" height="1022" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25274727" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25579977" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -194,8 +194,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32924107" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.5859375" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.29575893" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39955357" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -214,31 +214,27 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/company/Elve.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/Santa.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+        <state relative-caret-position="277">
+          <caret line="75" column="13" lean-forward="true" selection-start-line="75" selection-start-column="13" selection-end-line="75" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Reindeer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="16" column="41" lean-forward="true" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
+          <caret line="16" column="41" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Santa.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/Elf.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="744">
-          <caret line="104" column="5" selection-start-line="104" selection-start-column="5" selection-end-line="104" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1799#1800#0" expanded="true" />
-            <element signature="e#1850#1851#0" expanded="true" />
-            <element signature="e#1912#1913#0" expanded="true" />
-            <element signature="e#1962#1963#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
