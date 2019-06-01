@@ -2,15 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd66054b-5a1b-43f2-b697-49898eff3575" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/04-Santa-Claus/com/company/Elve.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/04-Santa-Claus/com/company/Elve.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/04-Santa-Claus/com/company/Reindeer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/04-Santa-Claus/com/company/Reindeer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/04-Santa-Claus/com/company/Santa.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/04-Santa-Claus/com/company/Santa.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Elve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Elve.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Reindeer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Reindeer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06-water-construction/.idea/06-water-construction.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06-water-construction/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06-water-construction/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06-water-construction/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06-water-construction/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06-water-construction/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06-water-construction/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06-water-construction/out/production/06-water-construction/org/elsys/water/Atom.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06-water-construction/out/production/06-water-construction/org/elsys/water/Hydrogen.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06-water-construction/out/production/06-water-construction/org/elsys/water/Oxygen.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06-water-construction/out/production/06-water-construction/org/elsys/water/WaterConstructor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06-water-construction/src/org/elsys/water/Atom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06-water-construction/src/org/elsys/water/Hydrogen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06-water-construction/src/org/elsys/water/Oxygen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../06-water-construction/src/org/elsys/water/WaterConstructor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Santa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Santa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OS/HW-04/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../OS/HW-04/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OS/HW-04/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../OS/HW-04/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homeworks/02-card-game-sequel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../homeworks/02-card-game-sequel/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homeworks/03-TUESky/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../homeworks/03-TUESky/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homeworks/03-TUESky/src/org/elsys/tuesky/impl/Trips.java" beforeDir="false" afterPath="$PROJECT_DIR$/../homeworks/03-TUESky/src/org/elsys/tuesky/impl/Trips.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homeworks/03-TUESky/src/org/elsys/tuesky/impl/trips/TripBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/../homeworks/03-TUESky/src/org/elsys/tuesky/impl/trips/TripBuilder.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,12 +38,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Santa.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="54" column="24" lean-forward="true" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
+            <state relative-caret-position="744">
+              <caret line="104" column="5" selection-start-line="104" selection-start-column="5" selection-end-line="104" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1794#1795#0" expanded="true" />
-                <element signature="e#1830#1831#0" expanded="true" />
+                <element signature="e#1799#1800#0" expanded="true" />
+                <element signature="e#1850#1851#0" expanded="true" />
+                <element signature="e#1912#1913#0" expanded="true" />
+                <element signature="e#1962#1963#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -172,7 +185,7 @@
     <frame x="-2" y="-2" width="1684" height="1022" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25274727" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25274727" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -181,7 +194,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32924107" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32589287" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.5859375" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -201,13 +214,6 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/company/Reindeer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="41" lean-forward="true" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Elve.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -215,14 +221,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Reindeer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="41" lean-forward="true" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Santa.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="54" column="24" lean-forward="true" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
+        <state relative-caret-position="744">
+          <caret line="104" column="5" selection-start-line="104" selection-start-column="5" selection-end-line="104" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1794#1795#0" expanded="true" />
-            <element signature="e#1830#1831#0" expanded="true" />
+            <element signature="e#1799#1800#0" expanded="true" />
+            <element signature="e#1850#1851#0" expanded="true" />
+            <element signature="e#1912#1913#0" expanded="true" />
+            <element signature="e#1962#1963#0" expanded="true" />
           </folding>
         </state>
       </provider>

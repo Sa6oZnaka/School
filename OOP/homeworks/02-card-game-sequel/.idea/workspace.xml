@@ -11,12 +11,16 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/elsys/cardgame/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1088">
+            <state relative-caret-position="795">
               <caret line="133" column="49" selection-start-line="133" selection-start-column="49" selection-end-line="133" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -174,8 +178,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -217,6 +219,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -224,6 +228,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556461728670" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../03-TUESky" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -321,9 +326,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_02-card-game-sequel - 2019.04.13 at 20h 36m 43s.xml">
-      <configuration name="All in 02-card-game-sequel" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="All_in_02-card-game-sequel - 2019.04.13 at 20h 41m 01s.xml">
       <configuration name="All in 02-card-game-sequel" configurationId="JUnit" />
     </history-entry>
@@ -351,11 +353,14 @@
     <history-entry file="All_in_02-card-game-sequel - 2019.04.28 at 17h 28m 50s.xml">
       <configuration name="All in 02-card-game-sequel" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="All_in_02-card-game-sequel - 2019.05.29 at 10h 30m 14s.xml">
+      <configuration name="All in 02-card-game-sequel" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2" y="-2" width="1684" height="1022" extended-state="6" />
+    <frame x="0" y="-1" width="1366" height="728" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25579977" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25984848" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -364,7 +369,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.24888393" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.24834438" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39955357" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -482,13 +487,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/Downloads/junit-4.13-beta-2.jar!/org/junit/Assert.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="334" selection-start-line="334" selection-end-line="334" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$USER_HOME$/Downloads/junit-4.13-beta-2.jar!/org/junit/Assert.class" />
     <entry file="file://$PROJECT_DIR$/src/org/elsys/cardgame/Operations/BottomCard.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -593,7 +592,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/elsys/cardgame/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1088">
+        <state relative-caret-position="795">
           <caret line="133" column="49" selection-start-line="133" selection-start-column="49" selection-end-line="133" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />

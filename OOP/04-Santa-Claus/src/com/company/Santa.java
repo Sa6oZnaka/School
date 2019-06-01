@@ -3,9 +3,6 @@ package com.company;
 import java.util.Random;
 import java.util.concurrent.Semaphore;
 
-// wait = accuire
-// signal = release
-
 public class Santa {
 
     private int elvesCount = 0;
@@ -29,8 +26,6 @@ public class Santa {
     }
 
     public void processReindeer() throws Exception{
-        System.out.println("Reindeer count " + reindeerCount);
-
         mutex.acquire();
         reindeerCount ++;
         if (reindeerCount  >= 9){
@@ -42,8 +37,6 @@ public class Santa {
     }
 
     public void processElve() throws Exception {
-        System.out.println("Elve count " + elvesCount);
-
         elfTex.acquire();
         mutex.acquire();
         elvesCount ++;
@@ -55,13 +48,12 @@ public class Santa {
         mutex.release();
         getHelp();
         mutex.acquire();
-        elvesCount  --;
+        elvesCount --;
         if(elvesCount  == 0) {
             elfTex.release();
         }
         mutex.release();
     }
-
 
     private void getHitched() {
         System.out.println("Hitched!");
@@ -74,30 +66,33 @@ public class Santa {
 
     private void helpElves() {
         System.out.println("Elves Helped!");
-        //elvesCount = 0;
     }
 
     private void prepareSleigh() {
-        System.out.println("9 ELVES!!!!!");
+        System.out.println("9 Raindeers reached!");
     }
 
     private void getHelp(){
-        // TODO
+        try {
+            SantaClaus();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public synchronized static void main(String[] args) {
         Random random = new Random();
         Santa constructor = new Santa();
 
-        int elve = 0;
-        int reindeer = 0;
+        int elves = 0;
+        int reindeers = 0;
 
         while (true) {
             if (random.nextInt(2) == 0) {
-                Reindeer r = new Reindeer(++ elve, constructor);
+                Reindeer r = new Reindeer(++ elves, constructor);
                 new Thread(r).start();
             } else {
-                Elve e = new Elve(++ reindeer, constructor);
+                Elve e = new Elve(++ reindeers, constructor);
                 new Thread(e).start();
             }
 
@@ -108,5 +103,4 @@ public class Santa {
             }
         }
     }
-
 }
