@@ -18,17 +18,16 @@ public class WaterConstructor {
 
 	private Semaphore oxygenSemaphore = new Semaphore(0);
 	private Semaphore hydrogenSemaphore = new Semaphore(0);
-	private Semaphore mutex = new Semaphore(1);
+	private Semaphore mutex = new Semaphore(3);
 
 
 	public void proceedOxygen(Oxygen oxygen) throws Exception {
-
-		mutex.acquire(); // wait
+		mutex.acquire(); // wait --
 		oxygenCounter ++;
 		if (hydrogenCounter >= 2) {
-			hydrogenSemaphore.release(2); // signal
+			hydrogenSemaphore.release(2); // signal ++
 			hydrogenCounter -= 2;
-			oxygenSemaphore.release(1);
+			oxygenSemaphore.release();
 			oxygenCounter --;
 		}else {
 			mutex.release();
@@ -36,7 +35,7 @@ public class WaterConstructor {
 		oxygenSemaphore.acquire();
 		oxygen.bond();
 		barrier.await();
-		mutex.release();
+		mutex.reinlease();
 	}
 
 	public void proceedHydrogen(Hydrogen hydrogen) throws Exception {
@@ -45,7 +44,7 @@ public class WaterConstructor {
 		if (hydrogenCounter >= 2 && oxygenCounter >= 1) {
 			hydrogenSemaphore.release(2);
 			hydrogenCounter -= 2;
-			oxygenSemaphore.release(1);
+			oxygenSemaphore.release();
 			oxygenCounter --;
 		}else{
 			mutex.release();
@@ -53,7 +52,6 @@ public class WaterConstructor {
 		hydrogenSemaphore.acquire();
 		hydrogen.bond();
 		barrier.await();
-		mutex.release();
 	}
 
 	public synchronized static void main(String[] args) {
@@ -71,7 +69,7 @@ public class WaterConstructor {
 				new Thread(h).start();
 			}
 			try {
-				Thread.sleep(random.nextInt(1000));
+				Thread.sleep(random.nextInt(10));
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
