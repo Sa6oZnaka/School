@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Random;
+
 public class Elf extends Santa implements Runnable{
 
     private final int id;
@@ -9,13 +11,27 @@ public class Elf extends Santa implements Runnable{
         this.id = id;
     }
 
+    public int getId() {
+        return id;
+    }
+
     @Override
     public void run() {
         System.out.println("Elf - " + id + " Created!");
-        try {
-            getConstructor().processElf();
-        } catch (Exception e) {
-            e.printStackTrace();
+
+        Random random = new Random();
+        while(true) {
+            try {
+                getConstructor().processElf(this);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            try {
+                Thread.sleep(random.nextInt(10000));
+            } catch (InterruptedException ex) {
+                ex.printStackTrace();
+            }
         }
     }
 

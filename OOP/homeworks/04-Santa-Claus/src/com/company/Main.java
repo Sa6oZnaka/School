@@ -3,6 +3,8 @@ package com.company;
 import java.util.Random;
 import java.util.concurrent.Semaphore;
 
+import static java.lang.Thread.sleep;
+
 public class Main {
 
     private int elfCount = 0;
@@ -40,7 +42,7 @@ public class Main {
         getHitched(reindeer);
     }
 
-    public void processElf() throws Exception {
+    public void processElf(Elf elf) throws Exception {
         elfMutex.acquire();
         mutex.acquire();
         elfCount++;
@@ -52,7 +54,7 @@ public class Main {
         mutex.release();
 
         elfSem.acquire();
-        getHelp();
+        getHelp(elf);
 
         mutex.acquire();
         elfCount--;
@@ -74,8 +76,8 @@ public class Main {
         System.out.println("Santa's reindeers are ready!");
     }
 
-    private void getHelp(){
-        //System.out.println("Elf Need help!");
+    private void getHelp(Elf elf){
+        System.out.println("Helped elf - " + elf.getId());
     }
 
     public static synchronized void main(String[] args) {
@@ -88,22 +90,16 @@ public class Main {
         Santa s = new Santa(constructor);
         new Thread(s).start();
 
-        while (true) {
-
-            if (random.nextInt(2) == 0) {
-                Reindeer r = new Reindeer(++ elves, constructor);
-                new Thread(r).start();
-            } else {
-                Elf e = new Elf(++ reindeers, constructor);
-                new Thread(e).start();
-            }
-
-            try {
-                Thread.sleep(random.nextInt(100));
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+        for(int i = 0; i < 9; i ++){
+            Reindeer r = new Reindeer(++ reindeers, constructor);
+            new Thread(r).start();
         }
+
+        for(int i = 0; i < 20; i ++){
+            Elf e = new Elf(++ elves, constructor);
+            new Thread(e).start();
+        }
+
     }
 
 }
