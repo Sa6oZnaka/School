@@ -2,18 +2,22 @@ package com.company;
 
 public class Santa implements Runnable{
 
-    private Main contructor;
+    private final Main constructor;
 
-    public Santa(Main contructor) {
-        this.contructor = contructor;
+    public Santa(Main constructor) {
+        this.constructor = constructor;
+    }
+
+    public Main getConstructor() {
+        return constructor;
     }
 
     @Override
     public void run() {
-        System.out.println("[Santa] Created!");
+        System.out.println("Santa Created!");
         while(true) {
             try {
-                contructor.processSanta();
+                getConstructor().processSanta();
             } catch (Exception e) {
                 e.printStackTrace();
             }

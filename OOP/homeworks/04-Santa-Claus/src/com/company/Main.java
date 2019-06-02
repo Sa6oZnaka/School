@@ -10,8 +10,10 @@ public class Main {
 
     private Semaphore santaSem = new Semaphore(0);
     private Semaphore reindeerSem = new Semaphore(0);
-    private Semaphore elfTex = new Semaphore(1);
+    private Semaphore elfSem = new Semaphore(0);
+
     private Semaphore mutex = new Semaphore(1);
+    private Semaphore elfMutex = new Semaphore(1);
 
     public void processSanta() throws InterruptedException {
         santaSem.acquire();
@@ -22,6 +24,7 @@ public class Main {
             reindeerCount -= 9;
         }else if(elfCount == 3){
             helpElves();
+            elfSem.release(3);
         }
         mutex.release();
     }
@@ -38,20 +41,23 @@ public class Main {
     }
 
     public void processElf() throws Exception {
-        elfTex.acquire();
+        elfMutex.acquire();
         mutex.acquire();
-        elfCount ++;
-        if(elfCount == 3) {
+        elfCount++;
+        if (elfCount == 3) {
             santaSem.release();
-        }else {
-            elfTex.release();
+        } else {
+            elfMutex.release();
         }
         mutex.release();
+
+        elfSem.acquire();
         getHelp();
+
         mutex.acquire();
-        elfCount --;
-        if(elfCount == 0) {
-            elfTex.release();
+        elfCount--;
+        if (elfCount == 0) {
+            elfMutex.release();
         }
         mutex.release();
     }
@@ -69,7 +75,7 @@ public class Main {
     }
 
     private void getHelp(){
-        //System.out.println("[Elve] Need help!");
+        //System.out.println("Elf Need help!");
     }
 
     public static synchronized void main(String[] args) {
@@ -97,7 +103,7 @@ public class Main {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-
         }
     }
+
 }

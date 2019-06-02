@@ -1,20 +1,19 @@
 package com.company;
 
-public class Elf implements Runnable{
+public class Elf extends Santa implements Runnable{
 
-    private int id;
-    private Main contructor;
+    private final int id;
 
     public Elf(int id, Main contructor) {
+        super(contructor);
         this.id = id;
-        this.contructor = contructor;
     }
 
     @Override
     public void run() {
-        System.out.println("[Elf] - " + id + " Created!");
+        System.out.println("Elf - " + id + " Created!");
         try {
-            contructor.processElf();
+            getConstructor().processElf();
         } catch (Exception e) {
             e.printStackTrace();
         }
