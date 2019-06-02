@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bd66054b-5a1b-43f2-b697-49898eff3575" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/04-Santa-Claus/com/company/Elf.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/04-Santa-Claus/com/company/Elf.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/04-Santa-Claus/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/04-Santa-Claus/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/04-Santa-Claus/com/company/Reindeer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/04-Santa-Claus/com/company/Reindeer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/04-Santa-Claus/com/company/Santa.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/04-Santa-Claus/com/company/Santa.class" afterDir="false" />
-    </list>
+    <list default="true" id="bd66054b-5a1b-43f2-b697-49898eff3575" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
