@@ -1,0 +1,3 @@
+/home/alexy/Documents/School/OS/HW-02/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/alexy/Documents/School/OS/HW-02/cmake-build-debug/CMakeFiles/HW_02.dir
+/home/alexy/Documents/School/OS/HW-02/cmake-build-debug/CMakeFiles/edit_cache.dir

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libHW_02.a  CMakeFiles/HW_02.dir/library.c.o
+/usr/bin/ranlib libHW_02.a
