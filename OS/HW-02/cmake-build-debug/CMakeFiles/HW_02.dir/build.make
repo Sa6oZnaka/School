@@ -57,27 +57,27 @@ include CMakeFiles/HW_02.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/HW_02.dir/flags.make
 
-CMakeFiles/HW_02.dir/library.c.o: CMakeFiles/HW_02.dir/flags.make
-CMakeFiles/HW_02.dir/library.c.o: ../library.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alexy/Documents/School/OS/HW-02/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/HW_02.dir/library.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/HW_02.dir/library.c.o   -c /home/alexy/Documents/School/OS/HW-02/library.c
+CMakeFiles/HW_02.dir/main.c.o: CMakeFiles/HW_02.dir/flags.make
+CMakeFiles/HW_02.dir/main.c.o: ../main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alexy/Documents/School/OS/HW-02/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/HW_02.dir/main.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/HW_02.dir/main.c.o   -c /home/alexy/Documents/School/OS/HW-02/main.c
 
-CMakeFiles/HW_02.dir/library.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/HW_02.dir/library.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/alexy/Documents/School/OS/HW-02/library.c > CMakeFiles/HW_02.dir/library.c.i
+CMakeFiles/HW_02.dir/main.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/HW_02.dir/main.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/alexy/Documents/School/OS/HW-02/main.c > CMakeFiles/HW_02.dir/main.c.i
 
-CMakeFiles/HW_02.dir/library.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/HW_02.dir/library.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/alexy/Documents/School/OS/HW-02/library.c -o CMakeFiles/HW_02.dir/library.c.s
+CMakeFiles/HW_02.dir/main.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/HW_02.dir/main.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/alexy/Documents/School/OS/HW-02/main.c -o CMakeFiles/HW_02.dir/main.c.s
 
 # Object files for target HW_02
 HW_02_OBJECTS = \
-"CMakeFiles/HW_02.dir/library.c.o"
+"CMakeFiles/HW_02.dir/main.c.o"
 
 # External object files for target HW_02
 HW_02_EXTERNAL_OBJECTS =
 
-libHW_02.a: CMakeFiles/HW_02.dir/library.c.o
+libHW_02.a: CMakeFiles/HW_02.dir/main.c.o
 libHW_02.a: CMakeFiles/HW_02.dir/build.make
 libHW_02.a: CMakeFiles/HW_02.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/alexy/Documents/School/OS/HW-02/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libHW_02.a"

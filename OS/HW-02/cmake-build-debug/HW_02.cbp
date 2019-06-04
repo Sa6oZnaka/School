@@ -78,10 +78,10 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/alexy/Documents/School/OS/HW-02/library.c">
+		<Unit filename="/home/alexy/Documents/School/OS/HW-02/main.c">
 			<Option target="HW_02"/>
 		</Unit>
-		<Unit filename="/home/alexy/Documents/School/OS/HW-02/library.h">
+		<Unit filename="/home/alexy/Documents/School/OS/HW-02/main.h">
 			<Option target="HW_02"/>
 		</Unit>
 		<Unit filename="/home/alexy/Documents/School/OS/HW-02/CMakeLists.txt">

@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/HW_02.dir/library.c.o"
+  "CMakeFiles/HW_02.dir/main.c.o"
   "libHW_02.pdb"
   "libHW_02.a"
 )

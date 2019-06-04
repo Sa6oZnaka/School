@@ -8,78 +8,108 @@
 // Implementation of the UNIX shell
 //---------------------------------------------
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
-#include <sys/wait.h>
-#include <sys/stat.h>
-#include <sys/types.h>
-#include <stdbool.h>
+#include<sys/types.h>
+#include<sys/wait.h>
+#include<stdio.h>
+#include<unistd.h>
+#include<string.h>
+#include<time.h>
+#include<stdlib.h>
 
-#define CAPACITY 100;
+int precessesCount = 0;
 
-char **processCommand(char *cmdline){
-    int capacity = CAPACITY;
-    char **arr = malloc(capacity * sizeof(char*));
+// TODO
+char** getCommands(const char* cmdline){
 
-    for(int i = 0; i < capacity; ++i){
-        arr[i] = malloc(capacity * sizeof(char));
+    char **result = malloc(100 * sizeof(char*));
+    for (int i =0 ; i < 100; ++i){
+        result[i] = malloc(100 * sizeof(char));
     }
+    int elem=0;
+    int last=0;
+    char *temp = malloc(20*sizeof(char*));
 
-    char string[500];
-    strcpy(string, cmdline);
+    for(int i = 0;i < strlen(cmdline);i ++) {
+        if (cmdline[i] == ' ' || strlen(cmdline) - 1 == i) {
+            int index = 0;
+            if (last > 0)last++;
+            for (int j = last; j < i; j++) {
+                temp[index] = cmdline[j];
+                index++;
+            }
+            temp[index] = '\0';
+            last = i;
+            strcpy(result[elem], temp);
 
-    int position = 0;
-
-    char *q = strtok(string," \n");
-    while(q != NULL){
-
-        /* reallocate */
-        int length = strlen(q);
-        if(position == (capacity - 1)|| capacity <= length){
-            capacity *= 2;
-            arr = realloc(arr, sizeof(char*) * capacity);
-            for(int i = 0 ; i < capacity; i++)
-                arr[i] = realloc(arr[i], sizeof(char) * capacity);
+            elem++;
         }
-
-        strcpy(arr[position++], q);
-
-        q = strtok(NULL, " \n");
     }
-    arr[position] = NULL;
-    return arr;
+
+    result[elem] = NULL;
+    return result;
 }
 
-int main(int argc, char const *argv[]){
+char** getProcesses(char* line){
 
-    size_t bufsize = CAPACITY;
+    // TODO
+    char** result = malloc(100 * sizeof(char*));
+    for (int i = 0 ; i < 100; ++i){
+        result[i] = malloc(100 * sizeof(char));
+    }
 
-    char *line = (char *)malloc(bufsize * sizeof(char));
-    char **commands = NULL;
+    int index = 0;
+    const char s[2] = "|";
+    char *token;
 
-    while(true){
+    token = strtok(line, s);
+    while( token != NULL ) {
+        strcpy(result[index], token);
+        index ++;
 
-        write(STDOUT_FILENO, "$ ", 2);
-        size_t resultSize = getline(&line,&bufsize,stdin);
-        if(resultSize == -1){
-            free(commands);
-            break;
+        token = strtok(NULL, s);
+    }
+
+    precessesCount = index;
+    return result;
+}
+
+int main(int argc, char*argv[]) {
+    char line[100];
+
+    while(1){
+        printf("$ ");
+        fgets(line,100,stdin);
+
+        char** precesses = getProcesses(line);
+
+        for(int i = 0; i < precessesCount; i ++) {
+            char **commands = getCommands(precesses[i]);
+
+            // Ctrl + D
+            if (feof(stdin)) {
+                break;
+            }
+
+            pid_t pid = fork();
+            if (pid < 0) {
+                perror("fork");
+                return -1;
+            } else if (pid == 0) {
+                if (execv(commands[0], commands) < 0) {
+                    perror(commands[0]);
+                    return -1;
+                }
+                return 0;
+            } else {
+                int rstatus;
+                if (waitpid(pid, &rstatus, 0) < 0) {
+                    perror("waitpid");
+                    return -1;
+                }
+            }
         }
-
-        commands = processCommand(line);
-
-        if(fork() < 0){
-            perror("fork");
-            return -1;
-        }
-
-        execv(commands[0], commands);
-
     }
 
     return 0;
 }
 
-// /bin/ls -l /usr/include
