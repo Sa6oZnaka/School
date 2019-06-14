@@ -11,11 +11,11 @@ public class Student {
 	private double avgGrade;
 	private List<Subject> subjects;
 
-	public Student(String name, Integer course, double avgGrade, List<Subject> subjects) {
+	public Student(String name, Integer course, double avgGrade) {
 		this.name = name;
 		this.course = course;
 		this.avgGrade = avgGrade;
-		this.subjects = subjects;
+		subjects = new ArrayList<>();
 	}
 
 	public String getName() {
@@ -43,7 +43,7 @@ public class Student {
 	}
 
 	public List<org.elsys.edu.Subject> getUncompletedSubjects() {
-		return subjects.stream().filter(Subject::isMandatory).collect(Collectors.toList());
+		return subjects;
 	}
 
 	public boolean addUncompletedSubject(org.elsys.edu.Subject subject) {

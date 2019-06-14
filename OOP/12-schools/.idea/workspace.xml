@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0ee9b7a-977f-412b-967d-38148cc7d736" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../homeworks/04-Santa-Claus/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../homeworks/04-Santa-Claus/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OS/HW-02/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../OS/HW-02/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/elsys/edu/org/elsys/edu/HighSchool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/elsys/edu/org/elsys/edu/HighSchool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/elsys/edu/org/elsys/edu/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/elsys/edu/org/elsys/edu/MainClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/elsys/edu/org/elsys/edu/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/elsys/edu/org/elsys/edu/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/elsys/edu/org/elsys/edu/University.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/elsys/edu/org/elsys/edu/University.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,28 +14,30 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/elsys/edu/org/elsys/edu/HighSchool.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="54" column="5" lean-forward="true" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
+            <state relative-caret-position="165">
+              <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
               <folding>
-                <element signature="e#1087#1088#0" expanded="true" />
-                <element signature="e#1105#1106#0" expanded="true" />
-                <element signature="e#1178#1179#0" expanded="true" />
-                <element signature="e#1196#1197#0" expanded="true" />
+                <element signature="e#287#288#0" expanded="true" />
+                <element signature="e#310#311#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/elsys/edu/org/elsys/edu/MainClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+            <state relative-caret-position="105">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
@@ -40,12 +45,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/elsys/edu/org/elsys/edu/Student.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="31" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="60">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#549#550#0" expanded="true" />
                 <element signature="e#569#570#0" expanded="true" />
-                <element signature="e#589#590#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -54,8 +59,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/elsys/edu/org/elsys/edu/University.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            <state relative-caret-position="180">
+              <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -90,7 +95,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
+            <state split_layout="SECOND">
               <first_editor />
               <second_editor />
             </state>
@@ -98,6 +103,11 @@
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>subjec</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -109,8 +119,9 @@
         <option value="$PROJECT_DIR$/src/org/elsys/edu/Subject.java" />
         <option value="$PROJECT_DIR$/src/org/elsys/edu/org/elsys/edu/Subject.java" />
         <option value="$PROJECT_DIR$/src/org/elsys/edu/org/elsys/edu/Student.java" />
-        <option value="$PROJECT_DIR$/src/org/elsys/edu/org/elsys/edu/HighSchool.java" />
         <option value="$PROJECT_DIR$/src/org/elsys/edu/org/elsys/edu/MainClass.java" />
+        <option value="$PROJECT_DIR$/src/org/elsys/edu/org/elsys/edu/University.java" />
+        <option value="$PROJECT_DIR$/src/org/elsys/edu/org/elsys/edu/HighSchool.java" />
       </list>
     </option>
   </component>
@@ -137,7 +148,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -184,11 +195,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/vending-exam" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -219,10 +231,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2" y="-2" width="1684" height="1022" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="-1" width="1366" height="728" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26136363" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -252,33 +263,38 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/org/elsys/edu/org/elsys/edu/HighSchool.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="54" column="5" lean-forward="true" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
+        <state relative-caret-position="165">
+          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
           <folding>
-            <element signature="e#1087#1088#0" expanded="true" />
-            <element signature="e#1105#1106#0" expanded="true" />
-            <element signature="e#1178#1179#0" expanded="true" />
-            <element signature="e#1196#1197#0" expanded="true" />
+            <element signature="e#287#288#0" expanded="true" />
+            <element signature="e#310#311#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/elsys/edu/org/elsys/edu/MainClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/elsys/edu/org/elsys/edu/Student.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        <state relative-caret-position="60">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#549#550#0" expanded="true" />
             <element signature="e#569#570#0" expanded="true" />
-            <element signature="e#589#590#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/elsys/edu/org/elsys/edu/University.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        <state relative-caret-position="180">
+          <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -305,18 +321,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
+        <state split_layout="SECOND">
           <first_editor />
           <second_editor />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/elsys/edu/org/elsys/edu/MainClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-        </state>
-      </provider>
+      <provider editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">

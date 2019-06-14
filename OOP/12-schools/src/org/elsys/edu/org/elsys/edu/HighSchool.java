@@ -7,9 +7,11 @@ import java.util.stream.Collectors;
 public class HighSchool implements EducationalInstitution {
 
 	private List<Student> students = new ArrayList<>();
-	private List<Subject> subjects = new ArrayList<>();
-
 	private String name;
+
+	public HighSchool(String name) {
+		this.name = name;
+	}
 
 	@Override
 	public String getName() {
