@@ -48,7 +48,7 @@ public class HighSchool implements EducationalInstitution {
 
 	@Override
 	public Collection<Student> filter(Predicate<Student> predicate) {
-		return null;
+		return students.stream().filter(predicate).collect(Collectors.toList());
 	}
 
 	@Override

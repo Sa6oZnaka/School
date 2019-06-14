@@ -1,16 +1,12 @@
 package org.elsys.edu;
 
-import java.util.Collection;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class University implements EducationalInstitution {
 
-	private List<Student> students;
-	private Integer course;
+	private List<Student> students = new ArrayList<>();
 	private String name;
 	private Integer totalSubjects;
 
@@ -51,6 +47,7 @@ public class University implements EducationalInstitution {
 
 	@Override
 	public Map<Integer, List<Student>> groupStudentsByGrade() {
+		order(cmp);
 		return null;
 	}
 
@@ -62,15 +59,9 @@ public class University implements EducationalInstitution {
 
 	@Override
 	public Collection<Student> filter(Predicate<Student> predicate) {
-		// TODO Auto-generated method stub
-		return null;
+		return students.stream().filter(predicate).collect(Collectors.toList());
 	}
 
-	private Comparator<Student> cmp = new Comparator<Student>() {
-		@Override
-		public int compare(Student o1, Student o2) {
-			return (int) (o1.getAverageGrade() - o2.getAverageGrade());
-		}
-	};
+	private Comparator<Student> cmp = (o1, o2) -> (int) (o1.getAverageGrade() - o2.getAverageGrade());
 
 }
