@@ -20,6 +20,10 @@ public class HighSchool implements EducationalInstitution {
 
 	@Override
 	public boolean signUpForNextYear(Student student) {
+		if(student.getUncompletedSubjects().size() > 1){
+			throw new EducationalInstitutionException();
+		}
+		student.setCourse(student.getCourse() + 1);
 		return students.add(student);
 	}
 

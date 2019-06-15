@@ -78,7 +78,9 @@ int main(int argc, char*argv[]) {
 
     while(1){
         printf("$ ");
-        fgets(line,100,stdin);
+        if(fgets(line,100,stdin) == NULL){
+            break;
+        }
 
         char** precesses = getProcesses(line);
 

@@ -13,7 +13,7 @@ public class Student {
 	public Student(String name, Integer course, double avgGrade) {
 		this.name = name;
 		this.course = course;
-		this.avgGrade = avgGrade;
+		setAverageGrade(avgGrade);
 		subjects = new ArrayList<>();
 	}
 
@@ -38,6 +38,9 @@ public class Student {
 	}
 
 	public void setAverageGrade(double averageGrade) {
+		if(averageGrade > 6 || averageGrade < 1){
+			throw new EducationalInstitutionException();
+		}
 		this.avgGrade = averageGrade;
 	}
 

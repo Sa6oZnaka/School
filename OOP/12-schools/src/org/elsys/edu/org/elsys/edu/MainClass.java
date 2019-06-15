@@ -18,8 +18,6 @@ public class MainClass {
         subjects.add(new Subject("Bel", false));
         subjects.add(new Subject("OOP", true));
 
-        List<Student> students;
-
         while(scanner.hasNext()){
             String line = scanner.nextLine();
 
