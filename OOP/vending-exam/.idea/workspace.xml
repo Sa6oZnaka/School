@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a319489-73b7-49fd-bf7a-cf261fdf73ff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../12-schools/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../12-schools/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../12-schools/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../12-schools/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../12-schools/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../12-schools/src/org/elsys/edu/org/elsys/edu/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/../12-schools/src/org/elsys/edu/org/elsys/edu/MainClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../12-schools/src/org/elsys/edu/org/elsys/edu/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/../12-schools/src/org/elsys/edu/org/elsys/edu/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../12-schools/src/org/elsys/edu/org/elsys/edu/University.java" beforeDir="false" afterPath="$PROJECT_DIR$/../12-schools/src/org/elsys/edu/org/elsys/edu/University.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/elsys/vending/EspressoVendingMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/elsys/vending/EspressoVendingMachine.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
@@ -59,11 +52,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/elsys/vending/EspressoVendingMachine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+            <state relative-caret-position="450">
+              <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
               <folding>
+                <element signature="e#547#548#0" expanded="true" />
+                <element signature="e#578#579#0" expanded="true" />
                 <element signature="e#759#760#0" expanded="true" />
-                <element signature="e#794#795#0" expanded="true" />
+                <element signature="e#801#802#0" expanded="true" />
                 <element signature="e#980#981#0" expanded="true" />
                 <element signature="e#1029#1030#0" expanded="true" />
               </folding>
@@ -125,6 +120,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -158,13 +155,11 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../12-schools" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -196,6 +191,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="-2" width="1684" height="1022" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -272,11 +268,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/elsys/vending/EspressoVendingMachine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+        <state relative-caret-position="450">
+          <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
           <folding>
+            <element signature="e#547#548#0" expanded="true" />
+            <element signature="e#578#579#0" expanded="true" />
             <element signature="e#759#760#0" expanded="true" />
-            <element signature="e#794#795#0" expanded="true" />
+            <element signature="e#801#802#0" expanded="true" />
             <element signature="e#980#981#0" expanded="true" />
             <element signature="e#1029#1030#0" expanded="true" />
           </folding>
