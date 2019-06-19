@@ -60,11 +60,6 @@ public class HighSchool implements EducationalInstitution {
 		return null;
 	}
 
-	private Comparator<Student> cmp = new Comparator<Student>() {
-		@Override
-		public int compare(Student o1, Student o2) {
-			return (int) (o1.getAverageGrade() - o2.getAverageGrade());
-		}
-	};
+	private Comparator<Student> cmp = (o1, o2) -> (int) (o1.getAverageGrade() - o2.getAverageGrade());
 
 }
