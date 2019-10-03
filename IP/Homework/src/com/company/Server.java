@@ -14,8 +14,8 @@ import java.util.Scanner;
 
 public class Server {
 
+    static List<EchoClientHandler> handlers = new ArrayList<>();
     private ServerSocket serverSocket;
-    List<EchoClientHandler> handlers = new ArrayList<>();
 
     public static void main(String[] args) throws IOException, InterruptedException {
         Server server = new Server();
@@ -47,36 +47,6 @@ public class Server {
         serverSocket.close();
     }
 
-    public void processMessage(String sender, String msg){
-
-        ArrayList<String> commands = (ArrayList<String>) Arrays.asList(msg.split(" "));
-
-        String type = commands.get(0);
-        commands.remove(commands.get(0));
-        String receiver = null;
-        if(! type.equals("all")) {
-            receiver = commands.get(1);
-            commands.remove(commands.get(1));
-        }
-
-        String message = String.join(" ", commands);
-        String output = "[client" + sender + "]" + message;
-
-        //System.out.println(output); // print in the server
-        if(type.equals("all")) {
-            for (EchoClientHandler handler : handlers) {
-                handler.out.println(output); // send to all clients
-            }
-        }else {
-            for (EchoClientHandler handler : handlers) {
-                Integer s = handler.index;
-                if(handler.name.equals(receiver)) {
-                    handler.out.println(output); // send to specific client
-                }
-            }
-        }
-    }
-
     private static class EchoClientHandler extends Thread {
         private Socket clientSocket;
         private PrintWriter out;
@@ -89,6 +59,51 @@ public class Server {
             this.index = index;
 
             this.name = "client" + index;
+        }
+
+        void processMessage(String sender, String msg) {
+
+            List<String> commands = Arrays.asList(msg.split(" "));
+            int removed = 0;
+            String type = commands.get(0);
+            System.out.println(type);
+            String receiver = null;
+            switch (type) {
+                case "all":
+                    removed = 1;
+                    break;
+                case "private":
+                    receiver = commands.get(1);
+                    removed = 2;
+                    break;
+                case "name":
+                    name = commands.get(1);
+                    break;
+                default:
+                    out.println("--error---");
+                    break;
+            }
+            if (type.equals("all") || type.equals("private")) {
+                StringBuilder text = new StringBuilder();
+                for (int i = removed; i < commands.size(); i++) {
+                    text.append(commands.get(i)).append(" ");
+                }
+                String output = "[" + sender + "]" + " (" + type + ") " + String.join(" ", text);
+
+                if (type.equals("all")) {
+                    for (EchoClientHandler handler : handlers) {
+                        handler.out.println(output); // send to all clients
+                    }
+                } else {
+                    for (EchoClientHandler handler : handlers) {
+                        Integer s = handler.index;
+                        if (handler.name.equals(receiver)) {
+                            handler.out.println(output); // send to specific client
+                            out.println(output);
+                        }
+                    }
+                }
+            }
         }
 
         public void run() {
@@ -105,10 +120,11 @@ public class Server {
                         out.println("bye");
                         break;
                     }
-                    System.out.println("[" + name + "] " + inputLine);
-                    out.println("[" + name + "] " + inputLine);
+                    //System.out.println("[" + name + "] " + inputLine);
+                    //out.println("[" + name + "] " + inputLine);
                     // send text to the server
                     // TODO
+                    processMessage(name, inputLine);
                     // Server.processMessage(name, inputLine);
                     /////
                 }
