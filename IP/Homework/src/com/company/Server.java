@@ -21,23 +21,16 @@ public class Server {
 
     public static void main(String[] args) throws IOException, InterruptedException {
         Server server = new Server();
-        Scanner scanner = new Scanner(System.in);
-        String port = scanner.nextLine();
-        if(port.equals("")){
-            System.out.println("Server started at 127.0.0.1:" + 8888);
+        if(args.length == 0){
             server.start(8888);
-        }else {
-            System.out.println("Server started at 127.0.0.1:" + port);
-            server.start(Integer.parseInt(port));
+        }else{
+            server.start(Integer.parseInt(args[0]));
         }
     }
 
     private void start(int port) throws IOException, InterruptedException {
         serverSocket = new ServerSocket(port);
-        while (clientsConnected < clientsConnected - clientsDisconnected + 3) {
-            if(clientsConnected > clientsConnected - clientsDisconnected + 3)
-                continue;
-
+        while (clientsConnected - clientsDisconnected - 1 < 10) {
             var clientSocket = serverSocket.accept();
             var handler = new EchoClientHandler(clientSocket, clientsConnected);
             handler.start();
