@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="6929d091-7d62-4508-a4b5-7800adfc2bef" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Homework/com/company/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Homework/com/company/Client.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Homework/com/company/Server$EchoClientHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Homework/com/company/Server$EchoClientHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Homework/com/company/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Homework/com/company/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Server.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,6 +32,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">

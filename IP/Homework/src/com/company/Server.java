@@ -14,6 +14,8 @@ import java.util.Scanner;
 
 public class Server {
 
+    static int clientsConnected = 1;
+    static int clientsDisconnected = 0;
     static List<EchoClientHandler> handlers = new ArrayList<>();
     private ServerSocket serverSocket;
 
@@ -21,15 +23,21 @@ public class Server {
         Server server = new Server();
         Scanner scanner = new Scanner(System.in);
         String port = scanner.nextLine();
-        System.out.println("Server started at 127.0.0.1:" + port);
-        server.start(Integer.parseInt(port));
+        if(port.equals("")){
+            System.out.println("Server started at 127.0.0.1:" + 8888);
+            server.start(8888);
+        }else {
+            System.out.println("Server started at 127.0.0.1:" + port);
+            server.start(Integer.parseInt(port));
+        }
     }
 
     private void start(int port) throws IOException, InterruptedException {
         serverSocket = new ServerSocket(port);
-        int clientsConnected = 0;
-        while (clientsConnected < 1000) {
-            System.out.println("client" + clientsConnected + " connected!");
+        while (clientsConnected < clientsConnected - clientsDisconnected + 3) {
+            if(clientsConnected > clientsConnected - clientsDisconnected + 3)
+                continue;
+
             var clientSocket = serverSocket.accept();
             var handler = new EchoClientHandler(clientSocket, clientsConnected);
             handler.start();
@@ -39,7 +47,6 @@ public class Server {
 
         for (EchoClientHandler handler : handlers) {
             handler.join();
-            System.out.println("join called!");
         }
     }
 
@@ -61,6 +68,10 @@ public class Server {
             this.name = "client" + index;
         }
 
+        public String getName2(){
+            return this.name;
+        }
+
         void processMessage(String sender, String msg) {
 
             List<String> commands = Arrays.asList(msg.split(" "));
@@ -71,6 +82,14 @@ public class Server {
             switch (type) {
                 case "all":
                     removed = 1;
+                    break;
+                case "info":
+                    out.print("[");
+                    for(int i = 0; i < handlers.size() - 1; i ++){
+                        out.print(handlers.get(i).name + ", ");
+                    }
+                    out.print(handlers.get(handlers.size() - 1).name + "]");
+                    out.println();
                     break;
                 case "private":
                     receiver = commands.get(1);
@@ -115,18 +134,24 @@ public class Server {
                         new InputStreamReader(clientSocket.getInputStream()));
 
                 String inputLine;
+
+                for (EchoClientHandler handler : handlers) {
+                    handler.out.println("---" + name + " connected---"); // send to all clients
+                }
+
                 while ((inputLine = in.readLine()) != null) {
                     if ("exit".equals(inputLine)) {
                         out.println("bye");
                         break;
                     }
-                    //System.out.println("[" + name + "] " + inputLine);
-                    //out.println("[" + name + "] " + inputLine);
-                    // send text to the server
-                    // TODO
+
                     processMessage(name, inputLine);
-                    // Server.processMessage(name, inputLine);
-                    /////
+                }
+
+                clientsDisconnected --;
+                for (EchoClientHandler handler : handlers) {
+                    handler.out.println("---" + name + " disconnected---"); // send to all clients
+                    handlers.remove(this);
                 }
 
                 in.close();
