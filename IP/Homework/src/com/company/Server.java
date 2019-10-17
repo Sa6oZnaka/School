@@ -9,7 +9,6 @@ import java.net.Socket;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Scanner;
 
 
 public class Server {
@@ -28,7 +27,7 @@ public class Server {
         }
     }
 
-    private void start(int port) throws IOException, InterruptedException {
+    public void start(int port) throws IOException, InterruptedException {
         serverSocket = new ServerSocket(port);
         while (clientsConnected - clientsDisconnected - 1 < 10) {
             var clientSocket = serverSocket.accept();

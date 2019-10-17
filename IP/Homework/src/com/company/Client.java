@@ -42,17 +42,17 @@ public class Client {
     private PrintWriter out;
     private BufferedReader in;
 
-    private void startConnection(String address, int port) throws IOException {
+    public void startConnection(String address, int port) throws IOException {
         clientSocket = new Socket(address, port);
         out = new PrintWriter(clientSocket.getOutputStream(), true);
         in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
     }
 
-    private void sendMessage(String msg) throws IOException {
+    public void sendMessage(String msg) throws IOException {
         out.println(msg);
     }
 
-    private String readLine() throws IOException {
+    public String readLine() throws IOException {
         return in.readLine();
     }
 
