@@ -34,6 +34,22 @@ public class Tests{
         assertEquals("bye", client.readLine());
     }
 
+    @Test
+    public void sendMessageTest() throws IOException {
+        Client client = new Client();
+        client.startConnection("localhost", 4444);
+
+        Client client2 = new Client();
+        client2.startConnection("localhost", 4444);
+
+        client.sendMessage("all Hello!");
+
+        assertEquals("Hello!", client2.readLine());
+        client.sendMessage("exit");
+        assertEquals("bye", client.readLine());
+        client2.sendMessage("exit");
+    }
+
 
 
 }
