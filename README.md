@@ -1,5 +1,4 @@
-# Welcome to School
-I here i upload my school work
-
-* OOP
-* OS
+* OOP (Object oriented programming - Java)
+* OS (Operating Systems - C)
+* IP (Internt Programming - Java spring boot)
+  
